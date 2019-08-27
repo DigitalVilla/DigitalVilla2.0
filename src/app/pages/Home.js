@@ -1,9 +1,8 @@
 import React from 'react'
-import ReactFullpage from '@fullpage/react-fullpage';
 
 export default function Home(props) {
+
   const handlePageDown = () => {
-    // fullpageApi.moveSectionDown();
      props.api.moveTo(2);
   }
 

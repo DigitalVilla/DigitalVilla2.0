@@ -111,7 +111,7 @@
   // Default  Breakpoints mobile first approach
 
   @if $breakpoint==xs {
-    @media only screen and (min-width: $screen-xs) and (min-height: $screen-xs) {
+    @media only screen and (min-width: $screen-xs) {
       @content
     }
 
@@ -119,7 +119,7 @@
   }
 
   @if $breakpoint==sm {
-    @media only screen and (min-width: $screen-sm) and (min-height: $screen-sm) {
+    @media only screen and (min-width: $screen-sm)   {
       @content
     }
 
@@ -127,7 +127,7 @@
   }
 
   @if $breakpoint==md {
-    @media only screen and (min-width: $screen-md) and (min-height: $screen-md) {
+    @media only screen and (min-width: $screen-md)  {
       @content
     }
 
@@ -135,7 +135,7 @@
   }
 
   @if $breakpoint==lg {
-    @media only screen and (min-width: $screen-lg) and (min-height: $screen-lg) {
+    @media only screen and (min-width: $screen-lg)  {
       @content
     }
 
@@ -143,7 +143,7 @@
   }
 
   @if $breakpoint==xl {
-    @media only screen and (min-width: $screen-xl) and (min-height: $screen-xl) {
+    @media only screen and (min-width: $screen-xl) {
       @content
     }
 
@@ -151,7 +151,7 @@
   }
 
   @if $breakpoint==xxl {
-    @media only screen and (min-width: $screen-xxl) and (min-height: $screen-xxl) {
+    @media only screen and (min-width: $screen-xxl){
       @content
     }
 
@@ -230,7 +230,7 @@
 
   //specific px size
   @else {
-    @media only screen and (min-width: $breakpoint) and (min-height: $breakpoint){
+    @media only screen and (min-width: $breakpoint)  {
       @content
     }
 
