@@ -1,0 +1,248 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin on-event($self: false) {
+  @if $self {
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+
+  @else {
+
+    &:hover,
+    &:active {
+      @content;
+    }
+  }
+}
+
+
+/* vertical alignment */
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* position abdolute
+  @include abs-on(2rem, 3rem, auto, auto);
+*/
+@mixin abs ($top, $right, $bottom:auto, $left:auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/* position abdolute
+  @include flex(2rem, 3rem, auto, auto);
+*/
+@mixin flex ($justify, $align:center, $direction:initial) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+/* center abdolute */
+@mixin abs-center () {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* Text shortening
+@include text-shorten();
+*/
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ */
+@mixin hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ *  from HTML5Boilerplate:
+ */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+@mixin media($breakpoint) {
+  // Default  Breakpoints mobile first approach
+
+  @if $breakpoint==xs {
+    @media only screen and (min-width: $screen-xs) and (min-height: $screen-xs) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==sm {
+    @media only screen and (min-width: $screen-sm) and (min-height: $screen-sm) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==md {
+    @media only screen and (min-width: $screen-md) and (min-height: $screen-md) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==lg {
+    @media only screen and (min-width: $screen-lg) and (min-height: $screen-lg) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==xl {
+    @media only screen and (min-width: $screen-xl) and (min-height: $screen-xl) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==xxl {
+    @media only screen and (min-width: $screen-xxl) and (min-height: $screen-xxl) {
+      @content
+    }
+
+    ;
+  }
+
+  //==== Default  Breakpoints desktop first approach ======
+
+
+  @if $breakpoint==inPhone {
+    @media only screen and (max-width: $screen-xs) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==inPhone_lg {
+    @media only screen and (max-width: $screen-sm) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==inTablet {
+    @media only screen and (max-width: $screen-md) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==inTablet_lg {
+    @media only screen and (max-width: $screen-lg) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==inLaptop {
+    @media only screen and (max-width: $screen-xl) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==inLaptop_lg {
+    @media only screen and (max-width: $screen-xxl) {
+      @content
+    }
+
+    ;
+  }
+
+  //==== Breakpoints exclusive approach ======
+
+  @if $breakpoint==onlyTablet {
+    @media only screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+      @content
+    }
+
+    ;
+  }
+
+
+  @if $breakpoint==onlyTablet_Lan {
+    @media only screen and (min-width: $screen-sm) and (max-width: $screen-md) and (orientation: landscape) {
+      @content
+    }
+
+    ;
+  }
+
+  //specific px size
+  @else {
+    @media only screen and (min-width: $breakpoint) and (min-height: $breakpoint){
+      @content
+    }
+
+    ;
+  }
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: auto;
+
+  @include media (desktop) {
+    max-width: $max-widthL;
+  }
+}

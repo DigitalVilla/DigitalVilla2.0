@@ -1,0 +1,120 @@
+
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  max-width: 100vw;
+  min-width: $min-width;
+  overflow: hidden;
+
+  @include media(desktop) {
+    font-size: 75%; //12px
+  }
+
+  @include media(ultraHD) {
+    font-size: 87.5%; //16px
+  }
+}
+body {
+  color: $grey-darker;
+  font-weight: 300;
+  line-height: 1.6;
+  font: normal 125% / 1.4 $text-font;
+  background: $off-white;
+  font-size: 1.6rem;
+  padding: 1rem;
+  padding: 0;
+}
+
+@mixin title {
+  font-size: 6.5rem;
+  color: #fff;
+  text-shadow: 0 0 .3rem rgba(0, 0, 0, 0.3), 0 .4rem .65rem rgba(0, 0, 0, 0.33);
+  font-style: normal;
+  font-stretch: normal;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  transition: all .2s;
+
+  @include media (iniPad) {
+    font-size: 4rem !important;
+    line-height: 1.2;
+  }
+
+  @include media (inPhone) {
+    font-size: 3.5rem !important;
+  }
+}
+
+.title {
+  @include title;
+}
+
+// *:focus {
+//   outline: none !important;
+// }
+
+// button::-moz-focus-inner {
+//   border: 0;
+// }
+
+.noSelect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+// ::selection {
+//     background: #e5eff1;
+//     /* WebKit/Blink Browsers */
+//     color: $color-primary;
+// }
+
+// ::-moz-selection {
+//     background: #ebebeb;
+//     /* Gecko Browsers */
+//     color: $color-primary;
+// }
+
+// button:focus,
+// button:active {
+//     outline: none !important;
+//     outline: 0 !important;
+// }
+
+// button::-moz-focus-inner {
+//     border: 0;
+// }
+
+// // input::placeholder {
+// //     color: rgb(182, 36, 158);
+// //     opacity: .5;
+// // }
+
+// input::-moz-focus-inner {
+//     border: 0;
+//     border: none;
+// }

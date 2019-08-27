@@ -1,0 +1,99 @@
+.fp-controlArrow {
+    //variables
+    $arrow-side: 10.5px;
+    $arrow-head: 14px;
+    $slides-gap: calc(50% - 100px);
+    //common
+    bottom: 20px;
+    opacity: .7;
+    top: unset;
+    z-index: 999;
+
+
+    &.fp-prev {
+        left: $slides-gap;
+        border-width: $arrow-side $arrow-head $arrow-side 0;
+    }
+
+    &.fp-next {
+        right: $slides-gap;
+        border-width: $arrow-side $arrow-side $arrow-head;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+/* vertical alignment */
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    transform: none;
+    border: none;
+}
+
+@mixin line-span {
+    border-radius: 10px;
+    height: $space-sm;
+    width: $space-xl;
+    top: 25%;
+}
+
+#fp-nav {
+    ul {
+        li {
+            @include reset;
+            height: $space-md;
+            width: $space-xl;
+            margin: $space-xl $space;
+
+            &:hover a.active span,
+            a.active span {
+                @include reset;
+                @include line-span;
+                width: $space-xxl;
+            }
+
+            &:hover a span {
+                @include reset;
+                @include line-span;
+            }
+
+            a {
+                span {
+                    @include reset;
+                    @include line-span;
+
+                    &:hover {
+                        @include reset;
+                        @include line-span;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fp-slidesNav {
+    ul {
+        width: auto;
+        text-align: center;
+
+        li {
+            border: 1px solid #00f;
+            margin: 2px;
+
+            a span {
+                background: #ddd;
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
