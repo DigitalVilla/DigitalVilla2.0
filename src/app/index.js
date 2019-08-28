@@ -16,9 +16,8 @@ class App extends Component {
   }
 
   render() {
-
     return (
-      <FullPage pages={this.pages} anchors={this.anchors} menu={null} />
+      <FullPage pages={this.pages} anchors={this.anchors} menu={Menu} />
     );
   }
 }

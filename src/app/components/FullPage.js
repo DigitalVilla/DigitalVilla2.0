@@ -19,10 +19,10 @@ export default function FullPage(props) {
 
             //Scrolling
             css3={true}
-            scrollingSpeed={500}
+            scrollingSpeed={800}
             autoScrolling={true}
             fitToSection={true}
-            fitToSectionDelay={1000}
+            fitToSectionDelay={100}
             scrollBar={false}
             easing={'easeInOutCubic'}
             easingcss3={'ease'}
@@ -30,20 +30,11 @@ export default function FullPage(props) {
             loopTop={false}
             loopHorizontal={true}
             continuousVertical={false}
-            continuousHorizontal={false}
-            scrollHorizontally={false}
-            interlockedSlides={false}
-            dragAndMove={false}
-            offsetSections={false}
-            resetSliders={false}
-            fadingEffect={false}
-            normalScrollElements={'#element1, .element2'}
+            normalScrollElements={null}
             scrollOverflow={false}
-            scrollOverflowReset={false}
             scrollOverflowOptions={null}
             touchSensitivity={15}
             bigSectionsDestination={null}
-
 
             //Accessibility
             keyboardScrolling={true}
@@ -54,10 +45,10 @@ export default function FullPage(props) {
             //Design
             controlArrows={true}
             verticalCentered={false}
-            sectionsColor={['#ccc', '#fff', '#ccc', '#fff']}
-            paddingTop={'50px'}
-            paddingBottom={'10px'}
-            // fixedElements = {'#header, .footer'}
+            // sectionsColor={['#ccc', '#fff', '#ccc', '#fff']}
+            // paddingTop={'50px'}
+            // paddingBottom={'10px'}
+            fixedElements = {null}
             responsiveWidth={0}
             responsiveHeight={0}
             responsiveSlides={false}
@@ -66,27 +57,40 @@ export default function FullPage(props) {
             cards={false}
             cardsOptions={{ perspective: 100, fadeContent: true, fadeBackground: true }}
 
-
             //Custom selectors
             sectionSelector={'.section'}
             slideSelector={'.slide'}
 
             //events
-            onLeave={function (origin, destination, direction) { }}
-            afterLoad={function (origin, destination, direction) { }}
-            afterRender={function () { }}
-            afterResize={function (width, height) { }}
-            afterReBuild={function () { }}
-            afterResponsive={function (isResponsive) { }}
+            onLeave={function (origin, destination, direction) {
+                // console.log('onLeave',origin, destination, direction);
+             }}
+            afterLoad={function (origin, destination, direction) {
+                //  console.log('afterLoad',origin, destination, direction);
+            }}
+            afterRender={function () {
+                 let vid = document.getElementById('video');
+                 vid.playbackRate = .5;
+                 console.log('afterRender',vid);
+             }}
+            afterResize={function (width, height) {
+                //  console.log('afterResize', width, height);
+             }}
+            afterReBuild={function () {
+                    // console.log('afterReBuild');
+             }}
+            afterResponsive={function (isResponsive) {
+                // console.log('afterResponsive',isResponsive);
+            }}
             afterSlideLoad={function (section, origin, destination, direction) { }}
             onSlideLeave={function (section, origin, destination, direction) { }}
 
             render={({ state, fullpageApi }) => {
                 return (
                     <div>
-                        { menu && <props.menu pages={anchors} api={fullpageApi} /> }
+                        { menu && <props.menu anchors={anchors} api={fullpageApi} /> }
                         <ReactFullpage.Wrapper>
-                            { pages.map((page,i)=>  <Section key={i} page={page} api={fullpageApi} />) }
+                            { pages.map((page,i)=>  <Section key={i} page={page} api={fullpageApi} anchor={anchors[i]}/>) }
                         </ReactFullpage.Wrapper>
                     </div>
                 );
@@ -95,13 +99,9 @@ export default function FullPage(props) {
     )
 }
 
-
-let index = 1;
-
 function Section(props) {
-    index = index >= 5 ? 1 : index;
     return (
-        <div className="section" data-anchor={'page-' + index++}>
+        <div className="section" data-anchor={props.anchor}>
             <props.page api={props.api} />
         </div>
     )

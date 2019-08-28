@@ -2,8 +2,10 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+
 /// Regular font family
-$text-font: 'Open Sans',
+$text-font: 'Oswald',
+'Open Sans',
 'Helvetica Neue Light',
 'Helvetica Neue',
 'Helvetica',
@@ -67,3 +69,9 @@ $screen-xxl: 1600px;
 
 // RESPONSIVE BREAKPOINTS
 $min-width: 320px;
+
+//Custom settings
+
+//Variables
+$font-color: White;
+$page-bg: linear-gradient(to left bottom, darken($brand3, 30%), darken($brand1, 40%));

@@ -2,7 +2,7 @@
 $arrow-side: 10.5px;
 $arrow-head: 14px;
 $slides-gap: calc(50% - 100px);
-$nav-color: red;
+$nav-color: $white;
 
 @mixin reset {
     margin: 0;
@@ -17,16 +17,11 @@ $nav-color: red;
 }
 
 @mixin line-span {
-    border-radius: 10px;
+    border-radius: 5px;
     top: 60%;
-    height: 4px;
+    height: 3px;
     width: $space-xl;
     background: $nav-color;
-
-    @include media(md) {
-        height: 5px;
-        width: 50px;
-    }
 }
 
 
@@ -43,10 +38,6 @@ $nav-color: red;
                 @include reset;
                 @include line-span;
                 width: $space-xxl;
-
-                @include media(md) {
-                    width: 80px;
-                }
             }
 
             &:hover a span {
@@ -72,22 +63,21 @@ $nav-color: red;
                 top: -$space-sm;
 
                 &.fp-left {
-                    left: 0;
+                    left:0;
                 }
 
                 &.fp-right {
                     right: 0;
                 }
 
-                @include media(md) {
-                    top: 0;
-                    font-size: 16px;
+                @include media(lg) {
+                    top: -3px;
                 }
             }
 
-            @include media (md) {
+            @include media (lg) {
                 height: $space-xl;
-                margin: $space-xxl $space-md;
+                // margin: $space-xxl $space-md;
             }
         }
     }

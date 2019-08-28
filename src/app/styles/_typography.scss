@@ -1,26 +1,125 @@
-/**
- * Basic typography style for copy text
- */
-
-body {
-  color: $grey-darker;
-  font-weight: 300;
-  line-height: 1.6;
-  font: normal 125% / 1.4 $text-font;
-  background: $off-white;
-  font-size: 1.6rem;
-  padding: 1rem;
-}
-
 @mixin title {
-  color: #fff;
-  text-shadow: 0 0 .3rem rgba(0, 0, 0, 0.3), 0 .4rem .65rem rgba(0, 0, 0, 0.33);
-  font-style: normal;
-  font-stretch: normal;
-  font-weight: bold;
-  text-align: center;
+    font-size: 10rem;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.6rem;
+    font-weight: 400;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+    text-transform: uppercase;
+
+    @include media (iniPad) {
+        font-size: 4rem !important;
+        line-height: 1.2;
+    }
+
+    @include media (inPhone) {
+        font-size: 3.5rem !important;
+    }
 }
 
 .title {
-  @include title;
+    @include title;
 }
+
+
+svg {
+    fill: $font-color;
+}
+
+.svg-xl {
+    svg {
+        height: 6rem !important;
+        width: 6rem !important;
+    }
+}
+
+.svg-lg {
+    svg {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+}
+
+.svg-md {
+    svg {
+        height: 3rem !important;
+        width: 3rem !important;
+    }
+}
+
+.svg-sm {
+    svg {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+}
+
+.icon_BTN,
+.icon_BTN:focus,
+.icon_BTN:hover,
+.icon_BTN:active {
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    outline: none;
+}
+
+
+// *:focus {
+//   outline: none !important;
+// }
+
+// button::-moz-focus-inner {
+//   border: 0;
+// }
+
+.noSelect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+// ::selection {
+//     background: #e5eff1;
+//     /* WebKit/Blink Browsers */
+//     color: $color-primary;
+// }
+
+// ::-moz-selection {
+//     background: #ebebeb;
+//     /* Gecko Browsers */
+//     color: $color-primary;
+// }
+
+// button:focus,
+// button:active {
+//     outline: none !important;
+//     outline: 0 !important;
+// }
+
+// button::-moz-focus-inner {
+//     border: 0;
+// }
+
+// // input::placeholder {
+// //     color: rgb(182, 36, 158);
+// //     opacity: .5;
+// // }
+
+// input::-moz-focus-inner {
+//     border: 0;
+//     border: none;
+// }
