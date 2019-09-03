@@ -17,11 +17,11 @@ html {
   min-width: $min-width;
   overflow: hidden;
 
-  @include media(desktop) {
+  @include media(xl) {
     font-size: 75%; //12px
   }
 
-  @include media(ultraHD) {
+  @include media(xxl) {
     font-size: 87.5%; //16px
   }
 }
@@ -43,4 +43,12 @@ body {
 
 .section {
   overflow: hidden;
+}
+
+.visible-md {
+  display: none;
+
+  @include media(md) {
+    display: inline-flex;
+  }
 }

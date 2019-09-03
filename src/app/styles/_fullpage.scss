@@ -1,0 +1,135 @@
+//variables
+$arrow-side: 10.5px;
+$arrow-head: 14px;
+$slides-gap: calc(50% - 100px);
+$nav-color: $white;
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    transform: none;
+    border: none;
+}
+
+@mixin line-span {
+    border-radius: 5px;
+    top: 60%;
+    height: 3px;
+    width: $space-lg;
+    background: $nav-color;
+
+    @include media(md) {
+        width: $space-xl;
+    }
+}
+
+
+#fp-nav {
+    ul {
+        li {
+            @include reset;
+            height: $space-lg;
+            width: $space-xxl;
+            margin: $space-lg 0;
+
+            &:hover a.active span,
+            a.active span {
+                @include reset;
+                @include line-span;
+                width: $space-xl;
+
+                @include media(md) {
+                    width: $space-xxl;
+                }
+            }
+
+            &:hover a span {
+                @include reset;
+                @include line-span;
+            }
+
+            a {
+                span {
+                    @include reset;
+                    @include line-span;
+                    color: $nav-color;
+
+                    &:hover {
+                        @include reset;
+                        @include line-span;
+                    }
+                }
+            }
+
+            .fp-tooltip {
+                color: $nav-color;
+                top: -$space-sm;
+                font-size: 12px;
+
+                &.fp-left {
+                    left: 0;
+                }
+
+                &.fp-right {
+                    right: 0;
+                }
+
+                @include media(md) {
+                    font-size: 16px;
+                    top: -8px;
+                }
+
+                @include media(lg) {
+                    top: -4px;
+                }
+            }
+
+            @include media (lg) {
+                height: $space-xl;
+                // margin: $space-xxl $space-md;
+            }
+        }
+    }
+}
+
+.fp-slidesNav {
+    ul {
+        width: auto;
+        text-align: center;
+
+        li {
+            margin: 2px;
+
+            a span {
+                background: #ddd;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.fp-controlArrow {
+    bottom: 20px;
+    opacity: .7;
+    top: unset;
+    z-index: 999;
+
+    &.fp-prev {
+        left: $slides-gap;
+        border-width: $arrow-side $arrow-head $arrow-side 0;
+    }
+
+    &.fp-next {
+        right: $slides-gap;
+        border-width: $arrow-side $arrow-side $arrow-head;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

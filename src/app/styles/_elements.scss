@@ -1,55 +1,87 @@
-#menu {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    top: 0;
-    right: 0;
-    z-index: 1000;
 
-    ul {
-        margin-left: auto;
-        height: 100%;
-        align-items: center;
-        width: 600px;
-        display: flex;
-        justify-content: space-around;
-
-        li {
-            list-style: none;
-            color: $font-color;
-            cursor: pointer;
-        }
-    }
-}
-
-img {
+.page {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 #Home {
     .header {
         position: absolute;
-        // display: flex;
-        // align-items: center;
         z-index: 2;
-        top: 20%;
-        left:20%;
-        // width: 500px;
-        // border: 1px solid #00f;
+        top: 35%;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+        text-align: center;
+
+        .main-logo {
+            height: 15rem;
+            width: auto;
+            margin: 0 0 $space-md;
+            border-radius: 10px;
+            padding: $space;
+
+        }
+
+        .title {
+            font-weight: 400;
+            line-height: 1;
+            font-size: 5rem;
+            color: #fff;
+            width: 70vw;
+            letter-spacing: 0.1em;
+            text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+            text-transform: uppercase;
+            margin: 0 0 $space-md;
+
+            span {
+                flex: 1 1 100%;
+                white-space: nowrap;
+                padding: 0
+            }
+
+
+            @include media (xs) {
+                font-size: 5.5rem;
+            }
+
+            @include media (sm) {
+                span {
+                    flex: 1 1 auto;
+                }
+
+                span:first-child {
+                    text-align: right;
+                }
+
+                span:last-child {
+                    text-align: left;
+                }
+            }
+
+
+            img {
+                // display: none;
+                height: 4rem;
+                width: auto;
+
+                @include media (xs) {
+                    height: 4.5rem;
+                }
+            }
+        }
+
         h2 {
             font-weight: 300;
             letter-spacing: 1px;
-            // font-size: 3rem;
             text-transform: capitalize;
-            padding-left: $space-md;
+            font-size: 2rem;
+
+            @include media (md) {
+                font-size: 3rem;
+            }
         }
-        img {
-            height: 85px;
-            width: auto;
-            // border: 1px solid #00f;
-        //    object-fit: none;
+
+        @include media (xl) {
+            top: 25%;
         }
     }
 
@@ -66,27 +98,20 @@ img {
             position: absolute;
             right: 0;
             top: 0;
-            opacity: .2;
-        }
-
-        .overlay {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-image: $page-bg;
-            z-index: 1;
-            opacity: 0;
+            opacity: .8;
         }
     }
 
     .scroll-icon {
         z-index: 2;
         position: absolute;
-        bottom: $space-xxl;
+        bottom: $space-lg;
         left: 50%;
         transform: translate3d(-50%, 0, 0);
+
+        @include media (lg) {
+             bottom: $space-xl;
+        }
     }
 
 }

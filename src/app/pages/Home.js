@@ -1,44 +1,39 @@
 import React from 'react'
-import Icon, { SVG } from '../components/Icons'
+import Icon from '../components/Icons'
 import source from '../assets/nebula.mp4'
-import logo from '../assets/VlogoW.png'
+import poster from '../assets/nebula.jpg'
+import logo_DV from '../assets/logo_DV.png'
+import logo_D from '../assets/logo_D.png'
+import logo_V from '../assets/logo_V.png'
 
 export default function Home(props) {
 
-  let isMobile = ((navigator.userAgent).indexOf("Mobile") > 0)
+  let isMobile = ((navigator.userAgent).indexOf("Mobile") > 0);
+  let vid = window.innerWidth > 767 ? source : '';
+  let icon = isMobile ? 'chevronCircleDn' : 'mouse';
 
   const handlePageDown = () => {
     props.api.moveTo(2);
   }
 
   return (
-    <div id="Home" className="container-fluid">
+    <div id="Home" className="page container-fluid">
       <div className="header">
-        <div className="">
-          <h1 className="title">Digital <br /> Villa
-           <img src={logo} alt="logo" />
-
-          </h1>
-          <h2>Where ideas become living designs</h2>
+        <img className="main-logo visible-md" src={logo_DV} alt="DV" />
+        <div className="title row">
+          <span><img src={logo_D} alt="D" />igital</span>
+          <span><img src={logo_V} alt="V" />illa </span>
         </div>
-
+        <h2>Transforming Ideas Into living designs</h2>
       </div>
 
       <div className="video-container">
-        <div className="overlay"></div>
-        <video id="video" data-autoPlay loop muted preload>
-          <source src={source} type='video/mp4' />
+        <video id="video" data-autoplay="true" loop muted preload="true" poster={poster}>
+          <source data-src={vid} type='video/mp4' />
         </video>
       </div>
 
-      {
-        !isMobile &&
-        <Icon className="scroll-icon svg-md" icon={'mouse'} action={handlePageDown} />
-      }
-      {
-        isMobile &&
-        <Icon className="scroll-icon svg-md" icon={'chevronCircleDn'} action={handlePageDown} />
-      }
+      <Icon className="scroll-icon svg-md" icon={icon} action={handlePageDown} />
     </div>
   )
 }

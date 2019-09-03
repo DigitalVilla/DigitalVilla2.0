@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
 
 export default function FullPage(props) {
+
     const { pages, anchors, menu } = props;
+    const [isOpen, setIsOpen] = useState(false);
+
+
+    const setState = () => {
+        setIsOpen(!isOpen)
+    }
+
+
     return (
         <ReactFullpage
             licenseKey={'YOUR_KEY_HERE'}
@@ -46,7 +55,7 @@ export default function FullPage(props) {
             controlArrows={true}
             verticalCentered={false}
             // sectionsColor={['#ccc', '#fff', '#ccc', '#fff']}
-            // paddingTop={'50px'}
+            paddingTop={'50px'}
             // paddingBottom={'10px'}
             fixedElements = {null}
             responsiveWidth={0}
@@ -64,14 +73,19 @@ export default function FullPage(props) {
             //events
             onLeave={function (origin, destination, direction) {
                 // console.log('onLeave',origin, destination, direction);
+                // console.clear();
              }}
             afterLoad={function (origin, destination, direction) {
                 //  console.log('afterLoad',origin, destination, direction);
+                // console.clear();
+                console.log('checked')
+                setIsOpen(false);
             }}
             afterRender={function () {
                  let vid = document.getElementById('video');
-                 vid.playbackRate = .5;
-                 console.log('afterRender',vid);
+                 if (vid) {
+                    // vid.playbackRate = ;
+                 }
              }}
             afterResize={function (width, height) {
                 //  console.log('afterResize', width, height);
@@ -88,9 +102,9 @@ export default function FullPage(props) {
             render={({ state, fullpageApi }) => {
                 return (
                     <div>
-                        { menu && <props.menu anchors={anchors} api={fullpageApi} /> }
+                        { menu && <props.menu anchors={anchors} api={fullpageApi}  isOpen={isOpen} setIsOpen={setState} /> }
                         <ReactFullpage.Wrapper>
-                            { pages.map((page,i)=>  <Section key={i} page={page} api={fullpageApi} anchor={anchors[i]}/>) }
+                            { pages.map((page,i)=> <Section key={i} page={page} api={fullpageApi} anchor={anchors[i]}/>) }
                         </ReactFullpage.Wrapper>
                     </div>
                 );
@@ -101,8 +115,8 @@ export default function FullPage(props) {
 
 function Section(props) {
     return (
-        <div className="section" data-anchor={props.anchor}>
+        <section className="section" data-anchor={props.anchor}>
             <props.page api={props.api} />
-        </div>
+        </section>
     )
 }
