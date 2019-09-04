@@ -61,8 +61,6 @@ export default function FullPage(props) {
             responsiveWidth={0}
             responsiveHeight={0}
             responsiveSlides={false}
-            parallax={false}
-            parallaxOptions={{ type: 'reveal', percentage: 62, property: 'translate' }}
             cards={false}
             cardsOptions={{ perspective: 100, fadeContent: true, fadeBackground: true }}
 
@@ -82,10 +80,6 @@ export default function FullPage(props) {
                 setIsOpen(false);
             }}
             afterRender={function () {
-                 let vid = document.getElementById('video');
-                 if (vid) {
-                    // vid.playbackRate = ;
-                 }
              }}
             afterResize={function (width, height) {
                 //  console.log('afterResize', width, height);

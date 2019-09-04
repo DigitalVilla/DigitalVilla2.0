@@ -4,21 +4,12 @@ $arrow-head: 14px;
 $slides-gap: calc(50% - 100px);
 $nav-color: $white;
 
-@mixin reset {
-    margin: 0;
-    padding: 0;
-    width: 0;
-    height: 0;
-    border-radius: 0;
-    left: 0;
-    top: 0;
-    transform: none;
-    border: none;
-}
 
 @mixin line-span {
+    margin: 0;
     border-radius: 5px;
     top: 60%;
+    left: 0;
     height: 3px;
     width: $space-lg;
     background: $nav-color;
@@ -28,18 +19,15 @@ $nav-color: $white;
     }
 }
 
-
 #fp-nav {
     ul {
         li {
-            @include reset;
             height: $space-lg;
             width: $space-xxl;
             margin: $space-lg 0;
 
             &:hover a.active span,
             a.active span {
-                @include reset;
                 @include line-span;
                 width: $space-xl;
 
@@ -49,21 +37,12 @@ $nav-color: $white;
             }
 
             &:hover a span {
-                @include reset;
                 @include line-span;
             }
 
-            a {
-                span {
-                    @include reset;
-                    @include line-span;
-                    color: $nav-color;
-
-                    &:hover {
-                        @include reset;
-                        @include line-span;
-                    }
-                }
+            a span {
+                @include line-span;
+                color: $nav-color;
             }
 
             .fp-tooltip {
@@ -89,9 +68,9 @@ $nav-color: $white;
                 }
             }
 
-            @include media (lg) {
+            @include media (md) {
                 height: $space-xl;
-                // margin: $space-xxl $space-md;
+                margin: $space-lg $space-lg;
             }
         }
     }
