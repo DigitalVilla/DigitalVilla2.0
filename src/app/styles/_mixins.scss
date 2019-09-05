@@ -168,7 +168,7 @@
   //==== Default  Breakpoints desktop first approach ======
 
 
-  @if $breakpoint==inPhone {
+  @if $breakpoint==xsDn {
     @media only screen and (max-width: $screen-xs) {
       @content
     }
@@ -176,7 +176,7 @@
     ;
   }
 
-  @if $breakpoint==inPhone_lg {
+  @if $breakpoint==smDn {
     @media only screen and (max-width: $screen-sm) {
       @content
     }
@@ -184,7 +184,7 @@
     ;
   }
 
-  @if $breakpoint==inTablet {
+  @if $breakpoint==mdDn {
     @media only screen and (max-width: $screen-md) {
       @content
     }
@@ -192,7 +192,7 @@
     ;
   }
 
-  @if $breakpoint==inTablet_lg {
+  @if $breakpoint==lgDn {
     @media only screen and (max-width: $screen-lg) {
       @content
     }
@@ -200,7 +200,7 @@
     ;
   }
 
-  @if $breakpoint==inLaptop {
+  @if $breakpoint==xlDn {
     @media only screen and (max-width: $screen-xl) {
       @content
     }
@@ -208,7 +208,7 @@
     ;
   }
 
-  @if $breakpoint==inLaptop_lg {
+  @if $breakpoint==xxlDn {
     @media only screen and (max-width: $screen-xxl) {
       @content
     }
@@ -218,8 +218,24 @@
 
   //==== Breakpoints exclusive approach ======
 
-  @if $breakpoint==onlyTablet {
-    @media only screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+  @if $breakpoint==phone {
+    @media only screen and (max-width: $screen-md) {
+      @content
+    }
+
+    ;
+  }
+
+    @if $breakpoint==phone_lan {
+    @media only screen and (max-width: $screen-md) and (orientation: landscape) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: $screen-md) and (max-width: $screen-lg) {
       @content
     }
 
@@ -227,8 +243,8 @@
   }
 
 
-  @if $breakpoint==onlyTablet_Lan {
-    @media only screen and (min-width: $screen-sm) and (max-width: $screen-md) and (orientation: landscape) {
+  @if $breakpoint==tablet_lan {
+    @media only screen and (min-width: $screen-md) and (max-width: $screen-lg) and (orientation: landscape) {
       @content
     }
 

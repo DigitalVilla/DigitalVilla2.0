@@ -3,67 +3,45 @@
 }
 
 #Home {
+
     .header {
-        position: absolute;
-        z-index: 2;
-        top: 30%;
         left: 50%;
-        transform: translate3d(-50%, 0, 0);
+        position: absolute;
         text-align: center;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 1;
 
         .main-logo {
-            height: 10rem;
+            height: 8rem;
+            margin: 0 0 $space-md;
             width: auto;
-            margin: 0;
-            padding: $space;
+
 
             @include media (md) {
-                height: 15rem;
-                margin: 0 0 $space-md;
+                height: 13rem;
+                margin: 0 0 $space-lg;
             }
         }
 
         .title {
             font-weight: 400;
-            line-height: 1;
-            font-size: 4rem;
+            line-height: .8;
             color: #fff;
             width: 70vw;
             letter-spacing: 0.1em;
-            text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
             text-transform: uppercase;
-            margin: 0 0 $space-md;
-
-            @include media (xs) {
-                font-size: 4.9rem;
-            }
-
-
-            img {
-                height: 3.2rem;
-                width: auto;
-
-                @include media (xs) {
-                    height: 4rem;
-                }
-            }
+            margin: 0 0 $space;
+            text-align: center;
+            font-size: 4.9rem;
 
             span {
-                flex: 1 1 100%;
                 white-space: nowrap;
-                padding: 0;
+            }
 
-                @include media (sm) {
-                    flex: 1 1 auto;
-
-                    &:first-child {
-                        text-align: right;
-                    }
-
-                    &:last-child {
-                        text-align: left;
-                    }
-                }
+            img {
+                height: 4rem;
+                width: auto;
             }
         }
 
@@ -71,19 +49,19 @@
             font-weight: 300;
             letter-spacing: 1px;
             text-transform: capitalize;
+            line-height: .8;
             font-size: 2rem;
 
             @include media (md) {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
         }
 
-        @include media (md) {
-            top: 35%;
-        }
-
-        @include media (xl) {
-            top: 25%;
+        .break {
+            @include media (smDn) {
+                display: block;
+                margin: $space;
+            }
         }
     }
 
@@ -104,20 +82,33 @@
         }
     }
 
+    @keyframes float {
+        0% {
+            // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            transform: translate3d(-50%, 0, 0);
+        }
+
+        50% {
+            // box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+            transform:translate3d(-50%, -10px, 0);
+        }
+
+        100% {
+            // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
     .scroll-icon {
         z-index: 2;
         position: absolute;
         bottom: $space-lg;
         left: 50%;
         transform: translate3d(-50%, 0, 0);
+        animation: float 2s ease-in-out infinite;
 
         @include media (lg) {
             bottom: $space-xl;
         }
     }
-
-}
-
-.column {
-    border: 1px solid #fff;
 }

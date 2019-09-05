@@ -1,23 +1,23 @@
-@mixin title {
-    font-size: 10rem;
-    color: #fff;
-    letter-spacing: 0.1em;
-    font-weight: 100;
-    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
-    text-transform: uppercase;
+// @mixin title {
+//     font-size: 10rem;
+//     color: #fff;
+//     letter-spacing: 0.1em;
+//     font-weight: 100;
+//     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+//     text-transform: uppercase;
 
-    @include media (iniPad) {
-        font-size: 4rem;
-    }
+//     @include media (iniPad) {
+//         font-size: 4rem;
+//     }
 
-    @include media (inPhone) {
-        font-size: 3.5rem;
-    }
-}
+//     @include media (inPhone) {
+//         font-size: 3.5rem;
+//     }
+// }
 
-.title {
-    @include title;
-}
+// .title {
+//     @include title;
+// }
 
 
 svg {

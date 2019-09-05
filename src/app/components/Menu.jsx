@@ -11,13 +11,13 @@ const Menu = (props) => {
 
     const handleClick = (e) => {
         props.setIsOpen()
+        // props.api.destroy('all');
     }
 
   return (
     <div id="menu" className='menu'>
       <img src={logo} alt="logo" onClick={handleClick} className={classnames("toggle-button", { "active": props.isOpen })} />
-
-      <nav className={classnames("menu__nav", { "active": props.isOpen  })}>
+      {/* <nav className={classnames("menu__nav", { "active": props.isOpen  })}>
         <ul className='menu__list'>
             {
                 props.anchors.map((name, i) =>
@@ -27,7 +27,7 @@ const Menu = (props) => {
                 )
             }
         </ul>
-      </nav>
+      </nav> */}
       <span className={classnames("menu__bg menu-abs ", { "active": props.isOpen })}> &nbsp;</span>
     </div>
   )

@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import FullPage from './components/FullPage';
-import Menu from './components/Menu';
-import Home from './pages/Home';
-import About from './pages/About';
-import Works from './pages/Works';
-import Contact from './pages/Contact';
+import FullPage from './components/FullPage.jsx';
+import Menu from './components/Menu.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Works from './pages/Works.jsx';
+import Contact from './pages/Contact.jsx';
 
 
 
 class App extends Component {
   constructor() {
     super();
-    this.pages = [Home, About, Works, Contact];
     this.anchors = ['Home', 'About', 'Works', 'Contact'];
+    this.pages = [Home, About, Works, Contact];
   }
 
   render() {
