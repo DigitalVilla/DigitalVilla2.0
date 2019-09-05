@@ -67,5 +67,8 @@ export default function isMedia(screen) {
 			return width < media._xxl;
 		case '4kDn':
 			return width < media._4k;
+			default:
+			//nothing
+			break;
 	}
 }

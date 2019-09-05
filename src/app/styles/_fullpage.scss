@@ -20,6 +20,7 @@ $nav-color: $white;
 }
 
 #fp-nav {
+    animation: bounceInLeft 1s ease-in-out;
     ul {
         li {
             height: $space-lg;
@@ -42,7 +43,7 @@ $nav-color: $white;
 
             a span {
                 @include line-span;
-                color: $nav-color;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
             }
 
             .fp-tooltip {

@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import logo from '../assets/logo_DV.png'
+import Icon from './Icons'
 
 const Menu = (props) => {
 
@@ -14,21 +15,23 @@ const Menu = (props) => {
         // props.api.destroy('all');
     }
 
+
+let icons = [ 'npm','github', 'linkedin','codepen'];
   return (
     <div id="menu" className='menu'>
-      <img src={logo} alt="logo" onClick={handleClick} className={classnames("toggle-button", { "active": props.isOpen })} />
-      {/* <nav className={classnames("menu__nav", { "active": props.isOpen  })}>
-        <ul className='menu__list'>
+      <img src={logo} alt="logo" onClick={handleClick} className="menu-button" />
+      <nav className={classnames("menu-nav", { "active": props.isOpen  })}>
+        <ul>
             {
-                props.anchors.map((name, i) =>
-                    <li key={i}  className="menu__item">
-                        <button data-page={i + 1} onClick={ moveTo }>{ name }</button>
+                props.anchors.map((name, i, arr) =>
+                    <li key={i} className={classnames("hide-"+(arr.length-((i)))+" show-"+(i+1), { "active": props.isOpen})}>
+                        {/* <button className="menu-link" data-page={i + 1} onClick={ moveTo }>{ name }</button> */}
+                        <Icon className="svg-lg" icon={icons[i]} />
                     </li>
                 )
             }
         </ul>
-      </nav> */}
-      <span className={classnames("menu__bg menu-abs ", { "active": props.isOpen })}> &nbsp;</span>
+      </nav>
     </div>
   )
 }

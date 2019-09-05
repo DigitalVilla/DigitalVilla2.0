@@ -102,7 +102,7 @@
  * Hide element while making it readable for screen readers
  *  from HTML5Boilerplate:
  */
-@mixin visually-hidden {
+@mixin reader-only {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;

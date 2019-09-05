@@ -9,6 +9,7 @@ import img_4k from '../assets/nebula.jpg'
 import logo_DV from '../assets/logo_DV.png'
 import logo_D from '../assets/logo_D.png'
 import logo_V from '../assets/logo_V.png'
+import '../styles/Home.scss'
 
 export default function Home(props) {
 	let isMobile = isMedia('mobile');
@@ -29,17 +30,18 @@ export default function Home(props) {
 		<div id="Home" className="page container-fluid">
 			<div className="header noSelect">
 				<img className="main-logo" src={logo_DV} alt="DV" />
+					<h1>Digital Villa | Media Agency</h1>
 				<div className="title">
-					<span><img src={logo_D} alt="D" />igital</span>
+					<span><img src={logo_D} alt="D logo" />igital</span>
 					<span className="break"></span>
-					<span><img src={logo_V} alt="V" />illa</span>
+					<span><img src={logo_V} alt="V logo" />illa</span>
 				</div>
 				<h2>Transforming Ideas<span className="break"></span> Into living designs</h2>
 			</div>
 
 			<div className="video-container">
 				<video id="video" {...dataset} loop muted preload="true" poster={poster}>
-					<source src={source} type='video/mp4' />
+					<source data-src={source} type='video/mp4' />
 				</video>
 			</div>
 
