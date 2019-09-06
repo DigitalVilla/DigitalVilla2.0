@@ -19,7 +19,6 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 	z-index: 1000;
 
 	&-button {
-		animation: fadeIn 2s ease-in-out;
 		cursor: pointer;
 		height: 100%;
 		position: relative;
@@ -29,6 +28,13 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 		&:hover {
 			transition: all .2s;
 			transform: scale3d(1.05, 1.05, 1);
+		}
+
+		img {
+			animation: fadeIn 1s ease-in-out;
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
 		}
 	}
 

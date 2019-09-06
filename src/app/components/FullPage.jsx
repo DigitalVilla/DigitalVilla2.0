@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
+import key from '../utils/keys';
 
 export default function FullPage(props) {
     const { pages, anchors, menu } = props;
     const [isOpen, setIsOpen] = useState(false);
 
-    const setState = () => {
+    const toggleMenu = () => {
         setIsOpen(!isOpen)
     }
 
     return (
         <ReactFullpage
-            licenseKey={'YOUR_KEY_HERE'}
+            licenseKey={key('fullpage')}
             //Navigation
             menu={'#menu'}
             navigation={true}
@@ -21,33 +22,35 @@ export default function FullPage(props) {
             slidesNavigation={true}
             scrollingSpeed={800}
             fitToSectionDelay={100}
-            touchSensitivity={15}
+            touchSensitivity={5}
             recordHistory={false}
             controlArrows={true}
             verticalCentered={false}
+            animateAnchor={false}
             //events
             afterLoad={function (origin, destination, direction) {
-               isOpen && setIsOpen();
+                isOpen && setIsOpen();
             }}
+            onLeave={function (origin, destination, direction) {
+                // console.log('onLeave',origin, destination, direction);
+                // console.clear();
+            }}
+
 
             render={({ state, fullpageApi }) => {
                 return (
                     <div>
-                        { menu && <props.menu anchors={anchors} api={fullpageApi}  isOpen={isOpen} setIsOpen={setState} /> }
+                        {menu && <props.menu anchors={anchors} api={fullpageApi} isOpen={isOpen} toggleMenu={toggleMenu} />}
                         <ReactFullpage.Wrapper>
-                            { pages.map((page,i)=> <Section key={i} page={page} api={fullpageApi} anchor={anchors[i]}/>) }
+                            {pages.map((Page, i) =>
+                                <section key={i} className="section" data-anchor={anchors[i]}>
+                                    <Page api={fullpageApi} page={anchors[i]}/>
+                                </section>
+                            )}
                         </ReactFullpage.Wrapper>
                     </div>
                 );
             }}
         />
-    )
-}
-
-function Section(props) {
-    return (
-        <section className="section" data-anchor={props.anchor}>
-            <props.page api={props.api} />
-        </section>
     )
 }
