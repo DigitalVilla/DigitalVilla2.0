@@ -16,17 +16,17 @@ const Menu = (props) => {
     }
 
 
-let icons = [ 'npm','github', 'linkedin','codepen'];
+let icons = [ 'npm','github', 'linkedin','codepen','linkedin'];
   return (
     <div id="menu" className='menu'>
       <img src={logo} alt="logo" onClick={handleClick} className="menu-button" />
       <nav className={classnames("menu-nav", { "active": props.isOpen  })}>
         <ul>
             {
-                props.anchors.map((name, i, arr) =>
+               icons.map((el, i, arr) =>
                     <li key={i} className={classnames("hide-"+(arr.length-((i)))+" show-"+(i+1), { "active": props.isOpen})}>
                         {/* <button className="menu-link" data-page={i + 1} onClick={ moveTo }>{ name }</button> */}
-                        <Icon className="svg-lg" icon={icons[i]} />
+                        <Icon icon={el} />
                     </li>
                 )
             }

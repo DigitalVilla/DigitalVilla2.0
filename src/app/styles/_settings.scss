@@ -66,6 +66,8 @@ $screen-lg: 992px;
 $screen-xl: 1200px;
 // Large laptop
 $screen-xxl: 1600px;
+// $K Desktop
+$screen-4k: 3800px;
 
 // RESPONSIVE BREAKPOINTS
 $min-width: 320px;
@@ -74,5 +76,5 @@ $min-width: 320px;
 
 //Variables
 $font-color: white;
-$page-bg: linear-gradient(to left bottom, darken($brand3, 20%), darken($brand1, 30%));
+$page-bg: linear-gradient(to left bottom, darken($brand3, 50%), darken($brand1, 60%));
 $page-bg_light: linear-gradient(to left bottom, darken($brand3, 10%), darken($brand1, 20%));

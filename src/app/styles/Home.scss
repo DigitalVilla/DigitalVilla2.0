@@ -103,17 +103,21 @@
         }
     }
 
-    .scroll-icon {
-        z-index: 2;
-        position: absolute;
-        bottom: $space-lg;
-        left: 50%;
-        transform: translate3d(-50%, 0, 0);
-        animation: float 2s ease-in-out infinite;
-        animation-delay: 1s;
+    .scroll {
+        animation: fadeIn 2s ease-in-out;
 
-        @include media (lg) {
-            bottom: $space-xl;
+        &-icon {
+            z-index: 2;
+            position: absolute;
+            bottom: $space-lg;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            animation: float 2s ease-in-out infinite;
+            animation-delay: 2s;
+
+            @include media (lg) {
+                bottom: $space-xl;
+            }
         }
     }
 }

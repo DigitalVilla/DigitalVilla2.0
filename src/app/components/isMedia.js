@@ -1,16 +1,18 @@
 const media = {
 	// Small mobile
-	_xs: 360,
+	xs: 360,
 	// Large mobile
-	_sm: 576,
+	sm: 576,
 	// Small Tablet
-	_md: 768,
+	md: 768,
 	// Large Tablet
-	_lg: 992,
+	lg: 992,
 	// Small  screen
-	_xl: 1200,
+	xl: 1200,
 	// Desktop
-	_xxl: 1600,
+	xxl: 1600,
+	// 2k
+	_2k: 2048,
 	// 4k
 	_4k: 3800
 }
@@ -34,37 +36,41 @@ export default function isMedia(screen) {
 		case 'landscape':
 			return landscape;
 		case 'tablet-sm':
-			return mobile && width >= media._sm && height >= media._sm;
+			return mobile && width >= media.sm && height >= media.sm;
 		case 'tablet':
-			return mobile && width >= media._md && height >= media._md;
+			return mobile && width >= media.md && height >= media.md;
 		case 'phone':
-			return mobile && ((width < media._sm && !landscape) || (height < media._sm && landscape));
+			return mobile && ((width < media.sm && !landscape) || (height < media.sm && landscape));
 		case 'xsUp':
-			return width >= media._sm;
+			return width >= media.sm;
 		case 'smUp':
-			return width >= media._sm;
+			return width >= media.sm;
 		case 'mdUp':
-			return width >= media._md;
+			return width >= media.md;
 		case 'lgUp':
-			return width >= media._lg;
+			return width >= media.lg;
 		case 'xlUp':
-			return width >= media._xl;
+			return width >= media.xl;
 		case 'xxlUp':
-			return width >= media._xxl;
+			return width >= media.xxl;
+		case '2kUp':
+			return width >= media._2k;
 		case '4kUp':
 			return width >= media._4k;
 		case 'xsDn':
-			return width < media._sm;
+			return width < media.sm;
 		case 'smDn':
-			return width < media._sm;
+			return width < media.sm;
 		case 'mdDn':
-			return width < media._md;
+			return width < media.md;
 		case 'lgDn':
-			return width < media._lg;
+			return width < media.lg;
 		case 'xlDn':
-			return width < media._xl;
+			return width < media.xl;
 		case 'xxlDn':
-			return width < media._xxl;
+			return width < media.xxl;
+		case '2kDn':
+			return width < media._2k;
 		case '4kDn':
 			return width < media._4k;
 			default:
