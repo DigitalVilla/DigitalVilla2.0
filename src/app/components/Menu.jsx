@@ -5,10 +5,10 @@ import Icon from './Icons'
 
 const Menu = (props) => {
 
-  const moveTo = (e) => {
-    let index = e.target.dataset.page
-    props.api.silentMoveTo(index);
-  }
+//   const moveTo = (e) => {
+//     let index = e.target.dataset.page
+//     props.api.silentMoveTo(index);
+//   }
 
   const handleClick = (e) => {
     props.toggleMenu()
