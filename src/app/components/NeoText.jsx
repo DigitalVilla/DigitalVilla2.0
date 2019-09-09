@@ -42,11 +42,11 @@ export default function NeoText(props) {
 					timeId = setTimeout(next, nextDelay);
 				} else {
 					clearTimeout(timeId);
-					props.setPlay(false);
+					// props.setPlay(false);
 				}
 			}).catch((err) => {
-				props.setPlay(false);
-				props.setAnimate(true);
+				// props.setPlay(false);
+				// props.setAnimate(true);
 				counter = reset ? 0 : counter;
 				log('next().catch()', 3, true)
 			});
@@ -57,7 +57,7 @@ export default function NeoText(props) {
 
 		if (_animate && !Neo) {
 			log('TextScramble init():',7,true);
-			_autoPlay = autoPlay || true;
+			_autoPlay = autoPlay;
 			_lapses = !loop ? lapses : 1000;
 			Neo = new TextScramble(neoId, {
 				speed: speed === 'slow' ? 0.08 : speed === 'fast' ? 0.8 : 0.28,
@@ -67,7 +67,7 @@ export default function NeoText(props) {
 			});
 		}
 
-		if (_animate && (_autoPlay || props.play)) {
+		if (_animate && _autoPlay) {
 			log('invoke next()', 1, true);
 			next();
 		}

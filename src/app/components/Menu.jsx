@@ -5,11 +5,6 @@ import Icon from './Icons'
 
 const Menu = (props) => {
 
-//   const moveTo = (e) => {
-//     let index = e.target.dataset.page
-//     props.api.silentMoveTo(index);
-//   }
-
   const handleClick = (e) => {
     props.toggleMenu()
   }
@@ -26,7 +21,7 @@ const Menu = (props) => {
         <ul>
           {
             icons.map((el, i, arr) =>
-              <li key={i} className={CN("hide-" + (arr.length - ((i))) + " show-" + (i + 1), { "active": props.isOpen })}>
+              <li key={i} className={CN("hide-" + (arr.length - i) + " show-" + (i + 1), { "active": props.isOpen })}>
                 {/* <button className="menu-link" data-page={i + 1} onClick={ moveTo }>{ name }</button> */}
                 <Icon icon={el} />
               </li>

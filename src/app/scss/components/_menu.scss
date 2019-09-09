@@ -25,11 +25,6 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 		width: auto;
 		z-index: 3;
 
-		&:hover {
-			transition: all .2s;
-			transform: scale3d(1.05, 1.05, 1);
-		}
-
 		img {
 			animation: fadeIn 1s ease-in-out;
 			height: 100%;
@@ -150,7 +145,7 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 		height: $btn-size-md;
 		width: 72px;
 
-		&-button {
+		&-button, svg {
 			&:active {
 				transform: scale3d(.95, .95, 1);
 			}

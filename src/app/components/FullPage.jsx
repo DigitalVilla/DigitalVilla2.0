@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
 import key from '../utils/keys';
+import logger from '../utils/logger'
+const log = logger('<FullPage/> :');
 
 export default function FullPage(props) {
-    const { pages, anchors, menu } = props;
     const [isOpen, setIsOpen] = useState(false);
+    const { pages, anchors, menu } = props;
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -20,7 +22,7 @@ export default function FullPage(props) {
             navigationTooltips={anchors}
             showActiveTooltip={true}
             slidesNavigation={true}
-            scrollingSpeed={800}
+            scrollingSpeed={1000}
             fitToSectionDelay={100}
             touchSensitivity={5}
             recordHistory={false}
@@ -32,8 +34,8 @@ export default function FullPage(props) {
                 isOpen && setIsOpen();
             }}
             onLeave={function (origin, destination, direction) {
-                // console.log('onLeave',origin, destination, direction);
-                // console.clear();
+				origin.item.firstChild.classList.add('animateOnLeave');
+				// return false;
             }}
 
 

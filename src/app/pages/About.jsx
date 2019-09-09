@@ -7,43 +7,40 @@ import '../scss/pages/About.scss'
 
 export default function About(props) {
 	const [play, setPlay] = useState(false);
-	const [animate, setAnimate] = useState(true);
-
-	const handleClick1 = () => {
-		setPlay(true)
-	}
-	const handleClick2 = () => {
-		setAnimate(!animate)
-	}
+	// const [animate, setAnimate] = useState(true);
 
 	const isVisible = () => {
 		return props.api ? props.api.getActiveSection().anchor === props.page : false;
 	}
 
 	const neoOptions = {
-		className: 'title',
+		className: 'scrambled-text title',
 		//Controls
 		loop: true,
+		delay:500,
+		loopDelay:4000,
 		lapses: 8,
 		reset : true,
-		autoPlay: false,
-		speed: 'slow',
-		initialText: 'Select this text',
+		autoPlay: true,
+		speed: 'medium',
+		initialText: 'A bit about us',
 		phrases: [
-			'1) Hello there!',
-			'2) My name is Omar',
-			"3) I have something",
-			"4) important to tell you",
-			'5) lets have a chat'
+			'Hello there!',
+			'We are a Calgary-based',
+			'Web & Mobile Workshop',
+			"In other words...",
+			'we make amazing apps.',
+			'and wear cowboy hats!',
+			'Lets make your idea',
+			'a living design!',
 		]
 	}
 
 	return (
 		<div className={CN("container-fluid " + props.page, { "animate": isVisible() })}>
-			<h2 className="title">About Us</h2>
-			<NeoText options={neoOptions} play={play} animate={isVisible()} setAnimate={setAnimate} setPlay={setPlay} />
-			<button onClick={handleClick1}>Play</button>
-			<button onClick={handleClick2}>Skip</button>
+		<div className="scrambled-container">
+			<NeoText options={neoOptions}  animate={isVisible()} />
+		</div>
 		</div>
 	)
 

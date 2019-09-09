@@ -31,7 +31,7 @@ export default function Home(props) {
 	}
 
 	return (
-		 <div className={CN("container-fluid "+props.page, { "animate": isVisible() })}>
+		<div className={CN("container-fluid " + props.page, { "animate": isVisible() })}>
 			<div className="header noSelect">
 				<img className="main-logo" src={logo_DV} alt="DV" />
 				<h1>Digital Villa | Media Agency</h1>
@@ -42,13 +42,11 @@ export default function Home(props) {
 				</div>
 				<h2>Transforming Ideas<span className="break"></span> Into living designs</h2>
 			</div>
-			{isMedia('tablet') &&
-				<div className="video-container">
-					<video id="video" {...dataset} loop muted preload="true" poster={poster}>
-						<source data-src={source} type='video/mp4' />
-					</video>
-				</div>
-			}
+			<div className="video-container">
+				<video id="video" {...dataset} loop muted preload="true" poster={poster}>
+					<source data-src={source} type='video/mp4' />
+				</video>
+			</div>
 			<div className="scroll">
 				<Icon className="scroll-icon svg-md" icon={icon} action={handlePageDown} />
 			</div>

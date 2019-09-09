@@ -1,5 +1,5 @@
 @mixin title {
-    font-size: 6rem;
+    font-size: 5rem;
     color: #fff;
     letter-spacing: 0.1em;
     font-weight: 100;
@@ -8,13 +8,8 @@
 }
 
 .title {
-    @include title;
-	.n-char {
-		opacity: .7;
-		color: $brand1;
-	}
+	@include title;
 }
-
 
 svg {
     fill: $font-color;

@@ -3,13 +3,39 @@
 @import '../vendors/AniamteCSS/animate.css';
 
 .About {
-    opacity: 0;
+	opacity: 0;
 
-    &.animate {
-        opacity: 1;
+	&.animate {
+		opacity: 1;
 
-        .title {
-            animation: fadeInLeft .5s ease-in-out;
-        }
-    }
+		.scrambled {
+			&-container {
+				position: absolute;
+				top: 30%;
+				left: 0;
+				width: 100%;
+				text-align: center;
+			}
+
+			&-text {
+				.n-char {
+					opacity: .7;
+					color: $brand1;
+				}
+
+				animation: fadeIn 1s ease-in-out;
+			}
+		}
+
+		&.animateOnLeave {
+			opacity: 0;
+			transition: opacity .8s;
+
+			.scrambled {
+				&-text {
+					animation: fadeOut .4s ease-in-out;
+				}
+			}
+		}
+	}
 }
