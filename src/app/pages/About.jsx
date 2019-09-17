@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import CN from 'classnames'
 import NeoText from '../components/NeoText.jsx'
+import ego from '../assets/ego.png'
 import '../scss/pages/About.scss'
 // import logger from '../utils/logger';
 // let log = logger(`<About/>:`);
@@ -26,10 +27,10 @@ export default function About(props) {
 		initialText: 'A bit about us',
 		phrases: [
 			'Hello there!',
-			'We are a Calgary-based',
-			'Web & Mobile Workshop',
+			'I am a software developer',
+			'and a UX/UI designer',
 			"In other words...",
-			'we make amazing apps.',
+			'I add value to companies.',
 			'and wear cowboy hats!',
 			'Lets make your idea',
 			'a living design!',
@@ -41,6 +42,7 @@ export default function About(props) {
 		<div className="scrambled-container">
 			<NeoText options={neoOptions}  animate={isVisible()} />
 		</div>
+		<img src={ego} alt="Profile"/>
 		</div>
 	)
 
