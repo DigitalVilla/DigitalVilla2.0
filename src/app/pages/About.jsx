@@ -1,48 +1,46 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CN from 'classnames'
-import NeoText from '../components/NeoText.jsx'
 import ego from '../assets/ego.png'
 import '../scss/pages/About.scss'
+import NeoText from '../components/NeoText'
 // import logger from '../utils/logger';
 // let log = logger(`<About/>:`);
 
-export default function About(props) {
-	const [play, setPlay] = useState(false);
-	// const [animate, setAnimate] = useState(true);
 
+export default function About(props) {
 	const isVisible = () => {
 		return props.api ? props.api.getActiveSection().anchor === props.page : false;
 	}
+
+
 
 	const neoOptions = {
 		className: 'scrambled-text title',
 		//Controls
 		loop: true,
-		delay:500,
-		loopDelay:4000,
+		delay: 500,
+		loopDelay: 4000,
 		lapses: 8,
-		reset : true,
+		reset: true,
 		autoPlay: true,
 		speed: 'medium',
-		initialText: 'A bit about us',
+		initialText:'Digital Villa',
 		phrases: [
-			'Hello there!',
-			'I am a software developer',
-			'and a UX/UI designer',
-			"In other words...",
-			'I add value to companies.',
-			'and wear cowboy hats!',
-			'Lets make your idea',
-			'a living design!',
+			'Husband',
+			'Father',
+			'Developer',
+			'UX Designer',
 		]
 	}
 
 	return (
 		<div className={CN("container-fluid " + props.page, { "animate": isVisible() })}>
-		<div className="scrambled-container">
-			<NeoText options={neoOptions}  animate={isVisible()} />
-		</div>
-		<img src={ego} alt="Profile"/>
+			<div className="scrambled-container">
+			<h2 className='title'>I am</h2>
+				<NeoText options={neoOptions} animate={isVisible()} />
+			</div>
+			<img className="left" src={ego} alt="Profile Left" />
+			<img className="right" className="right" src={ego} alt="Profile Right" />
 		</div>
 	)
 

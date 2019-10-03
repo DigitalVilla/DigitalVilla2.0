@@ -1,37 +1,39 @@
 @import '../base/settings';
 @import '../base/mixins';
+@import '../base/typography';
 @import '../vendors/AniamteCSS/animate.css';
 
 .About {
 	opacity: 0;
+	transition: opacity 1s;
 
 	&.animate {
 		opacity: 1;
 
 		.scrambled {
-			&-container {
-				position: absolute;
-				top: 30%;
-				left: 0;
-				width: 100%;
-				text-align: center;
+			&-text {
+				animation: fadeIn 1s ease-in-out;
+			}
+		}
+
+		img {
+			&.left {
+				clip-path: polygon(0 0, 47% 0, 47% 100%, 0 100%);
+				transform: translate3d(-50%, -70%, 0);
 			}
 
-			&-text {
-				.n-char {
-					opacity: .7;
-					color: $brand1;
-				}
-
-				animation: fadeIn 1s ease-in-out;
+			&.right {
+				clip-path: polygon(47% 0%, 100% 0%, 100% 100%, 47% 100%);
+				transform: translate3d(-50%, -20%, 0);
 			}
 		}
 
 		&.animateOnLeave {
 			opacity: 0;
-			transition: opacity .8s;
 
 			.scrambled {
+				opacity: 0;
+
 				&-text {
 					animation: fadeOut .4s ease-in-out;
 				}
@@ -39,7 +41,38 @@
 		}
 	}
 
+
+	.scrambled {
+		&-container {
+			position: absolute;
+			width:100%;
+			top: 50%;
+			right:0;
+			text-align: center;
+			transform: translate3d(0, -50%, 0);
+
+			.title {
+				@include title;
+			}
+		}
+
+		&-text {
+			span {
+				color: $brand2;
+			}
+
+			animation: fadeIn 1s ease-in-out;
+		}
+	}
+
+
 	img {
 		border-radius: 50%;
+		position: absolute;
+		width: 150px;
+		left: 50%;
+		top: 25%;
+		transform: translate3d(-50%, -50%, 0);
+		transition: all 1s;
 	}
 }

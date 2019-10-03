@@ -6,111 +6,111 @@ $nav-color: $white;
 
 
 @mixin line-span {
-    margin: 0;
-    border-radius: 5px;
-    top: 60%;
-    left: 0;
-    height: 3px;
-    width: $space-lg;
-    background: $nav-color;
+	margin: 0;
+	border-radius: 5px;
+	top: 60%;
+	left: 0;
+	height: 3px;
+	width: $space-lg;
+	background: $nav-color;
 
-    @include media(md) {
-        width: $space-xl;
-    }
+	@include media(md) {
+		width: $space-xl;
+	}
 }
 
 #fp-nav {
-    animation: bounceInLeft 1s ease-in-out;
-    ul {
-        li {
-            height: $space-lg;
-            width: $space-xxl;
-            margin: $space-lg 0;
+	animation: bounceInLeft 1s ease-in-out;
+	ul {
+		li {
+			height: $space-lg;
+			width: $space-xxl;
+			margin: $space-lg 0;
 
-            &:hover a.active span,
-            a.active span {
-                @include line-span;
-                width: $space-xl;
+			&:hover a.active span,
+			a.active span {
+				@include line-span;
+				width: $space-xl;
 
-                @include media(md) {
-                    width: $space-xxl;
-                }
-            }
+				@include media(md) {
+					width: $space-xxl;
+				}
+			}
 
-            &:hover a span {
-                @include line-span;
-            }
+			&:hover a span {
+				@include line-span;
+			}
 
-            a span {
-                @include line-span;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-            }
+			a span {
+				@include line-span;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+			}
 
-            .fp-tooltip {
-                color: $nav-color;
-                top: -$space-sm;
-                font-size: 12px;
+			.fp-tooltip {
+				color: $nav-color;
+				top: -$space-sm;
+				font-size: 12px;
 
-                &.fp-left {
-                    left: 0;
-                }
+				&.fp-left {
+					left: 0;
+				}
 
-                &.fp-right {
-                    right: 0;
-                }
+				&.fp-right {
+					right: 0;
+				}
 
-                @include media(md) {
-                    font-size: 16px;
-                    top: -8px;
-                }
+				@include media(md) {
+					font-size: 16px;
+					top: -8px;
+				}
 
-                @include media(lg) {
-                    top: -4px;
-                }
-            }
+				@include media(lg) {
+					top: -4px;
+				}
+			}
 
-            @include media (md) {
-                height: $space-xl;
-                margin: $space-lg $space-lg;
-            }
-        }
-    }
+			@include media (md) {
+				height: $space-xl;
+				margin: $space-lg $space-lg;
+			}
+		}
+	}
 }
 
 .fp-slidesNav {
-    ul {
-        width: auto;
-        text-align: center;
+	ul {
+		width: auto;
+		text-align: center;
 
-        li {
-            margin: 2px;
+		li {
+			margin: 2px;
 
-            a span {
-                background: #ddd;
-                margin: 0;
-                transition: none;
-            }
-        }
-    }
+			a span {
+				background: #ddd;
+				margin: 0;
+				transition: none;
+			}
+		}
+	}
 }
 
 .fp-controlArrow {
-    bottom: 20px;
-    opacity: .7;
-    top: unset;
-    z-index: 999;
+	bottom: 20px;
+	opacity: .7;
+	top: unset;
+	z-index: 999;
 
-    &.fp-prev {
-        left: $slides-gap;
-        border-width: $arrow-side $arrow-head $arrow-side 0;
-    }
+	&.fp-prev {
+		left: $slides-gap;
+		border-width: $arrow-side $arrow-head $arrow-side 0;
+	}
 
-    &.fp-next {
-        right: $slides-gap;
-        border-width: $arrow-side $arrow-side $arrow-head;
-    }
+	&.fp-next {
+		right: $slides-gap;
+		border-width: $arrow-side $arrow-side $arrow-head;
+	}
 
-    &:hover {
-        opacity: 1;
-    }
+	&:hover {
+		opacity: 1;
+	}
 }

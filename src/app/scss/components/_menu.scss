@@ -1,7 +1,7 @@
 $menu-items : 5;
 $vertical:true;
 
-$btn-size: 30px;
+$btn-size: 25px;
 $btn-size-md: 40px;
 
 $gutter: $space;
@@ -15,7 +15,7 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 	height: $btn-size;
 	width: 54px;
 	top: $space-md;
-	right: $space-md;
+	right: $space;
 	z-index: 1000;
 
 	&-button {
