@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
-import key from '../utils/keys';
+// import key from '../utils/keys';
 import logger from '../utils/logger'
 const log = logger('<FullPage/> :');
 
@@ -14,7 +14,7 @@ export default function FullPage(props) {
 
     return (
         <ReactFullpage
-            licenseKey={key('fullpage')}
+            // licenseKey={}
             //Navigation
             menu={'#menu'}
             navigation={true}
@@ -29,9 +29,11 @@ export default function FullPage(props) {
             controlArrows={true}
             verticalCentered={false}
             animateAnchor={false}
+            scrollOverflow={true}
             //events
             afterLoad={function (origin, destination, direction) {
                 isOpen && setIsOpen();
+                window.scrollTo(0, 0);
             }}
             onLeave={function (origin, destination, direction) {
 				origin.item.firstChild.classList.add('animateOnLeave');
