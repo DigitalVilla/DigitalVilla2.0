@@ -1,35 +1,9 @@
-@import '../base/settings';
-@import '../base/mixins';
-@import '../base/typography';
-@import '../vendors/AniamteCSS/animate.css';
+@include Page ('About') {
 
-.About {
-	opacity: 0;
-	transition: transform 1s;
-
-	&.animate {
-		opacity: 1;
-
+	@include animateIn {
 		.scrambled {
 			&-text {
 				animation: fadeIn 2s ease-in-out;
-			}
-		}
-
-		@keyframes slash {
-			from {
-				left: 0;
-				right: 0;
-			}
-		}
-
-		.slashed {
-			.top {
-				animation: slash 1s ease-in-out;
-			}
-
-			.bot {
-				animation: slash 1s ease-in-out;
 			}
 		}
 
@@ -44,23 +18,17 @@
 				transform: translate3d(-50%, -40%, 0);
 			}
 		}
-
-		&.animateOnLeave {
-			opacity: 0;
-
-			.scrambled {
-				opacity: 0;
-
-				&-text {
-					animation: fadeOut .4s ease-in-out;
-				}
-			}
-		}
 	}
 
-	.slashed-about {
-		// margin-bottom: $space-xl;
-		// height: 100px;
+
+	@include animateOut {
+		.scrambled {
+			opacity: 0;
+
+			&-text {
+				animation: fadeOut .4s ease-in-out;
+			}
+		}
 	}
 
 	.scrambled {

@@ -5,7 +5,7 @@ $slides-gap: calc(50% - 100px);
 $nav-color: $white;
 
 
-@mixin line-span {
+.lineSpan {
 	margin: 0;
 	border-radius: 5px;
 	top: 60%;
@@ -14,13 +14,14 @@ $nav-color: $white;
 	width: $space-lg;
 	background: $nav-color;
 
-	@include media(md) {
+	@media only screen and (min-width: $screen-md) {
 		width: $space-xl;
 	}
 }
 
 #fp-nav {
 	animation: bounceInLeft 1s ease-in-out;
+
 	ul {
 		li {
 			height: $space-lg;
@@ -29,20 +30,16 @@ $nav-color: $white;
 
 			&:hover a.active span,
 			a.active span {
-				@include line-span;
+				@extend .lineSpan;
 				width: $space-xl;
-
-				@include media(md) {
-					width: $space-xxl;
-				}
 			}
 
 			&:hover a span {
-				@include line-span;
+				@extend .lineSpan;
 			}
 
 			a span {
-				@include line-span;
+				@extend .lineSpan;
 				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 			}
 
@@ -58,20 +55,27 @@ $nav-color: $white;
 				&.fp-right {
 					right: 0;
 				}
+			}
 
-				@include media(md) {
+			@media only screen and (min-width: $screen-md) {
+				height: $space-xl;
+				margin: $space-lg $space-lg;
+
+				&:hover a.active span,
+				a.active span {
+					width: $space-xxl;
+				}
+
+				.fp-tooltip {
 					font-size: 16px;
 					top: -8px;
 				}
-
-				@include media(lg) {
-					top: -4px;
-				}
 			}
 
-			@include media (md) {
-				height: $space-xl;
-				margin: $space-lg $space-lg;
+			@media only screen and (min-width: $screen-lg) {
+				.fp-tooltip {
+					top: -4px;
+				}
 			}
 		}
 	}

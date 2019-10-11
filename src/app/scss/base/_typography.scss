@@ -116,3 +116,18 @@ svg {
 //     border: 0;
 //     border: none;
 // }
+
+
+	@keyframes float {
+		0% {
+			transform: translate3d(-50%, 0, 0);
+		}
+
+		50% {
+			transform: translate3d(-50%, -10px, 0);
+		}
+
+		100% {
+			transform: translate3d(-50%, 0, 0);
+		}
+	}

@@ -1,14 +1,5 @@
-@import '../base/settings';
-@import '../base/mixins';
-@import '../vendors/AniamteCSS/animate.css';
-
-.Home {
-	opacity: 0;
-	transition: opacity .5s;
-
-	&.animate {
-		opacity: 1;
-
+@include Page ('Home') {
+	@include animateIn {
 		.main-logo {
 			animation: bounceInDown 1.2s ease-in-out;
 		}
@@ -33,24 +24,22 @@
 				animation-delay: 1.6s;
 			}
 		}
+	}
 
-		&.animateOnLeave {
-			opacity: 0;
-			transition: opacity .4s;
+	@include animateOut {
+		.main-logo {
+			animation: fadeOutRight .4s ease-in-out;
+		}
 
-			.main-logo {
-				animation: fadeOutRight .4s ease-in-out;
-			}
+		.title {
+			animation: fadeOutLeft .4s ease-in-out;
+		}
 
-			.title {
-				animation: fadeOutLeft .4s ease-in-out;
-			}
-
-			h2 {
-				animation: fadeOutRight .4s ease-in-out;
-			}
+		h2 {
+			animation: fadeOutRight .4s ease-in-out;
 		}
 	}
+
 
 	.header {
 		left: 50%;
@@ -133,20 +122,6 @@
 			right: 0;
 			top: 0;
 			// opacity: .9;
-		}
-	}
-
-	@keyframes float {
-		0% {
-			transform: translate3d(-50%, 0, 0);
-		}
-
-		50% {
-			transform: translate3d(-50%, -10px, 0);
-		}
-
-		100% {
-			transform: translate3d(-50%, 0, 0);
 		}
 	}
 
