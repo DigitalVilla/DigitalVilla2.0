@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
-import key from '../utils/keys';
 import logger from '../utils/logger'
 import BasePage from '../pages/BasePage'
 const log = logger('<FullPage/> :');
@@ -15,7 +14,7 @@ export default function FullPage(props) {
 
 	return (
 		<ReactFullpage
-			licenseKey={key('fullpage')}
+			licenseKey={process.env.REACT_APP_FP}
 			//Navigation
 			menu={'#menu'}
 			navigation={true}

@@ -2,6 +2,7 @@
  * @fullpage/react-fullpage 0.1.16
  * https://github.com/alvarotrigo/react-fullpage
  * @license https://github.com/alvarotrigo/react-fullpage#license
+ * @Modified by DigitalVilla.co 0.1.2
  *
  * Copyright (C) 2018 alvarotrigo.com - A project by Alvaro Trigo & Michael Walker
  */
