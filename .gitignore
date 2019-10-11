@@ -10,7 +10,7 @@
 /src/app/utils/keys.js
 
 # production
-/build
+#/build
 
 # misc
 .DS_Store

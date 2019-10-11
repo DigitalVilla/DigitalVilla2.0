@@ -5,6 +5,7 @@
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.16",
     "classnames": "^2.2.6",
+    "concurrently": "^5.0.0",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -12,7 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js | react-scripts build",
+    "update": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
+    "build": "yarn update | react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
