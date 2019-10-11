@@ -12,8 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "update":"cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
-    "build": "react-scripts build",
+    "build": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js | react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
