@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect  } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Base from "../layout/Base"
 import Menu from "../components/Menu.jsx"
@@ -11,6 +11,11 @@ export default function FullPage() {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
+useEffect(() => {
+  console.log('WARPED');
+
+})
 
   return (
     <ReactFullpage

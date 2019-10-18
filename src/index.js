@@ -5,11 +5,7 @@ import './app/scss/main.scss'
 import IEcheck from './app/utils/IEcheck' // eslint-disable-line no-unused-vars
 // import * as serviceWogitrker from './services/serviceWorker';
 
-setTimeout(() => {
-    document.body.removeChild(document.getElementById('loader'));
-    return ReactDOM.render( < App / > , document.getElementById('root'));
-}, 2000);
-
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
