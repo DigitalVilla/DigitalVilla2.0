@@ -1,53 +1,44 @@
-$menu-items : 5;
-$vertical:true;
-
-$btn-size: 25px;
-$btn-size-md: 40px;
-
-$gutter: $space;
-$gutter-md: $space-lg;
-
-$nav-size: ($btn-size + $gutter) * $menu-items;
-$nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
-
 .menu {
+	// constants
+	$vertical: true;
+	$menu-items: 5;
+	// variables
+	--btn-width: 42px;
+	--btn-height: 25px;
+	--position: var(--space-md);
+	--gutter: var(--space);
+	--nav-size: calc((var(--btn-height) + var(--gutter)) * #{$menu-items});
+
 	position: absolute;
-	height: $btn-size;
-	width: 54px;
-	top: $space-md;
-	right: $space;
+	height: var(--btn-height);
+	width: var(--btn-width);
+	top: var(--position);
+	right: var(--position);
 	z-index: 1000;
 
 	&-button {
-		cursor: pointer;
 		height: 100%;
-		position: relative;
-		width: auto;
-		z-index: 3;
 
 		img {
+			@extend .img-fit;
 			animation: fadeIn 1s ease-in-out;
-			height: 100%;
-			width: 100%;
-			object-fit: contain;
 		}
 	}
 
 	&-nav {
-		position: absolute;
+		height: 0;
+		width: 0;
 		overflow: hidden;
-		z-index: 1;
+		position: absolute;
 		transition: all .1s;
 		transition-delay: .6s;
-		width: 0;
-		height: 0;
 
 		@if $vertical {
-			top: $btn-size;
+			top: var(--btn-height);
 		}
 
 		@else {
-			left: - $nav-size;
+			left: calc(var(--nav-size) * -1);
 			top: 0;
 		}
 
@@ -56,39 +47,34 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 			transition-delay: 0;
 
 			@if $vertical {
-				height: $nav-size;
+				height: var(--nav-size);
 				width: 100%;
 			}
 
 			@else {
-				width: $nav-size;
+				width: var(--nav-size);
 				height: 100%;
 			}
 		}
 
 		ul {
 			font-size: 2.5rem;
-			list-style: none;
-			display: flex;
-			align-content: center;
-			justify-content: space-between;
+			@include flex(space-between);
 
 			@if $vertical {
-				padding-top: $gutter;
+				padding-top: var(--gutter);
 				flex-direction: column;
 				height: 100%;
 			}
 
 			@else {
-				padding-right: $gutter;
+				padding-right: calc(var(--gutter)/2);
 			}
 
 			li {
-				height: $btn-size;
-				width: $btn-size;
-				display: flex;
-				align-content: center;
-				justify-content: center;
+				height: var(--btn-height);
+				width: var(--btn-width);
+				@include flex(center);
 
 				@if $vertical {
 					margin: 0 auto;
@@ -103,89 +89,51 @@ $nav-size-md: ($btn-size-md + $gutter-md) * $menu-items;
 						opacity: 0;
 
 						@if $vertical {
-							transform: translate3d(0, -$nav-size, 0) scale3d(1, 1, 0);
-							transition: all ($i)*.2s;
+							transform: translate(0, calc(var(--nav-size) * -1));
+							transition: all ($i) * .2s;
 						}
 
 						@else {
-							transform: translate3d(($nav-size + 120), 0, 0) scale3d(1, 1, 0);
-							transition-property: transform, opacity;
-							transition-duration: ($i)*.15s, 2s;
+							transform: translate(var(--nav-size), 0);
+							transition: transform ($i) * .15s, opacity ($i) * .1s;
 						}
 					}
 
 					&.show-#{$i} {
 						&.active {
 							opacity: 1;
-							transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+							transform: translate3d(0, 0, 0);
 
 							@if $vertical {
-								transition-property: transform, opacity;
-								transition-duration: ($i)*.15s, .8s;
+								transition-property: transform  ($i) * .15s, opacity ($i) * .2s;
 							}
 
 							@else {
-								transition: all ($i)*.2s;
+								transition: all ($i) * .2s;
 							}
 						}
 					}
 				}
 
 				svg {
-					height: $btn-size - 4;
-					width: $btn-size - 4;
+					height: calc(var(--btn-height) - 4px);
+					width: calc(var(--btn-height) - 4px);
 				}
 			}
 		}
 	}
 
-	@include media (md) {
-		top: $space-xl;
-		right: $space-xl;
-		height: $btn-size-md;
-		width: 72px;
+	@include media {
+		--btn-size: 40px;
+		--btn-width: 70px;
+		--btn-height: 40px;
+		--gutter: var(--space-lg);
+		--position: var(--space-xl);
 
-		&-button, svg {
+		&-button,
+		svg {
 			&:active {
 				transform: scale3d(.95, .95, 1);
-			}
-		}
-
-		&-nav {
-			@if $vertical {
-				top: $btn-size-md;
-
-				&.active {
-					height: $nav-size-md;
-				}
-
-				ul {
-					padding-top: $gutter-md;
-				}
-			}
-
-			@else {
-				left: - $nav-size-md;
-
-				&.active {
-					width: $nav-size-md;
-				}
-
-				ul {
-					padding-right: $gutter-md;
-				}
-			}
-
-			ul {
-				li {
-					height: $btn-size-md;
-					width: $btn-size-md;
-
-					svg {
-						height: $btn-size-md - 4;
-						width: $btn-size-md - 4;
-					}
-				}
 			}
 		}
 	}
