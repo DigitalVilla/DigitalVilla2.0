@@ -3,9 +3,9 @@
 	$vertical: true;
 	$menu-items: 5;
 	// variables
-	--btn-width: 42px;
-	--btn-height: 25px;
-	--position: var(--space-md);
+	--btn-width: 50px;
+	--btn-height: 30px;
+	--position: calc(var(--space-md) * 1.2);
 	--gutter: var(--space);
 	--nav-size: calc((var(--btn-height) + var(--gutter)) * #{$menu-items});
 

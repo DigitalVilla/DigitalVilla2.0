@@ -5,17 +5,22 @@ import Menu from "../components/Menu.jsx"
 import pages from "../constants/pages"
 import "../scss/main.scss"
 
-export default function FullPage() {
+export default function FullPage(props) {
   const [isOpen, setIsOpen] = useState(false)
   const anchors = pages.map((page)=> page.name);
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-useEffect(() => {
-  console.log('WARPED');
+console.log(props.display);
 
-})
+  useEffect(() => {
+      if (!props.display) {
+         setTimeout(() => {
+        document.getElementsByClassName('fp-completely')[0].classList.remove('active');
+        }, 100);
+      }
+  })
 
   return (
     <ReactFullpage

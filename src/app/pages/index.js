@@ -1,25 +1,20 @@
-import React, {
-  useEffect,
-  useState
-} from "react"
-import Fullpage from './Fulllpage'
+import React, { useEffect, useState } from "react";
+import Fullpage from "./Fulllpage";
 
 export default function Index() {
-
-const [toLoad, setToLoad ] = useState(false);
+  const [toLoad, setToLoad] = useState(false);
   useEffect(() => {
-    console.log('WARPED');
+    console.log("WARPED");
     setTimeout(() => {
-      !toLoad && document.body.removeChild(document.getElementById('loader'));
+      if (!toLoad) {
+        document.body.removeChild(document.getElementById("loader"));
+        document
+          .getElementsByClassName("fp-completely")[0]
+          .classList.add("active");
+      }
       setToLoad(true);
     }, 2000);
+  });
 
-  })
-
-  if (toLoad) {
-    return ( <Fullpage /> )
-  }
-  else {
-    return ( <></> )
-  }
+  return <Fullpage display={toLoad} />;
 }
