@@ -46,7 +46,7 @@
     #loader {
       height: 100vh;
       width: 100vw;
-
+      z-index: 1001;
     }
 
     #loader .warp-container {
@@ -55,14 +55,12 @@
       overflow: hidden;
       left: 50%;
       transform: translate(-50%, -60%);
-      width: 340px;
-/* border: 1px solid #00f; */
+      width: 280px;
     }
-
 
     #loader .warp-container h2 {
       text-align: center;
-      font-size:30px;
+      font-size: 25px;
       font-family: sans-serif;
       font-weight: 300;
       opacity: .8;
@@ -71,12 +69,12 @@
       border-right: .15em solid rgb(255, 255, 255);
       white-space: nowrap;
       margin: 0 auto;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       animation:
         typing 1.5s steps(40, end),
         blink-caret .75s step-end infinite;
-    }
 
+    }
 
     @keyframes warp-ripple {
       0% {
@@ -126,6 +124,36 @@
       animation-delay: -0.3s;
     }
   </style>
+
+  <script>
+    (function () {
+      console.log('hello');
+
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+      if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) { // eslint-disable-line no-useless-escape
+        setTimeout(() => {
+          document.body.innerHTML = `
+<section class="section" data-anchor="404">
+    <div class="Error container-fluid">
+       <div class="header noSelect"><img class="main-logo" src="/static/media/logo_DV.76f98a33.png" alt="DV">
+            <h1>Digital Villa | Media Agency, Web Design, Software Development, Graphic design, Website</h1>
+            <div class="title"><span>Digital Villa</span></div>
+            <h2 class="main">You have landed In a black hole!<div class="breaks">&nbsp;</div> Get back in Orbit with a real Browser:</h2>
+            <a class="ie-btn" href="https://www.mozilla.org/firefox/new/">Firefox</a>
+            <a class="ie-btn" href="https://www.google.com/chrome/">Chrome</a>
+            <h3>Don't miss out. IExplorer is not longer supported by <a href="https://www.microsoft.com/en-us/microsoft-365/windows/end-of-ie-support">Microsoft</a> </h3>
+        </div>
+    </div>
+</section>
+`;
+        }, 2400);
+      }
+
+
+      return false;
+    })();
+  </script>
 </head>
 
 <body>

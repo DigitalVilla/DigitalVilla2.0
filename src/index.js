@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/pages/index.js';
 import './app/scss/main.scss'
-import IEcheck from './app/utils/IEcheck' // eslint-disable-line no-unused-vars
 // import * as serviceWogitrker from './services/serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
