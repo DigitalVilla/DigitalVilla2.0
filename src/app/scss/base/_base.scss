@@ -25,7 +25,7 @@ body {
 	font-size: var(--text);
 	font-family: 'Oswald',sans-serif;
 	font-family: var(--text-font);
-	background-image: var(--grad-bg-dark);
+	// background-image: var(--grad-bg-dark);
 }
 
 .container {
@@ -55,22 +55,4 @@ button {
 
 .section {
 	overflow: hidden;
-}
-
-.visible-md {
-	display: none;
-
-	@include media {
-		display: inline-flex;
-	}
-}
-.page-bg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0;
 }

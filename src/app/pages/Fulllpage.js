@@ -34,7 +34,7 @@ export default function FullPage() {
         isOpen && setIsOpen()
       }}
       onLeave={function(origin, destination, direction) {
-        // return false
+        // return false;
       }}
       render={({ state, fullpageApi }) => {
         return (

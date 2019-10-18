@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.742f4af5.chunk.css",
-    "main.js": "/static/js/main.9a2445e4.chunk.js",
-    "main.js.map": "/static/js/main.9a2445e4.chunk.js.map",
+    "main.css": "/static/css/main.aaad3645.chunk.css",
+    "main.js": "/static/js/main.e11dc8e8.chunk.js",
+    "main.js.map": "/static/js/main.e11dc8e8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bdbb6f3c.js",
     "runtime-main.js.map": "/static/js/runtime-main.bdbb6f3c.js.map",
     "static/js/2.35af31f5.chunk.js": "/static/js/2.35af31f5.chunk.js",
     "static/js/2.35af31f5.chunk.js.map": "/static/js/2.35af31f5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f45fc5c044aec187a43d04c58c337c32.js": "/precache-manifest.f45fc5c044aec187a43d04c58c337c32.js",
+    "precache-manifest.0c258cdf929b42a29ebf4bf72a0c96a3.js": "/precache-manifest.0c258cdf929b42a29ebf4bf72a0c96a3.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.742f4af5.chunk.css.map": "/static/css/main.742f4af5.chunk.css.map",
+    "static/css/main.aaad3645.chunk.css.map": "/static/css/main.aaad3645.chunk.css.map",
     "static/media/ego.png": "/static/media/ego.850a67c5.png",
     "static/media/logo_DV.png": "/static/media/logo_DV.76f98a33.png",
     "static/media/nebula-lg.jpg": "/static/media/nebula-lg.b0c4a963.jpg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.bdbb6f3c.js",
     "static/js/2.35af31f5.chunk.js",
-    "static/css/main.742f4af5.chunk.css",
-    "static/js/main.9a2445e4.chunk.js"
+    "static/css/main.aaad3645.chunk.css",
+    "static/js/main.e11dc8e8.chunk.js"
   ]
 }

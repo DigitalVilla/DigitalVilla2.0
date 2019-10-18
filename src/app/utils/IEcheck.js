@@ -15,11 +15,11 @@ var template = `
 </section>
 `;
 
-export default (function msieversion() {
+export default (function () {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) { // eslint-disable-line no-useless-escape
-            document.body.innerHTML = template;
+        document.body.innerHTML = template;
     }
     return false;
 })();
