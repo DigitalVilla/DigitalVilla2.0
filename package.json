@@ -10,7 +10,7 @@
     "react-scripts": "^3.1.1"
   },
   "scripts": {
-    "restore": "yarn add @fullpage/react-fullpage",
+    "full": "yarn add @fullpage/react-fullpage",
     "start": "react-scripts start",
     "update": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
     "build": "yarn update | react-scripts build",
