@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from "react"
+import React, { useState, useEffect } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Base from "../layout/Base"
 import Menu from "../components/Menu.jsx"
@@ -6,65 +6,65 @@ import pages from "../constants/pages"
 import "../scss/main.scss"
 
 export default function FullPage(props) {
-  const [isOpen, setIsOpen] = useState(false)
-  const anchors = pages.map((page)=> page.name);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+	const [isOpen, setIsOpen] = useState(false)
+	const anchors = pages.map((page) => page.name);
+	const toggleMenu = () => {
+		setIsOpen(!isOpen)
+	}
 
-console.log(props.display);
+	console.log(props.display);
 
-  useEffect(() => {
-      if (!props.display) {
-         setTimeout(() => {
-        document.getElementsByClassName('fp-completely')[0].classList.remove('active');
-        }, 100);
-      }
-  })
+	useEffect(() => {
+		if (!props.display) {
+			setTimeout(() => {
+				document.getElementsByClassName('fp-completely')[0].classList.remove('active');
+			}, 100);
+		}
+	})
 
-  return (
-    <ReactFullpage
-      licenseKey={process.env.REACT_APP_FP}
-      //Navigation
-      menu={"#menu"}
-      navigation={true}
-      navigationPosition={"left"}
-      // navigationTooltips={anchors}
-      // showActiveTooltip={true}
-      slidesNavigation={true}
-      scrollingSpeed={1000}
-      fitToSectionDelay={100}
-      touchSensitivity={5}
-      recordHistory={false}
-      controlArrows={false}
-      verticalCentered={false}
-      animateAnchor={false}
-      //events
-      afterLoad={function(origin, destination, direction) {
-        isOpen && setIsOpen()
-      }}
-      onLeave={function(origin, destination, direction) {
-        // return false;
-      }}
-      render={({ state, fullpageApi }) => {
-        return (
-          <div>
-            <Menu
-              anchors={anchors}
-              api={fullpageApi}
-              isOpen={isOpen}
-              toggleMenu={toggleMenu}
-            />
-            <ReactFullpage.Wrapper>
-              {pages.map((p, i) =>
+	return (
+		<ReactFullpage
+			licenseKey={process.env.REACT_APP_FP}
+			//Navigation
+			menu={"#menu"}
+			navigation={true}
+			navigationPosition={"left"}
+			// navigationTooltips={anchors}
+			// showActiveTooltip={true}
+			slidesNavigation={true}
+			scrollingSpeed={1000}
+			fitToSectionDelay={100}
+			touchSensitivity={5}
+			recordHistory={false}
+			controlArrows={false}
+			verticalCentered={false}
+			animateAnchor={false}
+			//events
+			afterLoad={function (origin, destination, direction) {
+				isOpen && setIsOpen()
+			}}
+			onLeave={function (origin, destination, direction) {
+				// return false;
+			}}
+			render={({ state, fullpageApi }) => {
+				return (
+					<div>
+						<Menu
+							anchors={anchors}
+							api={fullpageApi}
+							isOpen={isOpen}
+							toggleMenu={toggleMenu}
+						/>
+						<ReactFullpage.Wrapper>
+							{pages.map((p, i) =>
 								<Base key={i} api={fullpageApi} pageName={p.name} >
 									<p.page api={fullpageApi} isVisible={false} />
 								</Base>
 							)}
-            </ReactFullpage.Wrapper>
-          </div>
-        )
-      }}
-    />
-  )
+						</ReactFullpage.Wrapper>
+					</div>
+				)
+			}}
+		/>
+	)
 }

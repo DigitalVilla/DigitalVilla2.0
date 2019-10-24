@@ -16,7 +16,6 @@
 			transform: translate3d(0, -50%, 0);
 
 			@include mediaDn($screen-xl, true) {
-				border: 1px solid #00f;
 				top: calc(var(--space-xxl) * 4);
 			}
 		}
