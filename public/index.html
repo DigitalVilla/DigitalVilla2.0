@@ -13,16 +13,11 @@
 	<style>
 		body {
 			margin: 0;
-			background: #999 -moz-radial-gradient(circle farthest-side, #261436 , #05051e);
-			background: #999 -webkit-radial-gradient(circle farthest-side, #261436 , #05051e);
-			background: #999 radial-gradient(circle farthest-side, #261436 , #05051e);
-
-			/* background: -moz-radial-gradient(center, ellipse cover,  #361433 0%, #291436 73%, #05051e 100%, #040411 100%);
-			background: -webkit-radial-gradient(center, ellipse cover,  #361433 0%, #291436 73%, #05051e 100%, #040411 100%);
-			background: radial-gradient(ellipse at center, #05051e 0%, #291436 73%, #05051e 100%, #040411 100%); */
+			background: #999 -moz-radial-gradient(circle farthest-side, #261436, #05051e);
+			background: #999 -webkit-radial-gradient(circle farthest-side, #261436, #05051e);
+			background: #999 radial-gradient(circle farthest-side, #261436, #05051e);
 		}
 
-		/* The typing effect */
 		@keyframes typing {
 			from {
 				width: 0
@@ -33,7 +28,6 @@
 			}
 		}
 
-		/* The typewriter cursor effect */
 		@keyframes blink-caret {
 
 			from,
@@ -123,40 +117,7 @@
 		.warp-ripple div:nth-child(3) {
 			animation-delay: -0.4s;
 		}
-
-		/* .warp-ripple div:nth-child(4) {
-			animation-delay: -0.3s; */
-		/* } */
 	</style>
-
-	<script>
-		(function () {
-			var ua = window.navigator.userAgent;
-			var msie = ua.indexOf("MSIE ");
-			if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) { // eslint-disable-line no-useless-escape
-				setTimeout(() => {
-					document.body.innerHTML =
-						`
-<section class="section" data-anchor="404">
-    <div class="Error container-fluid">
-       <div class="header noSelect"><img class="main-logo" src="/static/media/logo_DV.76f98a33.png" alt="DV">
-            <h1>Digital Villa | Media Agency, Web Design, Software Development, Graphic design, Website</h1>
-            <div class="title"><span>Digital Villa</span></div>
-            <h2 class="main">You have landed In a black hole!<div class="breaks">&nbsp;</div> Get back in Orbit with a real Browser:</h2>
-            <a class="ie-btn" href="https://www.mozilla.org/firefox/new/">Firefox</a>
-            <a class="ie-btn" href="https://www.google.com/chrome/">Chrome</a>
-            <h3>Don't miss out. IExplorer is not longer supported by <a href="https://www.microsoft.com/en-us/microsoft-365/windows/end-of-ie-support">Microsoft</a> </h3>
-        </div>
-    </div>
-</section>
-`;
-				}, 2400);
-			}
-
-
-			return false;
-		})();
-	</script>
 </head>
 
 <body>
@@ -166,14 +127,12 @@
 			<div class="warp-ripple">
 				<div></div>
 				<div></div>
-				<!-- <div></div> -->
 				<div></div>
 			</div>
-			<h2>You are now in space...</h2>
+			<h2>Entering outer space</h2>
 		</div>
 	</div>
 	<div id="root"></div>
-
 </body>
 
 </html>
