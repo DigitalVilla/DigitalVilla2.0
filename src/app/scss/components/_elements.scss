@@ -27,6 +27,7 @@
 		font-weight: 400;
 		line-height: .9;
 		text-align: center;
+<<<<<<< HEAD
 		text-transform: uppercase;
 		width: 70vw;
 	}
@@ -46,6 +47,53 @@
 		@include hide;
 		margin: 12px;
 	}
+=======
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		z-index: 1;
+
+		.main-logo {
+			height: 12rem;
+			height: calc(var(--text-xxxl) * 1.1);
+			margin: 0 0 2.2rem;
+			margin: 0 0 var(--base-gutter);
+		}
+
+		h1 {
+			@extend .reader-only;
+		}
+
+		.title {
+			color: #fff;
+			letter-spacing: 6px;
+			letter-spacing: var(--space-sm);
+			font-size: 4rem;
+			font-size: var(--text-xl);
+			margin: 0 0 2.2rem;
+			margin: 0 0 var(--base-gutter);
+			font-weight: 400;
+			line-height: .9;
+			text-align: center;
+			text-transform: uppercase;
+			width: 70vw;
+		}
+
+		h2 {
+			font-weight: 300;
+			letter-spacing: 1px;
+			text-transform: capitalize;
+			line-height: .8;
+			font-size: var(--text-md);
+			margin-bottom: 60px;
+			margin-bottom: var(--space-xxl);
+		}
+
+		.break {
+			@include hide;
+			margin: 12px;
+			margin: var(--space);
+		}
+>>>>>>> 154a857b4b88587353c15f69b41896576dce0fdf
 }
 
 a {
