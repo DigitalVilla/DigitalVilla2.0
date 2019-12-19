@@ -1,31 +1,17 @@
 {
   "files": {
-<<<<<<< HEAD
-    "main.css": "/static/css/main.12d2b841.chunk.css",
-    "main.js": "/static/js/main.567f13bd.chunk.js",
-    "main.js.map": "/static/js/main.567f13bd.chunk.js.map",
+    "main.css": "/static/css/main.6ceeb679.chunk.css",
+    "main.js": "/static/js/main.20ca404b.chunk.js",
+    "main.js.map": "/static/js/main.20ca404b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bdbb6f3c.js",
     "runtime-main.js.map": "/static/js/runtime-main.bdbb6f3c.js.map",
-    "static/js/2.b5dee160.chunk.js": "/static/js/2.b5dee160.chunk.js",
-    "static/js/2.b5dee160.chunk.js.map": "/static/js/2.b5dee160.chunk.js.map",
+    "static/js/2.9446593d.chunk.js": "/static/js/2.9446593d.chunk.js",
+    "static/js/2.9446593d.chunk.js.map": "/static/js/2.9446593d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5bf9ad5c73ac7c013f7cd2f86b043d04.js": "/precache-manifest.5bf9ad5c73ac7c013f7cd2f86b043d04.js",
+    "precache-manifest.d507c78bd61461f8a8898138e853aeb3.js": "/precache-manifest.d507c78bd61461f8a8898138e853aeb3.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.12d2b841.chunk.css.map": "/static/css/main.12d2b841.chunk.css.map",
+    "static/css/main.6ceeb679.chunk.css.map": "/static/css/main.6ceeb679.chunk.css.map",
     "static/media/Resume.pdf": "/static/media/Resume.2e7394fe.pdf",
-=======
-    "main.css": "/static/css/main.05820ea3.chunk.css",
-    "main.js": "/static/js/main.12965fb3.chunk.js",
-    "main.js.map": "/static/js/main.12965fb3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.bdbb6f3c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.bdbb6f3c.js.map",
-    "static/js/2.5dfd0cde.chunk.js": "/static/js/2.5dfd0cde.chunk.js",
-    "static/js/2.5dfd0cde.chunk.js.map": "/static/js/2.5dfd0cde.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.b2dfec8a32b3f2f3fe41d976f6aac425.js": "/precache-manifest.b2dfec8a32b3f2f3fe41d976f6aac425.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.05820ea3.chunk.css.map": "/static/css/main.05820ea3.chunk.css.map",
->>>>>>> 154a857b4b88587353c15f69b41896576dce0fdf
     "static/media/ego.png": "/static/media/ego.18908493.png",
     "static/media/logo_DV.png": "/static/media/logo_DV.76f98a33.png",
     "static/media/logo_Nebula.png": "/static/media/logo_Nebula.5a5e1ac6.png",
@@ -37,14 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bdbb6f3c.js",
-<<<<<<< HEAD
-    "static/js/2.b5dee160.chunk.js",
-    "static/css/main.12d2b841.chunk.css",
-    "static/js/main.567f13bd.chunk.js"
-=======
-    "static/js/2.5dfd0cde.chunk.js",
-    "static/css/main.05820ea3.chunk.css",
-    "static/js/main.12965fb3.chunk.js"
->>>>>>> 154a857b4b88587353c15f69b41896576dce0fdf
+    "static/js/2.9446593d.chunk.js",
+    "static/css/main.6ceeb679.chunk.css",
+    "static/js/main.20ca404b.chunk.js"
   ]
 }
