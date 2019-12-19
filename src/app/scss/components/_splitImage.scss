@@ -1,29 +1,28 @@
 .split-image {
-	--angle: 7deg;
-	--width: calc(var(--space-xxxl) * 4);
-	--displacement: 10%;
+	--angle: 10deg;
+	--width: 15rem;
+	--radius: 50%;
+	--displacement: 5%;
 
 	@include flex(center);
+	transform: rotate(var(--angle));
 	width: var(--width);
-	position: absolute;
-	left: 50%;
-	top: 10%;
-	transform: translate(-50%, 0) rotate(var(--angle));
 
 	div {
-		overflow: hidden;
-		width: 100%;
 		height: 100%;
+		width: 100%;
+		overflow: hidden;
 		position: relative;
+
 		img {
-			border-radius: 50%;
 			@extend .img-fit;
+			border-radius: var(--radius);
 			position: relative;
 		}
 	}
 
 	& div:first-child {
-		transform: translateY(-10%);
+		transform: translateY(calc(var(--displacement) * -1 ));
 
 		img {
 			right: -50%;
@@ -32,14 +31,11 @@
 	}
 
 	& div:last-child {
-		transform: translateY(10%);
+		transform: translateY(var(--displacement));
 
 		img {
-
 			left: -50%;
 			transform: rotate(calc(var(--angle) * -1 ));
 		}
 	}
-
-
 }

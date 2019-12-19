@@ -1,5 +1,5 @@
 .Title {
-	font-size: calc(var(--text-xl) *.8);
+	font-size: var(--font-xxl);
 	color: var(--white);
 	letter-spacing: 0.1em;
 	font-weight: 200;
@@ -12,31 +12,24 @@ svg {
 	fill: var(--font-color);
 }
 
-.svg-xl {
-	svg {
-		height: 6rem;
-		width: 6rem;
-	}
-}
-
 .svg-lg {
 	svg {
-		height: 4rem;
-		width: 4rem;
+		height: var(--space-xxl);
+		width: var(--space-xxl);
 	}
 }
 
 .svg-md {
 	svg {
-		height: 3rem;
-		width: 3rem;
+		height: var(--space-xl);
+		width: var(--space-xl);
 	}
 }
 
 .svg-sm {
 	svg {
-		height: 2rem;
-		width: 2rem;
+			height: var(--space-lg);
+		width: var(--space-lg);
 	}
 }
 
@@ -60,7 +53,7 @@ svg {
 	color: var(--btn-color);
 	transition: var(--transition);
 	border-radius: 2px;
-	font-size: var(--text);
+	font-size: var(--font);
 	text-transform: uppercase;
 	background: var(--btn-background);
 	letter-spacing: 2px;
@@ -92,6 +85,30 @@ svg {
 	/* Internet Explorer/Edge */
 	user-select: none;
 	/* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
 }
 
 

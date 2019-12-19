@@ -51,8 +51,9 @@ export default function FullPage(props) {
 					<div>
 						<Menu
 							anchors={anchors}
+							isLoaded={props.display}
 							api={fullpageApi}
-							isOpen={isOpen}
+							isOpen={ isOpen}
 							toggleMenu={toggleMenu}
 						/>
 						<ReactFullpage.Wrapper>

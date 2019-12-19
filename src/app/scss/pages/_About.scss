@@ -5,35 +5,44 @@
 }
 
 @include Page ('About') {
-	.scrambled {
+	transition: all .2s;
 
-		&-container {
-			position: absolute;
-			width: 100%;
-			top: calc(var(--space-xxxl) * 4);
-			right: 0;
-			text-align: center;
-			transform: translate3d(0, -50%, 0);
+	.head-container {
+		width: 100%;
 
-			@include mediaDn($screen-xl, true) {
-				top: calc(var(--space-xxl) * 4);
-			}
-		}
-
-		&-text {
+		.scrambled-text {
 			@extend .Title;
+			animation: fadeIn 1s ease-in-out;
+			text-align: center;
 
 			span {
 				color: var(--brand1);
 			}
+		}
 
-			animation: fadeIn 1s ease-in-out;
+		.split-image {
+			margin: 0 auto var(--space-md);
 		}
 	}
 
-	.article {
-		position: relative;
-		top: 450px;
+	.body-container {
+		margin-top: var(--space-lg);
+		font-weight: 200;
+		width: 60vw;
+	}
+
+	@include media($screen-lg) {
+		flex-direction: row;
+
+		.head-container {
+			width: auto;
+		}
+
+		.body-container {
+			height: 270px;
+			width: 45vw;
+			margin: 0;
+		}
 	}
 }
 
@@ -49,6 +58,10 @@
 			animation: trans 1.2s linear;
 		}
 	}
+
+	.body-container {
+		animation: fadeIn var(--delay) ease-in-out;
+	}
 }
 
 
@@ -59,5 +72,9 @@
 		&-text {
 			animation: fadeOut .4s ease-in-out;
 		}
+	}
+
+	.body-container {
+		animation: fadeOut var(--delay) ease-in-out;
 	}
 }

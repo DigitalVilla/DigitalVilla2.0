@@ -26,19 +26,16 @@ const About = props => {
 
 	return (
 		<>
-			<div className="scrambled-container">
+			<div className="head-container">
+				<SplitImage image={ego} className='split-about' />
 				<NeoText options={neoOptions} animate={isVisible()} />
 			</div>
-			<SplitImage image={ego} className='split-about' />
-			<div className="article">
-
-				<p>I started my career in the digital world as a freelancer helping startups and local businesses grow their brands.</p>
-				<p>Weather it was creating styled logos, original business cards, or captivating websites. I've taken each task as if it were my own brand.</p>
-				<p>I am currently one of the top front-end developers for <a href="https://mobilityquotient.com/">Mobility Quotient</a> a mayor media agency in downtown Calgary.</p>
-				<p>Whenever I am not programming the next big app, I am living the dream with my beautiful wife and 3 children who still believe I am their superhero.</p>
-				<br/>
-				<p>PD: At the moment, I am not available to take on extra work, remember, I've got a superhero duty to fulfill!</p>
-				<button className="black-btn" href="#">View More</button>
+			<div className="body-container">
+				<p className="p1">If you need a mobile application or a new logo I can help. However, I do more than just web development.
+					I can give your current brand a boost to improve customer acquisition, improve your online brand strategy to disrupt a greater market.
+					In other words whether a subcontractor or a fulltime developer, I am here to help you or your team to excel in the digital world.</p>
+				<br />
+				<p className="md-show">I am currently a fulltime developer for <a href="https://mobilityquotient.com/">Mobility Quotient</a>. Therefore, I am not available to take on any extra projects at the moment, however, I can always refer you to other great developers in the city!</p>
 			</div>
 		</>
 	)

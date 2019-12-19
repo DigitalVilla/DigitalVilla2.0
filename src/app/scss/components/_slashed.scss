@@ -1,17 +1,17 @@
 .slashed {
-	--slash-font-size: var(--text-lg);
+	--slash-font-size: var(--font-xxl);
 	--slash-color: var(--font-color);
 	--slash-angle: 9deg;
 	--slash-offset: 2px;
 	--slash-width: 120px;
-	--position: var(--space-md);
+	--position: 18px;
 
 	position: absolute;
+		top: calc(var(--space-xs));
+		left: var(--position);
 	transform: rotate3d(0, 0, 1, calc(var(--slash-angle) * -1)); //compensate for slashed angle
-	top: calc(var(--position) / 2);
-	left: var(--position);
-	width: calc(var(--slash-font-size) * 3.74);
 	height: calc(var(--slash-font-size) * 1.65);
+	width: calc(var(--slash-font-size) * 3.74);
 	z-index: 100;
 
 	.top,
@@ -19,7 +19,7 @@
 		position: absolute;
 		font-size: var(--slash-font-size);
 		line-height: 100px;
-		font-family: var(--text-font);
+		font-family: var(--font-family);
 		font-weight: 400;
 		letter-spacing: 1px;
 		text-transform: uppercase;
@@ -63,6 +63,5 @@
 		--slash-offset: 4px;
 		--slash-angle: 12deg;
 		--slash-width: 250px;
-		--position: var(--space-xl);
 	}
 }

@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.576542ca.chunk.css",
-    "main.js": "/static/js/main.e7828d20.chunk.js",
-    "main.js.map": "/static/js/main.e7828d20.chunk.js.map",
+    "main.css": "/static/css/main.437a2bde.chunk.css",
+    "main.js": "/static/js/main.567f13bd.chunk.js",
+    "main.js.map": "/static/js/main.567f13bd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bdbb6f3c.js",
     "runtime-main.js.map": "/static/js/runtime-main.bdbb6f3c.js.map",
-    "static/js/2.825b5bb9.chunk.js": "/static/js/2.825b5bb9.chunk.js",
-    "static/js/2.825b5bb9.chunk.js.map": "/static/js/2.825b5bb9.chunk.js.map",
+    "static/js/2.b5dee160.chunk.js": "/static/js/2.b5dee160.chunk.js",
+    "static/js/2.b5dee160.chunk.js.map": "/static/js/2.b5dee160.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5589a77337c65c9d5d43deb9791c7675.js": "/precache-manifest.5589a77337c65c9d5d43deb9791c7675.js",
+    "precache-manifest.3668d06372d2ea20521fddefa30a1297.js": "/precache-manifest.3668d06372d2ea20521fddefa30a1297.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.576542ca.chunk.css.map": "/static/css/main.576542ca.chunk.css.map",
+    "static/css/main.437a2bde.chunk.css.map": "/static/css/main.437a2bde.chunk.css.map",
+    "static/media/Resume.pdf": "/static/media/Resume.2e7394fe.pdf",
     "static/media/ego.png": "/static/media/ego.18908493.png",
     "static/media/logo_DV.png": "/static/media/logo_DV.76f98a33.png",
+    "static/media/logo_Nebula.png": "/static/media/logo_Nebula.5a5e1ac6.png",
     "static/media/nebula-lg.jpg": "/static/media/nebula-lg.e5e10d06.jpg",
     "static/media/nebula-md.jpg": "/static/media/nebula-md.35d55b63.jpg",
     "static/media/nebula-sm.jpg": "/static/media/nebula-sm.9b991304.jpg",
-    "static/media/nebula.mp4": "/static/media/nebula.0a0fad7a.mp4",
-    "static/media/nebula.jpg": "/static/media/nebula.1f0d88aa.jpg"
+    "static/media/nebula.jpg": "/static/media/nebula.1f0d88aa.jpg",
+    "static/media/nebula.mp4": "/static/media/nebula.3a134d72.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.bdbb6f3c.js",
-    "static/js/2.825b5bb9.chunk.js",
-    "static/css/main.576542ca.chunk.css",
-    "static/js/main.e7828d20.chunk.js"
+    "static/js/2.b5dee160.chunk.js",
+    "static/css/main.437a2bde.chunk.css",
+    "static/js/main.567f13bd.chunk.js"
   ]
 }

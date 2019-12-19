@@ -13,10 +13,6 @@ $nav-color: white;
 	height: 3px;
 	width: var(--space-lg);
 	background: $nav-color;
-
-	@media only screen and (min-width: $screen-md) {
-		width: var(--space-xl);
-	}
 }
 
 #fp-nav {
@@ -25,8 +21,8 @@ $nav-color: white;
 	ul {
 		li {
 			height: var(--space-lg);
-			width: var(--space-xxl);
 			margin: var(--space-lg 0);
+			width: var(--space-xxl);
 
 			&:hover a.active span,
 			a.active span {
@@ -45,8 +41,7 @@ $nav-color: white;
 
 			.fp-tooltip {
 				color: $nav-color;
-				top: -var(--space-sm);
-				font-size: 12px;
+				top: 4px;
 
 				&.fp-left {
 					left: 0;
@@ -54,27 +49,6 @@ $nav-color: white;
 
 				&.fp-right {
 					right: 0;
-				}
-			}
-
-			@media only screen and (min-width: $screen-md) {
-				height: var(--space-xl);
-				margin: var(--space-lg) var(--space-lg);
-
-				&:hover a.active span,
-				a.active span {
-					width: var(--space-xxl);
-				}
-
-				.fp-tooltip {
-					font-size: 16px;
-					top: -8px;
-				}
-			}
-
-			@media only screen and (min-width: $screen-lg) {
-				.fp-tooltip {
-					top: -4px;
 				}
 			}
 		}

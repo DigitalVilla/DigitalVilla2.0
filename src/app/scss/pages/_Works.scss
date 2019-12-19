@@ -1,18 +1,47 @@
 @include Page ('Works') {
-	figure {
-		margin: auto;
-		height: 300px;
-		width: 200px;
-		overflow: hidden;
-		border-radius: 10px;
+	.content {
+		@extend .abs-center;
+		text-align: center;
+		position: relative;
+		text-align: center;
+		max-width: 70vw;
 
-		img {
-			// @extend .img-fit;
-			object-fit: cover;
+		figure {
+			margin: auto;
+			height: auto;
+			width: 50vw;
+
+			img {
+				@extend .img-fit;
+			}
+		}
+
+		.text {
+			font-size: var(--space);
+		}
+
+		@include media() {
+			figure {
+				width: 40vw;
+			}
+
+			.text {
+				font-size: var(--space-md);
+			}
+
 		}
 	}
 }
 
-@include animateIn ('Works') {}
+@include animateIn ('Works') {
+	figure {
+			animation: fadeInRight var(--delay) ease-in-out;
+	}
+	.text {
+			animation: fadeInLeft var(--delay) ease-in-out;
+	}
+}
 
-@include animateOut ('Works') {}
+@include animateOut ('Works') {
+	animation: fadeOut .4s ease-in-out;
+}

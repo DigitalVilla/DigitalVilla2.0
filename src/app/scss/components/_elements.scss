@@ -1,99 +1,111 @@
-
 .Header {
-	--base-gutter: calc(var(--space-lg) * .9);
+	--base-gutter: var(--space);
 
-		left: 50%;
-		position: absolute;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 1;
+
+	.main-logo {
+		height: 6rem;
+		margin: 0 0 2rem;
+		margin: 0 0 var(--base-gutter);
+	}
+
+	h1 {
+		@extend .reader-only;
+	}
+
+	.title {
+		color: #fff;
+		letter-spacing: 6px;
+		font-size: 3rem;
+		margin: 0 0 1rem;
+		margin: 0 0 calc(var(--base-gutter) /2);
+		font-weight: 400;
+		line-height: .9;
 		text-align: center;
-		top: 50%;
-		transform: translate3d(-50%, -50%, 0);
-		z-index: 1;
+		text-transform: uppercase;
+		width: 70vw;
+	}
 
-		.main-logo {
-			height: 12rem;
-			height: calc(var(--text-xxxl) * 1.1);
-			margin: 0 0 2.2rem;
-			margin: 0 0 var(--base-gutter);
-		}
+	h2 {
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-transform: capitalize;
+		line-height: .8;
+		font-size: 1.5rem;
+		font-size: var(--font-lg);
+		margin-bottom: 60px;
+		margin-bottom: var(--space-xl);
+	}
 
-		h1 {
-			@extend .reader-only;
-		}
-
-		.title {
-			color: #fff;
-			letter-spacing: 6px;
-			letter-spacing: var(--space-sm);
-			font-size: 4rem;
-			font-size: var(--text-xl);
-			margin: 0 0 2.2rem;
-			margin: 0 0 var(--base-gutter);
-			font-weight: 400;
-			line-height: .9;
-			text-align: center;
-			text-transform: uppercase;
-			width: 70vw;
-		}
-
-		h2 {
-			font-weight: 300;
-			letter-spacing: 1px;
-			text-transform: capitalize;
-			line-height: .8;
-			font-size: 3rem;
-			font-size: var(--text-md);
-			margin-bottom: 60px;
-			margin-bottom: var(--space-xxl);
-		}
-
-		.break {
-			@include hide;
-			margin: 12px;
-			margin: var(--space);
-		}
+	.break {
+		@include hide;
+		margin: 12px;
+	}
 }
 
+a {
+	color: var(--brand1);
+	&:hover {
+		color: var(--brand2);
+	}
+}
 
 iframe {
-	@extend .abs-center;
-	width: 90vw;
+	border: 1px solid var(--brand3);
 	height: 90vh;
+	width: 90vw;
+	margin: auto;
+	position: relative;
+		top: 5vh;
+		left: 5vw;
 	z-index: 0;
-	border: none;
 }
 
 .black-btn {
 	background-image: linear-gradient(#464041, #181717);
-	color: #fff;
 	border: none;
-	cursor: pointer;
 	border-radius: 4rem;
-	padding: 1rem 3rem;
-	box-shadow: 0 0.5rem .7rem 0em rgba(0, 0, 0, 0.2);
-	margin: 1rem 0;
-	font-size: 1.5rem;
+	color: #fff;
+	cursor: pointer;
+	padding: 0.5rem 2.5rem;
+	font-size: 1rem;
 	font-weight: 600;
 	user-select: none;
-	text-transform: capitalize;
-	position: relative;
-	transition: background-image 3s !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 
 	&:hover,
 	&:active {
 		background-image: linear-gradient(to right top, $brand2, $brand3);
-		// transform: translateY(-.1rem);
 	}
 
 	&:active {
 		transform: translateY(.1rem);
-		box-shadow: 0 0.2rem .5rem 0em rgba(0, 0, 0, 0.2);
 	}
 }
 
+.md-show {
+	display: none;
 
+	@include media() {
+		display: block;
+	}
+}
+
+.md-hide {
+	display: block;
+
+	@include media() {
+		display: none;
+	}
+}
 
 .space-bg {
-	// border: 1px solid #00f;
 	background-image: url("https://cdn.pixabay.com/photo/2016/06/05/07/59/stars-1436950_960_720.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;

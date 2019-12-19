@@ -64,7 +64,7 @@
 	--grad-bg-dark:linear-gradient(to left bottom, #{darken($brand3, 35%)}, #{darken($brand1, 45%)});
 
 	// Regular font family
-	--text-font: 'Oswald',
+	--font-family: 'Oswald',
 		'Open Sans',
 		'Helvetica Neue Light',
 		'Helvetica Neue',
@@ -80,7 +80,7 @@
 		monospace;
 
 	// Spacing
-	--space: 8px;
+	--space: 1em;
 	--space-xs: calc(var(--space) / 4);
 	--space-sm: calc(var(--space) / 2);
 	--space-md: calc(var(--space) * 1.5);
@@ -90,29 +90,12 @@
 	--space-xxxl: calc(var(--space) * 6);
 
 	// body font size
-	--text: 1em;
-	--text-xs: calc(var(--text) / 4);
-	--text-sm: calc(var(--text) / 2);
-	--text-md: calc(var(--text) * 1.5);
-	--text-lg: calc(var(--text) * 2);
-	--text-xl: calc(var(--text) * 3);
-	--text-xxl: calc(var(--text) * 5);
-	--text-xxxl: calc(var(--text) * 6);
-
-
-
-	@media only screen and (min-width: $screen-xs) {
-		--text: 1.2em;
-		--space: 10px;
-	}
-
-	@media only screen and (min-width: $screen-md) {
-		--text: 1.4em;
-		--space: 12px;
-	}
-
-	@media only screen and (min-width: $screen-xxl) {
-		--text: 1.6em;
-		--space: 14px;
-	}
+	--font: 1em;
+	--font-xs: calc(var(--font)*.75);
+	--font-sm: calc(var(--font)*.9);
+	--font-md: calc(var(--font)*1.2);
+	--font-lg: calc(var(--font)*1.5);
+	--font-xl: calc(var(--font)*1.75);
+	--font-xxl: calc(var(--font)*2);
+	--font-xxxl: calc(var(--font)*2.5);
 }

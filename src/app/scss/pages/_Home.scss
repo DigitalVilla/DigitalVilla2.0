@@ -1,4 +1,6 @@
 @include Page ('Home') {
+	transition: all .5s;
+
 	.header {
 		@extend .Header;
 	}
@@ -10,10 +12,6 @@
 			bottom: var(--space-lg);
 			left: 50%;
 			transform: translate3d(-50%, 0, 0);
-
-			@include media ($screen-lg) {
-				bottom: var(--space-xl);
-			}
 		}
 	}
 }
