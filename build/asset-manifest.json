@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd02c0be.chunk.css",
+    "main.css": "/static/css/main.06688aa6.chunk.css",
     "main.js": "/static/js/main.0c1a07ee.chunk.js",
     "main.js.map": "/static/js/main.0c1a07ee.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bdbb6f3c.js",
@@ -8,9 +8,9 @@
     "static/js/2.45c12ce5.chunk.js": "/static/js/2.45c12ce5.chunk.js",
     "static/js/2.45c12ce5.chunk.js.map": "/static/js/2.45c12ce5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f64175d594085e953a37092022d916e7.js": "/precache-manifest.f64175d594085e953a37092022d916e7.js",
+    "precache-manifest.3f39242e82c0bbc209818ef1ab09d8a1.js": "/precache-manifest.3f39242e82c0bbc209818ef1ab09d8a1.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.fd02c0be.chunk.css.map": "/static/css/main.fd02c0be.chunk.css.map",
+    "static/css/main.06688aa6.chunk.css.map": "/static/css/main.06688aa6.chunk.css.map",
     "static/media/Resume.pdf": "/static/media/Resume.2e7394fe.pdf",
     "static/media/ego.png": "/static/media/ego.18908493.png",
     "static/media/logo_DV.png": "/static/media/logo_DV.76f98a33.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.bdbb6f3c.js",
     "static/js/2.45c12ce5.chunk.js",
-    "static/css/main.fd02c0be.chunk.css",
+    "static/css/main.06688aa6.chunk.css",
     "static/js/main.0c1a07ee.chunk.js"
   ]
 }
