@@ -23,6 +23,7 @@
 		@include media() {
 			figure {
 				width: 40vw;
+				max-width: 500px;
 			}
 
 			.text {

@@ -923,13 +923,13 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
-"@fullpage/react-fullpage@^0.1.16":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.16.tgz#aa78031dd94880ca59aa14d42d973f5514a72ded"
-  integrity sha512-1swdS+gxfVZlZ2XE5C1TK+NRNWKMdbkkZzaQB27RouzWbVDMOtpwVOdFbIFGUgMCjW5ba5zd7qSH3htmknFFcA==
+"@fullpage/react-fullpage@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.17.tgz#9beed867b0709cd1106e7e5fa98e0d18c58ac2de"
+  integrity sha512-jTcguyVswvGOmR4A7udB5bfcnIHNX+ZMkzMTlNB9QFFe81Ne6JBOeCvveZxTGOVNfELSFe7HXmxXHew1LulexQ==
   dependencies:
     "@babel/polyfill" "^7.2.5"
-    fullpage.js "^3.0.7"
+    fullpage.js "^3.0.8"
 
 "@hapi/address@2.x.x":
   version "2.1.2"
@@ -4374,10 +4374,10 @@ fstream@^1.0.0, fstream@^1.0.12:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fullpage.js@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.0.7.tgz#27d4815f39ad26019bf96dbc7644ac7ec6226f39"
-  integrity sha512-kKgwNWGUY/nMCMWuDJph2D4lSLmRqcEqD9zGR4no7e85sGLGUTdB5xWUUDZCXEp3nkPNVMOVJLFhJq5DbIY1UA==
+fullpage.js@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.0.8.tgz#4d89a87d36c30c0866c3dfec5e6cb363902f97b2"
+  integrity sha512-r4B/MNuxylgzSlY+w4klD0lYYlmzEy7doDvurupAuO1ObKBgu9EB5GPuoeJTP7t/njFlzAM/Wu/I+FL3WvudCw==
 
 function-bind@^1.1.1:
   version "1.1.1"
