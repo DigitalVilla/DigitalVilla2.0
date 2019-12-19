@@ -11,8 +11,12 @@ export default function Works(props) {
 						<img src={Nebula} alt='Logo' />
 					</figure>
 					<div className="text">
-						<p>Checkout my public repos from <a href="https://github.com/DigitalVilla">Github</a></p>
-						<p>Or Slide to play some fun games!</p>
+						<p>Slide to play some fun iframes</p>
+						<p>Or to play each game live!</p>
+						<a href="https://match-io.netlify.com">iMatch</a> <span className="break"> - </span>
+						<a href="https://wordsofwow.netlify.com">Words of Wow</a> <span className="break"> - </span>
+						<a href="https://eyedntify.herokuapp.com">Eyedentify</a>
+						<p>Also checkout my public repos from <a href="https://github.com/DigitalVilla">Github</a></p>
 					</div>
 				</div>
 			</div>
