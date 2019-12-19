@@ -12,7 +12,7 @@ export default function FullPage(props) {
 		setIsOpen(!isOpen)
 	}
 
-	console.log(props.display);
+	console.clear();
 
 	useEffect(() => {
 		if (!props.display) {

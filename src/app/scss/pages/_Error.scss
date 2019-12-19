@@ -20,20 +20,25 @@
 		@extend .Header;
 		height: 60vh;
 
+		.title {
+			font-size: 1.8em !important;
+			margin: 0 auto 1rem;
+		}
+
 		h2 {
+			font-size: 1.3em !important;
+			margin-bottom: 2rem;
 			.break {
 				display: block !important;
 			}
 		}
 
 		h4 {
-			font-size: 1.8rem;
+			font-size: .8em;
 			font-weight: 300;
-			position: absolute;
-			bottom: 20px;
-			left: 0;
-			right: 0;
-			text-shadow: 5px 5px 5px #0009
+			text-shadow: 5px 5px 5px #0009;
+			margin-top: 2rem;
+
 			a {
 				color: white;
 				border-bottom: 1px solid #fff;
@@ -42,14 +47,14 @@
 
 		.ie-btn {
 			background: transparent;
-			padding: 12px 32px;
+			padding: 12px 60px;
 			border: 2px solid #fff;
 			color: #fff;
 			border-radius: 2px;
 			font-size: 18px;
 			text-transform: uppercase;
 			letter-spacing: 2px;
-			margin: 12px;
+			margin: 1.2rem;
 		}
 	}
 }

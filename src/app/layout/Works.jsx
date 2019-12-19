@@ -11,8 +11,8 @@ export default function Works(props) {
 						<img src={Nebula} alt='Logo' />
 					</figure>
 					<div className="text">
-						<p>Checkout my public projects from <a href="https://github.com/DigitalVilla">Github</a></p>
-						<p>Or slide to play some fun games!</p>
+						<p>Checkout my public repos from <a href="https://github.com/DigitalVilla">Github</a></p>
+						<p>Or Slide to play some fun games!</p>
 					</div>
 				</div>
 			</div>
@@ -20,7 +20,7 @@ export default function Works(props) {
 				<iframe data-src="https://match-io.netlify.com" title="Match-io"></iframe>
 			</div>
 			<div className="slide" data-anchor="slide">
-				<iframe data-src="https://wordsofwow.netlify.com" title="Eyedentify"></iframe>
+				<iframe data-src="https://wordsofwow.netlify.com" title="Words of Wow"></iframe>
 			</div>
 			<div className="slide" data-anchor="slide">
 				<iframe src="https://eyedntify.herokuapp.com" title="Eyedentify"></iframe>

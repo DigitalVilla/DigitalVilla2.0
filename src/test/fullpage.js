@@ -76,7 +76,6 @@ export default function FullPage(props) {
             afterLoad={function (origin, destination, direction) {
                 //  console.log('afterLoad',origin, destination, direction);
                 // console.clear();
-                console.log('checked')
                 setIsOpen(false);
             }}
             afterRender={function () {
