@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from './../images/logo_DV.png'
-import resume from '../images/Resume.pdf'
+import resume from '../images/DigitalVilla.pdf'
 import Icon from './Icons'
 
 const Menu = (props) => {

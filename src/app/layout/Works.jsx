@@ -11,16 +11,19 @@ export default function Works(props) {
 						<img src={Nebula} alt='Logo' />
 					</figure>
 					<div className="text">
-						<p>Slide to play some fun iframes</p>
-						<p>Or to play each game live!</p>
+						<p>Personal Work</p>
 						<a href="https://match-io.netlify.com">iMatch</a> <span className="break"> - </span>
 						<a href="https://wordsofwow.netlify.com">Words of Wow</a> <span className="break"> - </span>
 						<a href="https://eyedntify.herokuapp.com">Eyedentify</a>
+						<p>Professional Work</p>
+						<a href="https://www.winsightmedia.com">Winsight</a> <span className="break"> - </span>
+						<a href="https://portal.winsightmedia.com">Media Portal</a> <span className="break"> - </span>
+						<a href="https://www.justbeerapp.com">JustBeer</a>
 						<p>Also checkout my public repos from <a href="https://github.com/DigitalVilla">Github</a></p>
 					</div>
 				</div>
 			</div>
-			<div className="slide" data-anchor="slide2">
+			{/* <div className="slide" data-anchor="slide2">
 				<iframe data-src="https://match-io.netlify.com" title="Match-io"></iframe>
 			</div>
 			<div className="slide" data-anchor="slide">
@@ -28,7 +31,7 @@ export default function Works(props) {
 			</div>
 			<div className="slide" data-anchor="slide">
 				<iframe src="https://eyedntify.herokuapp.com" title="Eyedentify"></iframe>
-			</div>
+			</div> */}
 		</div>
 	)
 }
