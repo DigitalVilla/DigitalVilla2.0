@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Fullpage from "./Fulllpage";
-import IE from './IE';
+import IE from './IE_error';
 
 export default function Index() {
   const [toLoad, setToLoad] = useState(false);
