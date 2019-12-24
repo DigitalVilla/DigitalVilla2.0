@@ -1,0 +1,77 @@
+@include Page ('About') {
+	.content {
+		@extend .about;
+	}
+
+	.background {
+		border-radius: 10px;
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		bottom: 10%;
+		right: 10%;
+		overflow: hidden;
+		z-index: 0;
+
+		img {
+			@extend .img-cover;
+		}
+
+		&:after {
+			@extend .overlay;
+		}
+
+		@include media() {
+			top: 20%;
+			left: 10%;
+			bottom: 20%;
+			right: 10%;
+		}
+	}
+}
+
+@include animateIn ('About') {
+	.neo-text {
+		animation: fadeIn var(--delay) ease-in;
+	}
+
+	.split-image {
+		div {
+			animation: fadeInRight var(--delay) ease-in-out;
+
+			@include media() {
+				@include animate ('splitIn') {
+					transform: translate(0, 0);
+				}
+
+				animation: splitIn var(--delay) linear;
+			}
+		}
+	}
+
+	.first,
+	.last {
+		animation: fadeInLeft var(--delay) ease-in-out;
+	}
+
+	.background {
+		animation: fadeInUp var(--delay) ease-in-out;
+	}
+}
+
+@include animateOut ('About') {
+
+	.neo-text,
+	.first,
+	.last {
+		animation: fadeOutLeft var(--delay) ease-in-out;
+	}
+
+	.split-image {
+		animation: fadeOutRight var(--delay) ease-in-out;
+	}
+
+	.background {
+		animation: fadeOutDown var(--delay) ease-in-out;
+	}
+}

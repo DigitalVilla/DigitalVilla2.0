@@ -12,7 +12,7 @@
 }
 
 $min_width: $min-width;
-$max_width: 1200px;
+$max_width: 1600px;
 $min_font: 16px;
 $max_font: 24px;
 
@@ -25,16 +25,17 @@ html {
 
 body {
 	color: white;
+	min-width: $min-width;
 	color: var(--font-color);
 	font-family: 'Oswald', sans-serif;
 	font-family: var(--font-family);
 }
 
 .container {
-	border: 1px solid #00f;
 	padding: 0 var(--space);
 	max-width: 900px;
 	margin: auto;
+	min-width: $min-width;
 
 	@include media($screen-xl) {
 		max-width: 1200px;
@@ -43,11 +44,6 @@ body {
 
 .hidden {
 	visibility: hidden;
-}
-
-a {
-	color: var(--font-color);
-	text-decoration: none;
 }
 
 li {

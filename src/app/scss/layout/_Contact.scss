@@ -1,0 +1,44 @@
+@include Page ('Contact') {
+	.content {
+		@extend .contact;
+	}
+}
+
+@include animateIn ('Contact') {
+	.content {
+		animation: fadeIn var(--delay) ease-in-out;
+
+		.business-card {
+			@include animate ('cardReset') {
+				transform: rotate(-12deg);
+			}
+
+			animation: cardReset var(--delay) ease-in;
+		}
+
+		.background-card {
+			@include animate ('bgReset') {
+				transform: transform(-50%, 0, 0) rotate(-12deg);
+			}
+
+			animation: bgReset var(--delay) ease-in;
+		}
+	}
+}
+
+@include animateOut ('Contact') {
+	.content {
+		.business-card {
+			animation: fadeOutUp var(--delay) ease-in;
+		}
+
+		.background-card {
+			animation: fadeOutLeft var(--delay) ease-in;
+
+			&.second {
+				animation: fadeOutRight var(--delay) ease-in;
+
+			}
+		}
+	}
+}

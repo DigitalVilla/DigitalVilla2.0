@@ -8,6 +8,15 @@
 	line-height: 1;
 }
 
+a {
+	color: inherit;
+
+	&:hover {
+		color: $brand1;
+		text-shadow: none;
+	}
+}
+
 svg {
 	fill: var(--font-color);
 }
@@ -28,7 +37,7 @@ svg {
 
 .svg-sm {
 	svg {
-			height: var(--space-lg);
+		height: var(--space-lg);
 		width: var(--space-lg);
 	}
 }
@@ -46,21 +55,21 @@ svg {
 }
 
 .btn {
-	--btn-color: var(--white);
-	-btn-background: transparent;
-	padding: var(--space) var(--space-lg);
-	border: 2px solid var(--btn-color);
-	color: var(--btn-color);
-	transition: var(--transition);
-	border-radius: 2px;
+	color: #fff;
+	background: transparent;
+	padding: var(--space-sm) var(--space-lg);
+	border: 2px solid white;
+	border-radius: 5px;
 	font-size: var(--font);
 	text-transform: uppercase;
-	background: var(--btn-background);
 	letter-spacing: 2px;
+	transition: all .2s;
+	text-decoration: none;
 
 	&:hover {
-		--btn-color: var(--brand4);
-		--btn-background: #fffd;
+		color: var(--brand2);
+		background: #fff;
+		top: 4px;
 	}
 }
 
@@ -94,72 +103,39 @@ svg {
 
 
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+	@return $value / ($value * 0 + 1);
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
+	@if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+		& {
+			font-size: $min-font-size;
+
+			@media screen and (min-width: $min-vw) {
+				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+			}
+
+			@media screen and (min-width: $max-vw) {
+				font-size: $max-font-size;
+			}
+		}
+	}
 }
 
 
-// ::selection {
-//     background: #e5eff1;
-//     /* WebKit/Blink Browsers */
-//     color: $color-primary;
-// }
+::selection {
+	background: $brand3;
+	/* WebKit/Blink Browsers */
+	color: white;
+}
 
-// ::-moz-selection {
-//     background: #ebebeb;
-//     /* Gecko Browsers */
-//     color: $color-primary;
-// }
-
-// button:focus,
-// button:active {
-//     outline: none !important;
-//     outline: 0 !important;
-// }
-
-// button::-moz-focus-inner {
-//     border: 0;
-// }
-
-// // input::placeholder {
-// //     color: rgb(182, 36, 158);
-// //     opacity: .5;
-// // }
-
-// input::-moz-focus-inner {
-//     border: 0;
-//     border: none;
-// }
-
-
-	@keyframes float {
-		0% {
-			transform: translate3d(-50%, 0, 0);
-		}
-
-		50% {
-			transform: translate3d(-50%, -10px, 0);
-		}
-
-		100% {
-			transform: translate3d(-50%, 0, 0);
-		}
-	}
+::-moz-selection {
+	background: $brand3;
+	/* Gecko Browsers */
+	color: white;
+}

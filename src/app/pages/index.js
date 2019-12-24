@@ -8,7 +8,6 @@ export default function Index() {
   let msie = ua.indexOf("MSIE ");
   let isIE = msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) // eslint-disable-line no-useless-escape
   useEffect(() => {
-    // console.log("WARPED");
     setTimeout(() => {
       if (!toLoad) {
         document.body.removeChild(document.getElementById("loader"));

@@ -74,7 +74,7 @@ export default function NeoText(props) {
 	}, [props, _animate]);
 
 	return (
-		<div className={props.options.className || 'n-text'} id={neoId}>
+		<div className={props.options.className || 'neo-text'} id={neoId}>
 			{props.options.initialText || 'Neo-Text'}
 		</div>
 	)

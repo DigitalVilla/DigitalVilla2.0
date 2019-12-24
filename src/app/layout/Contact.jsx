@@ -1,22 +1,55 @@
 import React from 'react'
+import logo from "../assets/logo_DV.png"
+import card from "../assets/card.jpg"
+import logoB from "../assets/logo_Nebula.png"
+import design from "../assets/design.jpg"
+import isMedia from "../utils/isMedia"
+import bg from "../assets/nebula-md.jpg"
+
 
 export default function Contact(props) {
-
 	return (
-		<div className="content">
-			<span className="break"></span>
-			<h1><span className="text-brand1">OMAR</span> VILLANUEVA</h1>
-			<h3>Full Stack Developer <span className="break"> - </span> With Passion for the Extraordinary.</h3>
-			<p>
-				<span className="text-brand1">City: </span>Calgary, AB.<span className="break"> - </span>
-				<span className="text-brand1">Email: </span>digitalvilla01@gmail.com<span className="break"> - </span>
-				<span className="text-brand1">LinkIn: </span>linkedin.com/in/digitalvilla
-			</p>
-			<p>
-				<span className="text-brand1">Mobile: </span> (587) 229-3860<span className="break"> - </span>
-				<span className="text-brand1">Web: </span>www.digitalvilla.ca<span className="break"> - </span>
-				<span className="text-brand1">Github:</span>github.com/DigitalVilla
-			</p>
-		</div>
+		<>
+			< div className="content" >
+				<div className="business-card" >
+					<div className="logo" style={{ backgroundImage: "url(" + design + ")" }}></div>
+
+					<div className="content">
+						<div className="top">
+							<h2>OMAR <span>VILLANUEVA</span></h2>
+							<h3>Full-Stack Developer</h3>
+						</div>
+
+						<div className="bottom">
+							<p>digitalvilla01@gmail.com</p>
+							<p>www.digitalvilla.ca</p>
+							<p>1+ 587-229-3860</p>
+							<p>Calgary, Alberta </p>
+						</div>
+					</div>
+				</div>
+
+				<div className="business-card background-card">
+					<div className="logo" style={{ backgroundImage: "url(" + design + ")" }}></div>
+				</div>
+				<div className="business-card background-card second">
+					<div className="logo" style={{ backgroundImage: "url(" + design + ")" }}></div>
+
+					<div className="content">
+						<div className="top">
+							<h2>OMAR <span>VILLANUEVA</span></h2>
+							<h3>Full-Stack Developer</h3>
+						</div>
+
+						<div className="bottom">
+							<p>digitalvilla01@gmail.com</p>
+							<p>www.digitalvilla.ca</p>
+							<p>1+ 587-229-3860</p>
+							<p>Calgary, Alberta </p>
+						</div>
+					</div>
+				</div>
+			</div >
+		</>
 	)
 }

@@ -1,0 +1,63 @@
+.defaultPage {
+	--delayIn: 1.2s;
+	--delayOut: .6s;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	transition: opacity var(--delayOut);
+	min-width: $min-width !important;
+
+	.fp-slides {
+		width: 100%;
+	}
+}
+
+.slashAnimation {
+	animation: fadeInDelayed 1s ease-in-out;
+
+	.top,
+	.bot {
+		@include animate ('slash') {
+			left: 0;
+			right: 0;
+		}
+
+		animation: slash 1.4s ease-out;
+	}
+}
+
+
+@mixin Page ($class) {
+	.#{$class} {
+		@extend .defaultPage;
+		@content;
+	}
+}
+
+@mixin animateIn($class) {
+	section.active {
+		& .#{$class} {
+			--delay: var(--delayIn);
+			opacity: 1;
+
+			.slashed {
+				@extend .slashAnimation;
+			}
+
+			@content;
+		}
+	}
+}
+
+@mixin animateOut($class) {
+	section:not(.active) {
+		& .#{$class} {
+			--delay: var(--delayOut);
+			@content;
+		}
+	}
+}

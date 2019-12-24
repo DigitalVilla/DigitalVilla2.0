@@ -1,7 +1,7 @@
-import img_sm from "../images/nebula-sm.jpg"
-import img_md from "../images/nebula-md.jpg"
-import img_lg from "../images/nebula-lg.jpg"
-import img_4k from "../images/nebula.jpg"
+import img_sm from "../assets/nebula-sm.jpg"
+import img_md from "../assets/nebula-md.jpg"
+import img_lg from "../assets/nebula-lg.jpg"
+import img_4k from "../assets/nebula.jpg"
 import isMedia from "../utils/isMedia"
 
  let poster = isMedia('phone') ? img_sm : isMedia('tablet') ? img_md

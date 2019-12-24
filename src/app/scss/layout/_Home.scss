@@ -1,0 +1,69 @@
+@include Page ('Home') {
+	.header {
+		@extend .home;
+	}
+
+	.scroll {
+		&-icon {
+			z-index: 2;
+			position: absolute;
+			bottom: var(--space-lg);
+			left: 50%;
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+}
+
+@include animateIn('Home') {
+	.main-logo {
+		animation: bounceInDown calc(var(--delay) + .2s) ease-in-out;
+	}
+
+	.title {
+		animation: fadeInRight var(--delay) ease-in-out;
+	}
+
+	h2 {
+		animation: fadeInLeft var(--delay) ease-in-out;
+	}
+
+	video {
+		opacity: 1;
+		animation: fadeInDelayed var(--delay) ease-in-out;
+	}
+
+	.page-bg {
+		animation: fadeIn var(--delay) ease-in-out;
+	}
+
+	.scroll {
+		animation: fadeInDelayed var(--delay) ease-in-out;
+
+		&-icon {
+			@include animate ('float', false) {
+				0% {
+					transform: translate3d(-50%, 0, 0);
+				} 50% {
+					transform: translate3d(-50%, -10px, 0);
+				} 100% {
+					transform: translate3d(-50%, 0, 0);
+				}
+			}
+
+			animation: float 2s ease-in-out infinite;
+			animation-delay: var(--delay);
+		}
+	}
+}
+
+@include animateOut('Home') {
+
+	.main-logo {
+		animation: fadeOutRight var(--delay) ease-in-out;
+	}
+
+	h2,
+	.title {
+		animation: fadeOutLeft var(--delay) ease-in-out;
+	}
+}

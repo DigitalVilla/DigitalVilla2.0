@@ -1,0 +1,11 @@
+@include Page ('Public') {
+	@include portfolio();
+}
+
+@include animateIn ('Public') {
+	@include portfolioAnimateIn();
+}
+
+@include animateOut ('Public') {
+	@include portfolioAnimateOut();
+}

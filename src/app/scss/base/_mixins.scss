@@ -1,6 +1,17 @@
 /* ---------------------
    ------ MIXINS ------
    -------------------- */
+@mixin animate ($name, $from:true) {
+	@keyframes #{$name} {
+		@if $from {
+			from {
+				@content;
+			}
+		} @else {
+				@content;
+		}
+	}
+}
 
 @mixin abs ($top, $right, $bottom:auto, $left:auto) {
 	position: absolute;
@@ -9,7 +20,6 @@
 	bottom: $bottom;
 	left: $left;
 }
-
 
 /* position absolute
   @include flex(2rem, 3rem, auto, auto);
@@ -48,7 +58,22 @@
 }
 
 // Mobile first approach
-@mixin media($screen:$screen-md, $landscape:false) {
+@mixin mediaTablet($screen:$screen-md, $landscape:false) {
+	@if $landscape {
+		@media only screen and (min-width: $screen) and (orientation: landscape) {
+			@content;
+		}
+	}
+
+	@else {
+		@media only screen and (min-width: $screen) and (min-height: $screen){
+			@content;
+		}
+	}
+}
+
+// Mobile first approach
+@mixin media($screen:$screen-md, $landscape:false, $tablet:false) {
 	@if $landscape {
 		@media only screen and (min-width: $screen) and (orientation: landscape) {
 			@content;
@@ -63,7 +88,7 @@
 }
 
 // Desktop first approach
-@mixin mediaDn($screen:$screen-md, $landscape:false) {
+@mixin mediaDown($screen:$screen-md, $landscape:false) {
 	@if $landscape {
 		@media only screen and (max-width: $screen - 1px) and (orientation: landscape) {
 			@content;
@@ -160,7 +185,13 @@
 	width: 1px;
 }
 
-.img-fit {
+.img-cover {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.img-contain {
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
