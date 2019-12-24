@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5c4865211e1fcb3987cab28b0a5fc669",
+    "revision": "a3a7a284a91105c849e602110bccffb3",
     "url": "/index.html"
   },
   {
-    "revision": "82517c682f8cdf23dc05",
+    "revision": "6f16112cd0d0fbdd1972",
     "url": "/static/css/main.4153d56c.chunk.css"
   },
   {
@@ -12,16 +12,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.4d0169a9.chunk.js"
   },
   {
-    "revision": "82517c682f8cdf23dc05",
-    "url": "/static/js/main.d9a57939.chunk.js"
+    "revision": "6f16112cd0d0fbdd1972",
+    "url": "/static/js/main.5c23dfbb.chunk.js"
   },
   {
     "revision": "4b71c3e81e5e8087b7d0",
     "url": "/static/js/runtime-main.bdbb6f3c.js"
   },
   {
-    "revision": "2a9756438023d22b7a42181154e54a5b",
-    "url": "/static/media/DigitalVilla2020.2a975643.pdf"
+    "revision": "a17f46008f65481aa134db272f59e54c",
+    "url": "/static/media/Resume2020.a17f4600.pdf"
   },
   {
     "revision": "6402d793bef3e2b2b3273692e2a048ac",
