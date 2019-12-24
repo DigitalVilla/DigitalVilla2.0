@@ -11,7 +11,8 @@ export default function Private(props) {
 			title: 'Personal Work',
 			image: main,
 			dek: [
-				<p>Most recent personal projects</p>,
+				<p>Excluding this website,</p>,
+				<p>my most recent personal projects</p>,
 				<p>built to test advanced concepts.</p>,
 				<span className="break"></span>,
 				<p>Applied technologies:</p>,
@@ -51,7 +52,7 @@ export default function Private(props) {
 			dek: [
 				<p>The app for wildlife enthusiasts!</p>,
 				<p>A TEST to imitate instagram's main flux</p>,
-				<p>in a REST-full - JavaScript environment.</p>,
+				<p>in a REST-full | JavaScript environment.</p>,
 				<span className="break"></span>,
 				<p>Create a <q>mock</q> account and explore!</p>,
 				<span className="break button"></span>,
