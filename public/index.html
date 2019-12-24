@@ -19,29 +19,6 @@
 			background: #999 radial-gradient(circle farthest-side, #261436, #05051e);
 		}
 
-		@keyframes typing {
-			from {
-				width: 0
-			}
-
-			to {
-				width: 100%
-			}
-		}
-
-		@keyframes blink-caret {
-
-			from,
-			to {
-				border-color: transparent
-			}
-
-			50% {
-				border-color: white;
-			}
-		}
-
-
 		#loader {
 			height: 100vh;
 			width: 100vw;
@@ -55,24 +32,6 @@
 			left: 50%;
 			transform: translate(-50%, -60%);
 			width: 280px;
-		}
-
-		#loader .warp-container h2 {
-			text-align: center;
-			font-size: 25px;
-			font-family: sans-serif;
-			font-weight: 300;
-			opacity: .8;
-			color: #fff;
-			overflow: hidden;
-			border-right: .15em solid rgb(255, 255, 255);
-			white-space: nowrap;
-			margin: 0 auto;
-			letter-spacing: 2px;
-			animation:
-				typing 2s steps(40, end),
-				blink-caret .75s step-end infinite;
-
 		}
 
 		@keyframes warp-ripple {
@@ -130,7 +89,6 @@
 				<div></div>
 				<div></div>
 			</div>
-			<h2>Entering outer space</h2>
 		</div>
 	</div>
 	<div id="root"></div>

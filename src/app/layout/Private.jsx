@@ -13,7 +13,7 @@ export default function Private(props) {
 			dek: [
 				<p>Most recent personal projects</p>,
 				<p>built to test advanced concepts.</p>,
-				<br />,
+				<span className="break"></span>,
 				<p>Applied technologies:</p>,
 				<p>JavaScript, React, Redux, SASS,</p>,
 				<p>AJAX, PWA, MongoDB, Express, Node.js</p>
@@ -27,8 +27,7 @@ export default function Private(props) {
 				<p>An amusing memory game </p>,
 				<p>implementing modern css animations</p>,
 				<p>and advanced sorting algorithms.</p>,
-				<br />,
-				<br />,
+				<span className="break button"></span>,
 				<p><a class="btn" href="https://match-io.netlify.com">View Live</a></p>,
 			]
 		},
@@ -41,8 +40,7 @@ export default function Private(props) {
 				<p>inspiring word puzzle</p>,
 				<p>built to test the latest React,</p>,
 				<p>Context API and React Hooks.</p>,
-				<br />,
-				<br />,
+				<span className="break button"></span>,
 				<p><a class="btn" href="https://wordsofwow.netlify.com">View Live</a></p>,
 			]
 		},
@@ -54,9 +52,9 @@ export default function Private(props) {
 				<p>The app for wildlife enthusiasts!</p>,
 				<p>A TEST to imitate instagram's main flux</p>,
 				<p>in a REST-full - JavaScript environment.</p>,
+				<span className="break"></span>,
 				<p>Create a <q>mock</q> account and explore!</p>,
-				<br />,
-				<br />,
+				<span className="break button"></span>,
 				<p><a class="btn" href="https://eyedntify.herokuapp.com">View Live</a></p>,
 			]
 		},

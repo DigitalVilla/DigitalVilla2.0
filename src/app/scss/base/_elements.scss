@@ -1,6 +1,7 @@
 /*==========================================================*/
 /*================= <<< Page Elements >>> ==================*/
 /*==========================================================*/
+
 .video-container {
 	opacity: .7;
 	position: absolute;
@@ -181,6 +182,24 @@
 		justify-content: center;
 		height: 100Vh;
 		position: relative;
+
+		.break {
+			display: block;
+			margin: var(--space-xs);
+
+			&.button {
+				margin: var(--space-md);
+			}
+
+			@media screen and (min-height: $screen-sm) {
+				margin: var(--space);
+
+				&.button {
+					margin: var(--space-lg);
+				}
+			}
+
+		}
 
 		.leyend {
 			position: absolute;

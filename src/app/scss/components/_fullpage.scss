@@ -10,8 +10,12 @@ $nav-color: white;
 	top: 60%;
 	left: 0;
 	height: 3px;
-	width: var(--space-lg);
+	width: 30px;
 	background: $nav-color;
+
+	@include media () {
+		width: var(--space-lg);
+	}
 }
 
 #fp-nav {
@@ -26,7 +30,11 @@ $nav-color: white;
 			&:hover a.active span,
 			a.active span {
 				@extend .lineSpan;
-				width: var(--space-xl);
+				width: 40px;
+
+				@include media () {
+					width: var(--space-xl);
+				}
 			}
 
 			&:hover a span {

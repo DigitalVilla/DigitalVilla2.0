@@ -13,7 +13,7 @@ export default function Public(props) {
 			dek: [
 				<p>Best projects developed</p>,
 				<p> under <a href="https://www.mobilityquotient.com">Mobility Quotient</a></p>,
-				<br />,
+				<span className="break"></span>,
 				<p>Applied Technologies:</p>,
 				<p>JS, Angular, React, PHP, Symphony</p>,
 				<p>AJAX, SASS, Bootstrap & WordPress</p>
@@ -27,12 +27,11 @@ export default function Public(props) {
 				<p>After a systematic redesign of</p>,
 				<p>each of Winsight's brands</p>,
 				<p>we upgraded its main website.</p>,
-				<br />,
+				<span className="break"></span>,
 				<p>They wanted to emphasize a people </p>,
 				<p> centred company comes before being</p>,
 				<p>a multimillion-dollar food industry.</p>,
-				<br />,
-				<br />,
+				<span className="break button"></span>,
 				<p><a class="btn" href="https://www.winsightmedia.com/">View Live</a></p>,
 			]
 		},
@@ -44,12 +43,11 @@ export default function Public(props) {
 				<p>The app for beer lovers around the world.</p>,
 				<p>Research new beers, find local breweries,</p>,
 				<p> and connect with the local community.</p>,
-				<br />,
+				<span className="break"></span>,
 				<p>Data personalization based on location.</p>,
 				<p>Advanced SEO and accessibility practices.</p>,
 				<p>Google ads and JSON-ld compatibility.</p>,
-				<br />,
-				<br />,
+				<span className="break button"></span>,
 				<p><a class="btn" href="https://justbeerapp.com/guides">View Live</a></p>,
 			]
 		},
@@ -61,12 +59,11 @@ export default function Public(props) {
 				<p>In 2019 MQ created one of the</p>,
 				<p>most ambitious projects in</p>,
 				<p>the software industry.</p>,
-				<br/>,
+				<span className="break"></span>,
 				<p>An online application to unify</p>,
 				<p>all of Winsight's family tasks</p>,
 				<p>into a centralized cloud platform.</p>,
-				<br/>,
-				<br/>,
+				<span className="break button"></span>,
 				<p><a class="btn" href="JavaScript:void(0);">Not Public</a></p>
 			]
 		},

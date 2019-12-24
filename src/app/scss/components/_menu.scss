@@ -3,9 +3,9 @@
 	$vertical: true;
 	$menu-items: 4;
 	// variables
-	--btn-width: 60px;
-	--btn-height: 40px;
-	--position: 18px;
+	--btn-width: 50px;
+	--btn-height: 36px;
+	--position: 16px;
 	--gutter: var(--space);
 	--nav-size: calc((var(--btn-height) + var(--gutter)) * #{$menu-items});
 
@@ -113,8 +113,8 @@
 
 	@include media {
 		--btn-size: 40px;
-		--btn-width: 80px;
-		--btn-height: 45px;
+		--btn-width: 70px;
+		--btn-height: 40px;
 		--position: var(--space-md);
 
 		&-button,

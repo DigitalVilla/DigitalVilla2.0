@@ -60,16 +60,21 @@ svg {
 	padding: var(--space-sm) var(--space-lg);
 	border: 2px solid white;
 	border-radius: 5px;
-	font-size: var(--font);
+	font-size: var(--font-sm);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: all .2s;
 	text-decoration: none;
+	position: relative;
 
 	&:hover {
 		color: var(--brand2);
 		background: #fff;
 		top: 4px;
+	}
+
+	@media screen and (min-height: $screen-sm) {
+		font-size: var(--font);
 	}
 }
 
