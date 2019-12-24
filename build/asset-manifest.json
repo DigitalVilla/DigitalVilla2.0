@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.4153d56c.chunk.css",
-    "main.js": "/static/js/main.4dc34b27.chunk.js",
+    "main.js": "/static/js/main.d9a57939.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.bdbb6f3c.js",
     "static/js/2.4d0169a9.chunk.js": "/static/js/2.4d0169a9.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.fc66e91cdf784799d692c7323999444e.js": "/precache-manifest.fc66e91cdf784799d692c7323999444e.js",
+    "precache-manifest.6b98dd6074a97b44c7c6d802b613c1f2.js": "/precache-manifest.6b98dd6074a97b44c7c6d802b613c1f2.js",
     "service-worker.js": "/service-worker.js",
-    "static/media/Resume2020.pdf": "/static/media/Resume2020.325be96a.pdf",
+    "static/media/DigitalVilla2020.pdf": "/static/media/DigitalVilla2020.2a975643.pdf",
     "static/media/card.jpg": "/static/media/card.6402d793.jpg",
     "static/media/design.jpg": "/static/media/design.14b28b88.jpg",
     "static/media/ego.png": "/static/media/ego.18908493.png",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.bdbb6f3c.js",
     "static/js/2.4d0169a9.chunk.js",
     "static/css/main.4153d56c.chunk.css",
-    "static/js/main.4dc34b27.chunk.js"
+    "static/js/main.d9a57939.chunk.js"
   ]
 }
