@@ -68,9 +68,9 @@ svg {
 	position: relative;
 
 	&:hover {
-		color: var(--brand2);
-		background: #fff;
-		top: 4px;
+		color: var(--brand4);
+		background: #eee;
+		border-color: transparent;
 	}
 
 	@media screen and (min-height: $screen-sm) {
