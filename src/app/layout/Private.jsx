@@ -11,7 +11,7 @@ export default function Private(props) {
 			title: 'Personal Work',
 			image: main,
 			dek: [
-				<p>Excluding this website,</p>,
+				<p>Aside from this website,</p>,
 				<p>my most recent personal projects</p>,
 				<p>built to test advanced concepts.</p>,
 				<span className="break"></span>,
