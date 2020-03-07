@@ -1,6 +1,6 @@
 # Digital Villa 2.0
-> A Quick landing page in React/Redux
-> Experimental programming in sass and css variables`
+> My new landing page with React & CSS custom properties.
+#### [See it in action here!](https://www.digitalvilla.ca)
 
 ![](screenshot.png)
 `
