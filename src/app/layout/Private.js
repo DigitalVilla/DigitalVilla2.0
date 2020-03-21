@@ -1,8 +1,8 @@
 import React from "react"
 import main from "../assets/old-games.jpg"
-import imatch from "../assets/imatch.png"
-import wow from "../assets/wow.png"
-import eyedentify from "../assets/eyedentify.png"
+import imatch from "../assets/projects/imatch.png"
+import wow from "../assets/projects/wow.png"
+import eyedentify from "../assets/projects/eyedentify.png"
 
 export default function Private(props) {
 	const content = [

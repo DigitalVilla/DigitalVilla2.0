@@ -1,5 +1,5 @@
 import React from "react"
-import Icon from "../components/Icons.jsx"
+import Icon from "../components/Icons"
 import video from "../assets/nebula.mp4"
 import poster from "../constants/poster"
 import Video from "../components/Video"
@@ -26,7 +26,7 @@ const Home = props => {
 					<span>Villa</span>
 				</div>
 				<h2>
-					Launching Ideas<span className="break"></span> As Living Designs
+					Developing Ideas<span className="break"></span> Into Living Designs
 				</h2>
 				{props.children}
 			</div>

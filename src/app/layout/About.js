@@ -28,10 +28,12 @@ const About = props => {
 				<SplitImage image={ego} className='split-about' />
 				<div className="dek">
 					<NeoText options={neoOptions} animate={isVisible()} />
-					<p className="first">If you need a trending app or a new website I can do the job! However, I do more than just web and app development.
-						I can give your current brand a boost to improve customer acquisition, improve your online brand strategy to disrupt a greater market.
-					Whether as a subcontractor or an in-house developer, I am here to help you or your team excel in the digital world.</p>
-					<p className="last">I am currently a fulltime developer for <a href="https://mobilityquotient.com/">Mobility Quotient</a>. Therefore, I am not available to take on any extra projects at the moment, however, I can always refer you to other great developers in the city!</p>
+					<p className="first">If you need a trending app or a new website I can do the job, however, I am not intrested in doing that. </p>
+
+					<p className="first">I am in the business of solving problems by offering innovating solutions, because the work that I do for my clients truly impacts their businesses.
+					Therefore, I take my craft seriously and asure you that if we create a partnership I will do everything that is in my reach to manage your online precence so you can keep doing what you do best!</p>
+					<p className="last">Whether as a subcontractor or an in-house developer, I can help you or your team develop full-stack websites; make a mobile application; optimize existing sites as PWAs; create and consume GraphQL APIs,
+						and even transition a slow monolithic site to a blazzing fast Server-less architecture.</p>
 				</div>
 			</div>
 			<figure className="background">

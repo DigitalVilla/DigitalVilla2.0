@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Base from "../layout/Base"
-import Menu from "../components/Menu.jsx"
+import Menu from "../components/Menu"
 import pages from "../constants/pages"
 import "../scss/main.scss"
 

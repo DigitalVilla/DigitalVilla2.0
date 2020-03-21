@@ -1,11 +1,5 @@
 import React from 'react'
-import logo from "../assets/logo_DV.png"
-import card from "../assets/card.jpg"
-import logoB from "../assets/logo_Nebula.png"
 import design from "../assets/design.jpg"
-import isMedia from "../utils/isMedia"
-import bg from "../assets/nebula-md.jpg"
-
 
 export default function Contact(props) {
 	return (

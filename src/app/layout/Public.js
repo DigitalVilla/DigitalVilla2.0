@@ -1,18 +1,18 @@
 import React from "react"
 import main from "../assets/mac-rainbow.jpg"
-import winsight from "../assets/winsight.png"
-import justbeer from "../assets/justbeer.png"
-import portal from "../assets/portal.png"
+import tlc from "../assets/projects/tlc.jpg"
+import winsight from "../assets/projects/winsight.jpg"
+import justbeer from "../assets/projects/justbeer.png"
+import portal from "../assets/projects/portal.png"
 
 export default function Public(props) {
 	const content = [
 		{
-			label: 'slide1',
 			title: 'Professional Work',
 			image: main,
 			dek: [
 				<p>Best projects developed</p>,
-				<p> under <a href="https://www.mobilityquotient.com">Mobility Quotient</a></p>,
+				<p> under <a href="https://www.thearcane.com">Arcane</a> and <a href="https://www.mobilityquotient.com">Mobility Quotient</a></p>,
 				<span className="break"></span>,
 				<p>Applied Technologies:</p>,
 				<p>JS, Angular, React, PHP, Symphony</p>,
@@ -20,7 +20,6 @@ export default function Public(props) {
 			]
 		},
 		{
-			label: 'slide2',
 			title: 'Winsight',
 			image: winsight,
 			dek: [
@@ -36,7 +35,21 @@ export default function Public(props) {
 			]
 		},
 		{
-			label: 'slide3',
+			title: 'TLC Pricing Tool',
+			image: tlc,
+			dek: [
+				<p>After a systematic redesign of</p>,
+				<p>each of Winsight's brands</p>,
+				<p>we upgraded its main website.</p>,
+				<span className="break"></span>,
+				<p>They wanted to emphasize a people </p>,
+				<p> centred company comes before being</p>,
+				<p>a multimillion-dollar food industry.</p>,
+				<span className="break button"></span>,
+				<p><a class="btn" href="https://www.winsightmedia.com/">View Demo</a></p>,
+			]
+		},
+		{
 			title: 'JustBeer',
 			image: justbeer,
 			dek: [
@@ -52,7 +65,6 @@ export default function Public(props) {
 			]
 		},
 		{
-			label: 'slide4',
 			title: 'My Winsight',
 			image: portal,
 			dek: [
@@ -64,7 +76,6 @@ export default function Public(props) {
 				<p>all of Winsight's family tasks</p>,
 				<p>into a centralized cloud platform.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="JavaScript:void(0);">Not Public</a></p>
 			]
 		},
 	];
@@ -73,8 +84,8 @@ export default function Public(props) {
 		<>
 			{
 				content.map((slide, i) => {
-					return (<div key={i} className="slide" data-anchor={slide.label}>
-						<div className={"content " + slide.label}>
+					return (<div key={i} className="slide" data-anchor={'slide'+i}>
+						<div className={"content slide" + i }>
 							<div className="leyend">
 								<h2>{slide.title}</h2>
 								<div className="dek">
@@ -84,7 +95,6 @@ export default function Public(props) {
 							<figure>
 								<img data-src={slide.image} alt='Logo' />
 							</figure>
-
 						</div>
 					</div>)
 				})
