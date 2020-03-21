@@ -1,6 +1,7 @@
 import React from "react"
 import main from "../assets/mac-rainbow.jpg"
 import tlc from "../assets/projects/tlc.jpg"
+import kit from "../assets/projects/kit.png"
 import winsight from "../assets/projects/winsight.jpg"
 import justbeer from "../assets/projects/justbeer.png"
 import portal from "../assets/projects/portal.png"
@@ -20,6 +21,37 @@ export default function Public(props) {
 			]
 		},
 		{
+			title: 'Kit e-comm',
+			image: kit,
+			dek: [
+				<p>Kit is moving online!</p>,
+				<p>I am currently developing an</p>,
+				<p>e-comm to create online sales.</p>,
+				<p>I went beyond and also fixed bugs,</p>,
+				<span className="break"></span>,
+				<p>and responsive issues in their live site.</p>,
+				<p>It is a shame that there are developers</p>,
+				<p>damaging small businesses with mediocrity.</p>,
+				<span className="break button"></span>,
+				<p><a class="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
+			]
+		},
+		{
+			title: 'TLC Pricing Tool',
+			image: tlc,
+			dek: [
+				<p>TLC came to Arcane looking</p>,
+				<p>for an innovative way to showcase</p>,
+				<p>their high end services.</p>,
+				<span className="break"></span>,
+				<p>I was asigned to build this JS app.</p>,
+				<p>TLC loved it so much that Arcane has</p>,
+				<p>earned their trust to rebuild their website.</p>,
+				<span className="break button"></span>,
+				<p><a class="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
+			]
+		},
+		{
 			title: 'Winsight',
 			image: winsight,
 			dek: [
@@ -31,22 +63,7 @@ export default function Public(props) {
 				<p> centred company comes before being</p>,
 				<p>a multimillion-dollar food industry.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://www.winsightmedia.com/">View Live</a></p>,
-			]
-		},
-		{
-			title: 'TLC Pricing Tool',
-			image: tlc,
-			dek: [
-				<p>After a systematic redesign of</p>,
-				<p>each of Winsight's brands</p>,
-				<p>we upgraded its main website.</p>,
-				<span className="break"></span>,
-				<p>They wanted to emphasize a people </p>,
-				<p> centred company comes before being</p>,
-				<p>a multimillion-dollar food industry.</p>,
-				<span className="break button"></span>,
-				<p><a class="btn" href="https://www.winsightmedia.com/">View Demo</a></p>,
+				<p><a class="btn noSelect" href="https://www.winsightmedia.com/">View Live</a></p>,
 			]
 		},
 		{
@@ -61,7 +78,7 @@ export default function Public(props) {
 				<p>Advanced SEO and accessibility practices.</p>,
 				<p>Google ads and JSON-ld compatibility.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://justbeerapp.com/guides">View Live</a></p>,
+				<p><a class="btn noSelect" href="https://justbeerapp.com/guides">View Live</a></p>,
 			]
 		},
 		{
@@ -70,12 +87,12 @@ export default function Public(props) {
 			dek: [
 				<p>In 2019 MQ created one of the</p>,
 				<p>most ambitious projects in</p>,
-				<p>the software industry.</p>,
+				<p>the food industry.</p>,
 				<span className="break"></span>,
 				<p>An online application to unify</p>,
 				<p>all of Winsight's family tasks</p>,
 				<p>into a centralized cloud platform.</p>,
-				<span className="break button"></span>,
+				<p>This is a private project*</p>,
 			]
 		},
 	];

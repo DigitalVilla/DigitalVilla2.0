@@ -26,7 +26,7 @@ const Home = props => {
 					<span>Villa</span>
 				</div>
 				<h2>
-					Developing Ideas<span className="break"></span> Into Living Designs
+					Programming Ideas<span className="break"></span> Into Living Designs
 				</h2>
 				{props.children}
 			</div>
