@@ -1,8 +1,8 @@
-import Home from '../layout/Home.jsx';
-import About from '../layout/About.jsx';
-import Public from '../layout/Public.jsx';
-import Private from '../layout/Private.jsx';
-import Contact from '../layout/Contact.jsx';
+import Home from '../layout/Home';
+import About from '../layout/About';
+import Public from '../layout/Public';
+import Private from '../layout/Private';
+import Contact from '../layout/Contact';
 
 export default [
     {

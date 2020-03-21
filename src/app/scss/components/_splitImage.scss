@@ -22,7 +22,7 @@
 	}
 
 	div:first-child {
-		transform: translateY(calc(var(--displacement) * -1 ));
+		transform: translateY(calc(var(--displacement) * -1px ));
 
 		img {
 			right: -50%;
