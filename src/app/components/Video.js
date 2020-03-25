@@ -9,7 +9,7 @@ const Video = ({ poster, className, media, id }) => {
 
 	return (
 		<div className={"video-container " + className}>
-			<video id={"video-" + id} {...dataset} loop muted preload="true" poster={poster}>
+			<video id={"video-" + id} {...dataset} loop muted preload="auto" poster={poster}>
 				<source src={source} type={`video/${datatype}`} />
 			</video>
 		</div>

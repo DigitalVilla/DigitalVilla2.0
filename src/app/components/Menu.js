@@ -34,26 +34,29 @@ const Menu = (props) => {
 
 
 	return (
-		<div id="menu" className='menu'>
-			<button className="menu-button" onClick={handleClick}>
-				<img src={logo} alt="logo" />
-			</button>
+		<>
+		<div id="online-status">online</div>
+			<div id="menu" className='menu'>
+				<button className="menu-button" onClick={handleClick}>
+					<img src={logo} alt="logo" />
+				</button>
 
-			<nav className={props.isOpen ? "menu-nav active" : "menu-nav"}>
-				<ul>
-					{
-						buttons.map((el, i, arr) => {
-							let defaultClass = `hide-${arr.length - i} show-${i + 1}`;
-							return (
-								<li key={i} className={props.isOpen ? defaultClass + ' active' : defaultClass}>
-									<Icon icon={el.icon} action={handleLink.bind(this, el.link)} />
-								</li>
-							)
-						})
-					}
-				</ul>
-			</nav>
-		</div>
+				<nav className={props.isOpen ? "menu-nav active" : "menu-nav"}>
+					<ul>
+						{
+							buttons.map((el, i, arr) => {
+								let defaultClass = `hide-${arr.length - i} show-${i + 1}`;
+								return (
+									<li key={'menu-item' + i} className={props.isOpen ? defaultClass + ' active' : defaultClass}>
+										<Icon icon={el.icon} action={handleLink.bind(this, el.link)} />
+									</li>
+								)
+							})
+						}
+					</ul>
+				</nav>
+			</div>
+		</>
 	)
 }
 

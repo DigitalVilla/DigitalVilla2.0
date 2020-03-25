@@ -12,8 +12,6 @@ export default function FullPage(props) {
 		setIsOpen(!isOpen)
 	}
 
-	console.clear();
-
 	useEffect(() => {
 		if (!props.display) {
 			setTimeout(() => {
@@ -57,11 +55,13 @@ export default function FullPage(props) {
 							toggleMenu={toggleMenu}
 						/>
 						<ReactFullpage.Wrapper>
-							{pages.map((p, i) =>
-								<Base key={i} api={fullpageApi} pageName={p.name} >
-									<p.page api={fullpageApi} isVisible={false} />
-								</Base>
-							)}
+							{
+								pages.map((p, i) =>
+									<Base key={'FP-'+i} api={fullpageApi} pageName={p.name} >
+										<p.page api={fullpageApi} isVisible={false} />
+									</Base>
+								)
+							}
 						</ReactFullpage.Wrapper>
 					</div>
 				)
