@@ -1,9 +1,9 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '1.4.0';
+const VERSION = '1.5.0';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
-const debug = true;
+const debug = false;
 let isOnline = true;
 let isLoggedIn = false;
 let filesToCache = [];
