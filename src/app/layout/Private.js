@@ -29,7 +29,7 @@ export default function Private(props) {
 				<p>implementing modern css animations</p>,
 				<p>and advanced sorting algorithms.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://match-io.netlify.com">View Live</a></p>,
+				<p><a className="btn" href="https://match-io.netlify.com">View Live</a></p>,
 			]
 		},
 		{
@@ -42,7 +42,7 @@ export default function Private(props) {
 				<p>built to test the latest React,</p>,
 				<p>Context API and React Hooks.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://wordsofwow.netlify.com">View Live</a></p>,
+				<p><a className="btn" href="https://wordsofwow.netlify.com">View Live</a></p>,
 			]
 		},
 		{
@@ -56,7 +56,7 @@ export default function Private(props) {
 				<span className="break"></span>,
 				<p>Create a <q>mock</q> account and explore!</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://eyedntify.herokuapp.com">View Live</a></p>,
+				<p><a className="btn" href="https://eyedntify.herokuapp.com">View Live</a></p>,
 			]
 		},
 	];
@@ -64,8 +64,8 @@ export default function Private(props) {
 	return (
 		<>
 			{
-				content.map((slide, i) => {
-					return (<div key={i} className="slide" data-anchor={slide.label}>
+				content.map((slide, i) => 
+					<div key={'private-slide-'+i} className="slide" data-anchor={slide.label}>
 						<div className={"content " + slide.label}>
 							<figure>
 								<img data-src={slide.image} alt='Logo' />
@@ -77,8 +77,8 @@ export default function Private(props) {
 								</div>
 							</div>
 						</div>
-					</div>)
-				})
+					</div>
+				)
 			}
 		</>
 	)

@@ -33,7 +33,7 @@ export default function Public(props) {
 				<p>It is a shame that there are developers</p>,
 				<p>damaging small businesses with mediocrity.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
+				<p><a className="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
 			]
 		},
 		{
@@ -48,7 +48,7 @@ export default function Public(props) {
 				<p>TLC loved it so much that Arcane has</p>,
 				<p>earned their trust to rebuild their website.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
+				<p><a className="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
 			]
 		},
 		{
@@ -63,7 +63,7 @@ export default function Public(props) {
 				<p> centred company comes before being</p>,
 				<p>a multimillion-dollar food industry.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn noSelect" href="https://www.winsightmedia.com/">View Live</a></p>,
+				<p><a className="btn noSelect" href="https://www.winsightmedia.com/">View Live</a></p>,
 			]
 		},
 		{
@@ -78,7 +78,7 @@ export default function Public(props) {
 				<p>Advanced SEO and accessibility practices.</p>,
 				<p>Google ads and JSON-ld compatibility.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn noSelect" href="https://justbeerapp.com/guides">View Live</a></p>,
+				<p><a className="btn noSelect" href="https://justbeerapp.com/guides">View Live</a></p>,
 			]
 		},
 		{
@@ -100,8 +100,8 @@ export default function Public(props) {
 	return (
 		<>
 			{
-				content.map((slide, i) => {
-					return (<div key={i} className="slide" data-anchor={'slide'+i}>
+				content.map((slide, i) => 
+					<div key={'public-slide-'+i} className="slide" data-anchor={'slide'+i}>
 						<div className={"content slide" + i }>
 							<div className="leyend">
 								<h2>{slide.title}</h2>
@@ -110,11 +110,11 @@ export default function Public(props) {
 								</div>
 							</div>
 							<figure>
-								<img data-src={slide.image} alt='Logo' />
+								<img data-src={slide.image} alt={slide.title} />
 							</figure>
 						</div>
-					</div>)
-				})
+					</div>
+				)
 			}
 		</>
 	)
