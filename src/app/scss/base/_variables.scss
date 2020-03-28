@@ -89,6 +89,7 @@ $brand4: #5539af;
 
 	// body font size
 	--font: 1em;
+	--font-xxs: calc(var(--font) * 0.68);
 	--font-xs: calc(var(--font) * 0.75);
 	--font-sm: calc(var(--font) * 0.9);
 	--font-md: calc(var(--font) * 1.2);

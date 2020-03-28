@@ -108,7 +108,7 @@ export default function Public(props) {
 								{slide.dek}
 							</div>
 						</div>
-						<figure>
+						<figure className="noSelect">
 							<img data-src={slide.image} alt={slide.title} />
 						</figure>
 					</div>

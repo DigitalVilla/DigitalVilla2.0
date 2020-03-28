@@ -62,7 +62,7 @@ export default function Private(props) {
 			{ content.map((slide, i) =>
 				<div key={'private-slide-' + i} className="slide custom" data-anchor={'slide' + i}>
 					<div className={"content slide" + i}>
-						<figure>
+						<figure className="noSelect">
 							<img data-src={slide.image} alt={slide.title} />
 						</figure>
 						<div className="leyend">

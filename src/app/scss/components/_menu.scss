@@ -111,17 +111,42 @@
 		}
 	}
 
+	&.contactBox-toggle {
+		top: unset;
+		bottom: calc(var(--position) - 6px);
+		margin-right: 5px;
+		animation: fadeIn 1s ease-in-out;
+		@include flex(flex-end);
+		opacity: 0.85;
+		transition: opacity 1s;
+
+		button {
+			height: calc(var(--btn-height) - 4px);
+			width: calc(var(--btn-height) - 4px);
+		}
+
+		&.active {
+			opacity: 0;
+			transition: opacity 0.2s;
+		}
+	}
+
+	svg, 
+	&-button {
+		&:after {
+			@extend .overlay;
+			opacity: 0;
+		}
+	
+		&:active {
+			transform: scale3d(.95, .95, 1);
+		}
+	}
+
 	@include media {
 		--btn-size: 50px;
 		--btn-width: 80px;
 		--btn-height: 50px;
 		--position: var(--space-md);
-
-		&-button,
-		svg {
-			&:active {
-				transform: scale3d(.95, .95, 1);
-			}
-		}
 	}
 }
