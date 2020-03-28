@@ -70,10 +70,10 @@ const Menu = (props) => {
             	<Icon icon={'offline'}/>
         	</div>
 			
-			{/* <div className={`menu contactBox-toggle noSelect${isContactOpen ? " active" : ''}`}>
+			<div className={`menu contactBox-toggle noSelect${isContactOpen ? " active" : ''}`}>
             	<Icon icon={'planeSolid'} action={toggleContact}/>
         	</div>
-			<ContactBox className={isContactOpen ? "active" : ''} toggleContact={toggleContact} isOpen={isContactOpen}/> */}
+			<ContactBox className={isContactOpen ? "active" : ''} toggleContact={toggleContact} isOpen={isContactOpen}/>
 		</>
 	)
 }

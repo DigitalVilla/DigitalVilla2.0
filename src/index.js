@@ -8,4 +8,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 console.clear();
 // SW.unregister();
-SW.register();
+// SW.register();
