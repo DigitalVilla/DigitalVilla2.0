@@ -19,7 +19,7 @@ const Home = props => {
 				<img className="main-logo" src={logo_DV} alt="DV" />
 				<h1>
 					{/* {`${meta.title} is a ${meta.description} by ${siteMetadata.author}. location ${siteMetadata.location}`} */}
-					Advanced and Inovative Web development and  Mobile development in React
+					Advanced and Inovative Web development and  Mobile development in ReactJS and React Native
 				</h1>
 				<div className="title">
 					<span>Digital </span>
@@ -27,7 +27,7 @@ const Home = props => {
 					<span>Villa</span>
 				</div>
 				<h2>
-					Programming Ideas<span className="break"></span> Into Living Designs
+					Full-Stack Web & <span className="break"></span>Mobile Development
 				</h2>
 				{props.children}
 			</div>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import logo from './../assets/logo_DV.png'
 import resume from '../assets/Resume2.0.pdf'
 import Icon from './Icons'
@@ -6,18 +6,28 @@ import ContactBox from './ContactBox';
 
 const Menu = (props) => {
 	const [isContactOpen, setContactOpen] = useState(false);
+	const [isMenuOpen, setMenuOpen] = useState(false);
+	const [page, setPage] = useState('');
 	
-	const toggleContact = () => {
-		if (props.isLoaded) {
-			setContactOpen(!isContactOpen);
-			props.isMenuOpen && props.toggleMenu();
+
+	useEffect(()=> {
+		if (props.api) {
+			const currentPage = props.api.getActiveSection().anchor
+			
+			if (page != currentPage) {
+				setPage(currentPage);
+				setMenuOpen(false);
+			}
 		}
+	})
+
+	const toggleMenu = () => {
+		setMenuOpen(!isMenuOpen)
 	}
 
-	const handleClick = (e) => {
-		if (props.isLoaded) {
-			props.toggleMenu();
-		}
+	const toggleContact = () => {
+		setContactOpen(!isContactOpen);
+		isMenuOpen && toggleMenu();
 	}
 
 	const handleLink = (a) => {
@@ -46,17 +56,17 @@ const Menu = (props) => {
 	return (
 		<>
 			<div id="menu" className='menu'>
-				<button className="menu-button noSelect" onClick={handleClick}>
+				<button className="menu-button noSelect" onClick={toggleMenu}>
 					<img src={logo} alt="logo" />
 				</button>
 
-				<nav className={`menu-nav${props.isMenuOpen ? " active" : ''}`}>
+				<nav className={`menu-nav${isMenuOpen ? " active" : ''}`}>
 					<ul>
 						{
 							buttons.map((el, i, arr) => {
 								let defaultClass = `hide-${arr.length - i} show-${i + 1}`;
 								return (
-									<li key={'menu-item' + i} className={`${defaultClass}${props.isMenuOpen ? " active" :''}`}>
+									<li key={'menu-item' + i} className={`${defaultClass}${isMenuOpen ? " active" :''}`}>
 										<Icon icon={el.icon} action={()=>handleLink(el.link)} />
 									</li>
 								)
