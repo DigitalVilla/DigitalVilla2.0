@@ -1,5 +1,5 @@
 export default (() => {
-	const hiddenClass = "hidden";
+	const activeClass = "active";
 	const hasServiceWorker = ("serviceWorker" in navigator)
 	// let isLoggedIn = /isLoggedIn=1/.test(document.cookie.toString() || "");
 	let isLoggedIn = false;
@@ -13,17 +13,17 @@ export default (() => {
 		offlineIcon = document.getElementById("online-status");
 
 		if (!isOnline) {
-			offlineIcon.classList.remove(hiddenClass);
+			offlineIcon.classList.add(activeClass);
 		}
 
 		window.addEventListener("online", () => {
-			offlineIcon.classList.add(hiddenClass);
+			offlineIcon.classList.remove(activeClass);
 			isOnline = true;
 			sendStatusUpdate();
 		}, false);
 
 		window.addEventListener("offline", () => {
-			offlineIcon.classList.remove(hiddenClass);
+			offlineIcon.classList.add(activeClass);
 			isOnline = false;
 			sendStatusUpdate();
 		}, false);

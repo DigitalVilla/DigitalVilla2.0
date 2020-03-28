@@ -99,23 +99,21 @@ export default function Public(props) {
 
 	return (
 		<>
-			{
-				content.map((slide, i) => 
-					<div key={'public-slide-'+i} className="slide" data-anchor={'slide'+i}>
-						<div className={"content slide" + i }>
-							<div className="leyend">
-								<h2>{slide.title}</h2>
-								<div className="dek">
-									{slide.dek}
-								</div>
+			{ content.map((slide, i) =>
+				<div key={'public-slide-' + i} className="slide" data-anchor={'slide' + i}>
+					<div className={"content slide" + i}>
+						<div className="leyend">
+							<h2>{slide.title}</h2>
+							<div className="dek">
+								{slide.dek}
 							</div>
-							<figure>
-								<img data-src={slide.image} alt={slide.title} />
-							</figure>
 						</div>
+						<figure className="noSelect">
+							<img data-src={slide.image} alt={slide.title} />
+						</figure>
 					</div>
-				)
-			}
+				</div>
+			)}
 		</>
 	)
 }

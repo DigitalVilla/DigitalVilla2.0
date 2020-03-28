@@ -1,19 +1,19 @@
 import React from "react"
 import main from "../assets/old-games.jpg"
 import imatch from "../assets/projects/imatch.png"
+import digitalvilla from "../assets/projects/digitalvilla.jpg"
 import wow from "../assets/projects/wow.png"
 import eyedentify from "../assets/projects/eyedentify.png"
 
 export default function Private(props) {
 	const content = [
 		{
-			label: 'slide1',
 			title: 'Personal Work',
 			image: main,
 			dek: [
-				<p>Aside from this website,</p>,
-				<p>my most recent personal projects</p>,
+				<p>My most recent personal projects</p>,
 				<p>built to test advanced concepts.</p>,
+				<p>Try to view this site without WIFI!</p>,
 				<span className="break"></span>,
 				<p>Applied technologies:</p>,
 				<p>JavaScript, React, Redux, SASS,</p>,
@@ -21,19 +21,30 @@ export default function Private(props) {
 			]
 		},
 		{
-			label: 'slide2',
+			title: 'Digital Villa',
+			image: digitalvilla,
+			dek: [
+				<p>More than a website, this is my personal</p>,
+				<p>sandbox to apply hot and new technologies.</p>,
+				<span className="break"></span>,
+				<p>Currently working on server-less LAMDA functions</p>,
+				<p>to manage forms and email services.</p>,
+				<span className="break button"></span>,
+				<p><a className="btn" href="https://staging.digitalvilla.ca">Check it out</a></p>,
+			]
+		},
+		{
 			title: 'Match.io',
 			image: imatch,
 			dek: [
 				<p>An amusing memory game </p>,
 				<p>implementing modern css animations</p>,
-				<p>and advanced sorting algorithms.</p>,
+				<p>and advanced sortinyarng algorithms.</p>,
 				<span className="break button"></span>,
 				<p><a className="btn" href="https://match-io.netlify.com">View Live</a></p>,
 			]
 		},
 		{
-			label: 'slide3',
 			title: 'WOW',
 			image: wow,
 			dek: [
@@ -46,7 +57,6 @@ export default function Private(props) {
 			]
 		},
 		{
-			label: 'slide4',
 			title: 'Eyedentify',
 			image: eyedentify,
 			dek: [
@@ -63,23 +73,21 @@ export default function Private(props) {
 
 	return (
 		<>
-			{
-				content.map((slide, i) => 
-					<div key={'private-slide-'+i} className="slide" data-anchor={slide.label}>
-						<div className={"content " + slide.label}>
-							<figure>
-								<img data-src={slide.image} alt='Logo' />
-							</figure>
-							<div className="leyend">
-								<h2>{slide.title}</h2>
-								<div className="dek">
-									{slide.dek}
-								</div>
+			{ content.map((slide, i) =>
+				<div key={'private-slide-' + i} className="slide custom" data-anchor={'slide' + i}>
+					<div className={"content slide" + i}>
+						<figure className="noSelect">
+							<img data-src={slide.image} alt={slide.title} />
+						</figure>
+						<div className="leyend">
+							<h2>{slide.title}</h2>
+							<div className="dek">
+								{slide.dek}
 							</div>
 						</div>
 					</div>
-				)
-			}
+				</div>   
+			)}
 		</>
 	)
 }
