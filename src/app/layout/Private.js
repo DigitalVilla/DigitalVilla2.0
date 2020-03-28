@@ -7,7 +7,6 @@ import eyedentify from "../assets/projects/eyedentify.png"
 export default function Private(props) {
 	const content = [
 		{
-			label: 'slide1',
 			title: 'Personal Work',
 			image: main,
 			dek: [
@@ -21,7 +20,6 @@ export default function Private(props) {
 			]
 		},
 		{
-			label: 'slide2',
 			title: 'Match.io',
 			image: imatch,
 			dek: [
@@ -29,11 +27,10 @@ export default function Private(props) {
 				<p>implementing modern css animations</p>,
 				<p>and advanced sorting algorithms.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://match-io.netlify.com">View Live</a></p>,
+				<p><a className="btn" href="https://match-io.netlify.com">View Live</a></p>,
 			]
 		},
 		{
-			label: 'slide3',
 			title: 'WOW',
 			image: wow,
 			dek: [
@@ -42,11 +39,10 @@ export default function Private(props) {
 				<p>built to test the latest React,</p>,
 				<p>Context API and React Hooks.</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://wordsofwow.netlify.com">View Live</a></p>,
+				<p><a className="btn" href="https://wordsofwow.netlify.com">View Live</a></p>,
 			]
 		},
 		{
-			label: 'slide4',
 			title: 'Eyedentify',
 			image: eyedentify,
 			dek: [
@@ -56,30 +52,28 @@ export default function Private(props) {
 				<span className="break"></span>,
 				<p>Create a <q>mock</q> account and explore!</p>,
 				<span className="break button"></span>,
-				<p><a class="btn" href="https://eyedntify.herokuapp.com">View Live</a></p>,
+				<p><a className="btn" href="https://eyedntify.herokuapp.com">View Live</a></p>,
 			]
 		},
 	];
 
 	return (
 		<>
-			{
-				content.map((slide, i) => {
-					return (<div key={i} className="slide" data-anchor={slide.label}>
-						<div className={"content " + slide.label}>
-							<figure>
-								<img data-src={slide.image} alt='Logo' />
-							</figure>
-							<div className="leyend">
-								<h2>{slide.title}</h2>
-								<div className="dek">
-									{slide.dek}
-								</div>
+			{ content.map((slide, i) =>
+				<div key={'private-slide-' + i} className="slide custom" data-anchor={'slide' + i}>
+					<div className={"content slide" + i}>
+						<figure className="noSelect">
+							<img data-src={slide.image} alt={slide.title} />
+						</figure>
+						<div className="leyend">
+							<h2>{slide.title}</h2>
+							<div className="dek">
+								{slide.dek}
 							</div>
 						</div>
-					</div>)
-				})
-			}
+					</div>
+				</div>   
+			)}
 		</>
 	)
 }

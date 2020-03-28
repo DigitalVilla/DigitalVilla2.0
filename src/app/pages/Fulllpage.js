@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
-import Base from "../layout/Base"
+import Layout from "../layout/Layout"
 import Menu from "../components/Menu"
 import pages from "../constants/pages"
 import "../scss/main.scss"
 
+let t = 0;
 export default function FullPage(props) {
-	const [isOpen, setIsOpen] = useState(false)
+	const [isMenuOpen, setMenuOpen] = useState(false);
 	const anchors = pages.map((page) => page.name);
+	
 	const toggleMenu = () => {
-		setIsOpen(!isOpen)
+		setMenuOpen(!isMenuOpen)
 	}
-
-	console.clear();
 
 	useEffect(() => {
 		if (!props.display) {
-			setTimeout(() => {
+			clearTimeout(t);
+			t = setTimeout(() => {
 				document.getElementsByClassName('fp-completely')[0].classList.remove('active');
 			}, 100);
 		}
@@ -26,7 +27,7 @@ export default function FullPage(props) {
 		<ReactFullpage
 			licenseKey={process.env.REACT_APP_FP}
 			//Navigation
-			menu={"#menu"}
+			menu={".menu"}
 			navigation={true}
 			navigationPosition={"left"}
 			// navigationTooltips={anchors}
@@ -41,29 +42,29 @@ export default function FullPage(props) {
 			animateAnchor={false}
 			//events
 			afterLoad={function (origin, destination, direction) {
-				isOpen && setIsOpen()
+				isMenuOpen && setMenuOpen(false)
 			}}
 			onLeave={function (origin, destination, direction) {
 				// return false;
 			}}
 			render={({ state, fullpageApi }) => {
 				return (
-					<div>
+					<>
 						<Menu
 							anchors={anchors}
-							isLoaded={props.display}
 							api={fullpageApi}
-							isOpen={ isOpen}
+							isLoaded={props.display}
+							isMenuOpen={isMenuOpen}
 							toggleMenu={toggleMenu}
 						/>
 						<ReactFullpage.Wrapper>
-							{pages.map((p, i) =>
-								<Base key={i} api={fullpageApi} pageName={p.name} >
-									<p.page api={fullpageApi} isVisible={false} />
-								</Base>
+							{ pages.map((P, i) =>
+								<Layout key={'FP-' + i} api={fullpageApi} pageName={P.name} >
+									<P.page api={fullpageApi} isVisible={false} />
+								</Layout>
 							)}
 						</ReactFullpage.Wrapper>
-					</div>
+					</>
 				)
 			}}
 		/>

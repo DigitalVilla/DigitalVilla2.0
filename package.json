@@ -10,10 +10,12 @@
     "react-scripts": "^3.1.1"
   },
   "scripts": {
-    "full": "yarn add @fullpage/react-fullpage",
+    "install-fp": "yarn add @fullpage/react-fullpage",
     "start": "react-scripts start",
-    "update": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
-    "build": "yarn update | react-scripts build",
+    "update-fp": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
+    "update-cra": "cp -f ./src/app/scripts/webpack.config.js ./node_modules/react-scripts/config/webpack.config.js",
+    "update": "yarn update-fp | yarn update-cra",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

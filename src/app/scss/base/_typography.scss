@@ -2,7 +2,7 @@
 	font-size: var(--font-xxl);
 	color: var(--white);
 	letter-spacing: 0.1em;
-	font-weight: 200;
+	font-weight: 300;
 	text-shadow: var(--darkShadow);
 	text-transform: uppercase;
 	line-height: 1;
@@ -132,15 +132,58 @@ svg {
 	}
 }
 
-
 ::selection {
-	background: $brand3;
+	background: rgba($brand2, 0.4);
 	/* WebKit/Blink Browsers */
 	color: white;
 }
 
 ::-moz-selection {
-	background: $brand3;
+	background: rgba($brand2, 0.4);
 	/* Gecko Browsers */
 	color: white;
 }
+
+/* Animation */
+@keyframes rotate {
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  /* Variables */
+  $loader-size: 100px;
+  
+  /* Loading Icon */
+  .loading {
+	width: $loader-size;
+	height: $loader-size;
+  
+	&__ring {
+	  position: absolute;
+	  width: $loader-size;
+	  height: $loader-size;
+	  
+	  &:first-child {
+		transform: skew(30deg,20deg);
+	  }
+  
+	  &:last-child {
+		transform: skew(-30deg,-20deg) scale(-1, 1);
+  
+		svg {
+		  animation-delay: -0.5s;
+		}
+	  }
+  
+	  svg {
+		// border: 10px solid rgba(185, 185, 185, 0.24);
+		// border-radius: 40%;
+		animation: rotate 1s linear infinite;
+		opacity: 0.8;
+
+		// fill: rgba(196, 20, 20, 0.61);
+	  }
+	}
+  }
+  

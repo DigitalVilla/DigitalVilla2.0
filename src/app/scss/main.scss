@@ -5,10 +5,12 @@
 @import './base/mixins';
 @import './base/typography';
 @import './base/base';
+@import './base/formCtrls';
 @import './base/elements';
 // Components
 @import './components/menu';
 @import './components/slashed';
+@import './components/contactBox';
 @import './components/fullpage';
 @import './components/splitImage';
 // Pages

@@ -4,6 +4,12 @@
 	--radius: 50%;
 	--displacement: 5%;
 
+	&:after {
+		@extend .overlay;
+		opacity: 0;
+	}
+	
+
 	@include flex(center);
 	transform: rotate(var(--angle));
 	width: var(--width);

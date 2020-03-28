@@ -40,6 +40,11 @@
 	position: relative;
 	text-align: center;
 	z-index: 1;
+	
+	&:after {
+		@extend .overlay;
+		opacity: 0;
+	}
 
 	.main-logo {
 		height: 6rem;
@@ -91,7 +96,7 @@
 
 // About
 .about {
-	font-weight: 200;
+	font-weight: 300;
 	text-shadow: 0 0 4px rgba(#000, 0.6);
 	width: 70vw;
 
@@ -170,6 +175,14 @@
 		.split-image {
 			--displacement: 15%;
 			margin: 150px calc(var(--width)/ -4) 60px -80px;
+		}
+	}
+
+	@media (max-height:400px){
+		.dek {
+			.first {
+				display: none;
+			}
 		}
 	}
 }

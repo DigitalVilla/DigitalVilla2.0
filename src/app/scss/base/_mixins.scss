@@ -73,7 +73,7 @@
 }
 
 // Mobile first approach
-@mixin media($screen:$screen-md, $landscape:false, $tablet:false) {
+@mixin media($screen:$screen-md, $landscape:false) {
 	@if $landscape {
 		@media only screen and (min-width: $screen) and (orientation: landscape) {
 			@content;
