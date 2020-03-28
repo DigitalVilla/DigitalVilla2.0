@@ -28,7 +28,7 @@ const About = props => {
 				<SplitImage image={ego} className='split-about noSelect' />
 				<div className="dek">
 					<NeoText options={neoOptions} animate={isVisible()} />
-					<p className="first">If you need a trending app or a new website I can do the job, however, I am not interested in doing that. </p>
+					<p className="first">If you need a trending app or a new website I can do the job, however, I am not interested in doing just that.</p>
 
 					<p className="last">I am in the business of solving problems by offering innovating solutions. The work that I do for my clients truly impacts their businesses.
 					Therefore, I take my craft seriously and make sure that if we create a partnership I will do everything within my reach to grow your online presence so you can relax and keep doing what you do best!</p>

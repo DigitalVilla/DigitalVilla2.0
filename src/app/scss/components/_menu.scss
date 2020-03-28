@@ -111,6 +111,25 @@
 		}
 	}
 
+	&.online-status {
+		top: unset;
+		right: unset;
+		left: 1rem;
+		bottom: calc(var(--position) - 1.5rem);
+		button {
+			height: calc(var(--btn-height) + 10px);
+			width: calc(var(--btn-height) + 10px);
+		}
+		opacity: .0;
+		transition: opacity .3s;
+		
+		&.active {
+			animation: fadeIn 1s ease-in-out;
+			transition: opacity .3s;
+			opacity: .8;
+		}
+	}
+
 	&.contactBox-toggle {
 		top: unset;
 		bottom: calc(var(--position) - 6px);
@@ -149,4 +168,6 @@
 		--btn-height: 50px;
 		--position: var(--space-md);
 	}
+
+
 }
