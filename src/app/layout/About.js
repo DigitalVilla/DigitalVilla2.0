@@ -30,7 +30,7 @@ const About = props => {
 			<div className="content">
 				<SplitImage image={ego} className='split-about noSelect' />
 				<div className="dek">
-					<NeoText options={neoOptions} animate={isVisible()} />
+					<NeoText options={neoOptions} animate={visible} />
 					<p className="first">I solve business problems with innovating solutions.
 					I take my craft seriously and do my best to enhance your brand online, so you can focus on keep doing what you do best.</p>
 					<p className="last">Whether as a subcontractor or an in-house developer, I can help you develop full-stack websites; implement advanced JS animations;
