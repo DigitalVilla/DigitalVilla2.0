@@ -99,12 +99,10 @@ const Menu = (props) => {
 			<div id="online-status" className="menu online-status">
             	<Icon icon={'offline'}/>
         	</div>
-			{/* 
 			<div className={`menu contactBox-toggle noSelect${isContactOpen ? " active" : ''}`}>
             	<Icon icon={'planeSolid'} action={toggleContact}/>
         	</div>
 			<ContactBox className={isContactOpen ? "active" : ''} api={props.api} toggleContact={toggleContact} isOpen={isContactOpen}/>
-			 */}
 		</>
 	)
 }

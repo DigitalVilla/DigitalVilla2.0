@@ -1,2 +1,118 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="shortcut icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/><meta name="theme-color" content="#000000"/><meta property="og:site_name" content="Digital Villa"/><meta property="og:title" content="Digital Villa | Advanced Web and Mobile Solutions"/><meta property="og:description" content="I am in the business of solving problems and offering innovating solutions. What I do for my clients truly impacts their businesses. Therefore, I take my craft seriously and by constantly learning, and exploring new technologies you can be sure that I will deliver only top-quality products. 
-"/><meta property="og:url" content="https://digitalvilla.ca"/><meta property="og:type" content="website"/><meta property="twitter:image”" content="https://digitalvilla.ca/static/media/design.03392def.jpg"/><meta property="”og:image”" content="https://digitalvilla.ca/static/media/design.03392def.jpg"/><meta property="”og:image:width”" content="405"/><meta property="”og:image:height”" content="466"/><link rel="manifest" href="/manifest.json"/><title>Digital Villa | Advanced Web and Mobile Solutions</title><style>body{margin:0;background:#999 -moz-radial-gradient(circle farthest-side,#261436,#05051e);background:#999 -webkit-radial-gradient(circle farthest-side,#261436,#05051e);background:#999 radial-gradient(circle farthest-side,#261436,#05051e)}#loader{height:100vh;width:100vw;z-index:1001}#loader .warp-container{position:absolute;top:50%;overflow:hidden;left:50%;transform:translate(-50%,-60%);width:280px}@keyframes warp-ripple{0%{top:70px;left:50px;width:0;height:0;opacity:1}100%{top:-1px;left:-1px;width:120px;height:120px;opacity:0}}.warp-ripple{display:inline-block;position:relative;width:100px;height:100px;margin-bottom:40px;left:50%;transform:translateX(-60px)}.warp-ripple div{position:absolute;border:4px solid #fff;opacity:1;border-radius:50%;animation:warp-ripple 1.2s cubic-bezier(0,.2,.8,1) infinite}.warp-ripple div:nth-child(2){animation-delay:-.8s}.warp-ripple div:nth-child(3){animation-delay:-.4s}</style><link href="/static/css/main.af5dfd3e.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="loader"><div class="warp-container"><div class="warp-ripple"><div></div><div></div><div></div></div></div></div><div id="root"></div><script src="/static/js/runtime-main.9a849ed7.js"></script><script src="/static/js/2.971b459d.chunk.js"></script><script src="/static/js/main.981be63f.chunk.js"></script></body></html>
+Html Webpack Plugin:
+<pre>
+  Error: Parse Error: <meta name="viewport" content="width=device-width, initial-scale=1/>
+  <meta name=" theme-color" content="#000000" />
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Digital Villa" />
+  <meta property="og:title" content="Digital Villa | Advanced Web and Mobile Solutions" />
+  <meta property="og:description" content="I am in the business of solving problems and offering innovating solutions. What I do for my clients truly impacts the  ir businesses. Therefore, I take my craft seriously and by constantly learning, and exploring new technologies you can be sure that I will deliver only top-qua  lity products. 
+  " />
+  <meta property="og:url" content="https://digitalvilla.ca" />
+  <meta property="og:type" content="website" />
+  <meta property=twitter:image” content="https://digitalvilla.ca/static/media/design.03392def.jpg" />
+  <meta property=”og:image” content="https://digitalvilla.ca/static/media/design.03392def.jpg" />
+  <meta property=”og:image:width” content="405" />
+  <meta property=”og:image:height” content="466" />
+  <link rel="manifest" href="/manifest.json" />
+  <title>Digital Villa | Advanced Web and Mobile Solutions</title>
+  <style>
+  :root {
+  --vh: 1vh;
+  }
+  html,
+  body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  /* overflow: hidden; */
+  margin: 0;
+  background: #999 -moz-radial-gradient(circle farthest-side, #261436, #05051e);
+  background: #999 -webkit-radial-gradient(circle farthest-side, #261436, #05051e);
+  background: #999 radial-gradient(circle farthest-side, #261436, #05051e);
+  }
+  #loader {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1001;
+  }
+  #loader .warp-container {
+  position: absolute;
+  top: 50%;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 280px;
+  }
+  @keyframes warp-ripple {
+  0% {
+  top: 70px;
+  left: 50px;
+  width: 0;
+  height: 0;
+  opacity: 1;
+  }
+  100% {
+  top: -1px;
+  left: -1px;
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  }
+  }
+  .warp-ripple {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+  left: 50%;
+  transform: translateX(-60px)
+  }
+  .warp-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: warp-ripple 1.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .warp-ripple div:nth-child(2) {
+  animation-delay: -0.8s;
+  }
+  .warp-ripple div:nth-child(3) {
+  animation-delay: -0.4s;
+  }
+  </style>
+  <link href="/static/css/main.1dd56970.chunk.css" rel="stylesheet"></head>
+  <body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="loader">
+  <div class="warp-container">
+  <div class="warp-ripple">
+  <div></div>
+  <div></div>
+  <div></div>
+  </div>
+  </div>
+  </div>
+  <div id="root"></div>
+  <script src="/static/js/runtime-main.9a849ed7.js"></script><script src="/static/js/2.971b459d.chunk.js"></script><script src="/static/js/main.c04b10b3.chunk.js  "></script></body>
+  </html>
+  
+  - htmlparser.js:244 new HTMLParser
+    [app-digitalvilla]/[html-minifier-terser]/src/htmlparser.js:244:13
+  
+  - htmlminifier.js:981 minify
+    [app-digitalvilla]/[html-minifier-terser]/src/htmlminifier.js:981:3
+  
+  - htmlminifier.js:1342 Object.exports.minify
+    [app-digitalvilla]/[html-minifier-terser]/src/htmlminifier.js:1342:16
+  
+  - index.js:445 HtmlWebpackPlugin.postProcessHtml
+    [app-digitalvilla]/[html-webpack-plugin]/index.js:445:41
+  
+  - index.js:274 Promise.all.then.then
+    [app-digitalvilla]/[html-webpack-plugin]/index.js:274:25
+  
+  - next_tick.js:68 process._tickCallback
+    internal/process/next_tick.js:68:7
+  
+</pre>
