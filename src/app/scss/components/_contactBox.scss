@@ -27,7 +27,7 @@
 	.form-container {
         color: var(--grey-darkest);
 		width: 90vW;
-        height: 80vh;
+        height: 88vh;
         max-width: 400px;
         max-height: 700px;
         min-width: 300px;
@@ -39,11 +39,14 @@
         position: relative;
         opacity: 0;
         transition: opacity 0.1s;
+        display: flex;
+        flex-direction: column;
      
      
         .form-header {
-            height: 35%;
+            flex-basis: 0;
             width: 100%;
+            max-height: 35%;
             position: relative;
             @extend .noSelect;
 
@@ -90,9 +93,9 @@
         }
         
         .form-body { 
+            flex-basis: 65%;
             position: relative;
             padding: 1rem;
-            height: 65%;
 
             &:after {
                 @extend .overlay;

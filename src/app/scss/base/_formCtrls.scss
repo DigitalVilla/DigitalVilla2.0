@@ -23,6 +23,7 @@
     textarea,
     select {
         color: inherit;
+        border: none;
         border: $default-outline;
         border-radius: 4px;
         display: block;
@@ -45,7 +46,7 @@
         padding: 0.5rem;
         height: 100%;
         resize: none;
-        max-width: 100%;
+        width: 100%;
     }
 
     button[type=submit],
@@ -59,6 +60,7 @@
 
     .customSelect {
         select {
+            background: #fff;
             --arrow-color: #8c45b8ad;
             color: #767676;
             appearance: none;
