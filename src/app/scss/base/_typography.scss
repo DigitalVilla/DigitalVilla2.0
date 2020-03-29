@@ -152,35 +152,35 @@ svg {
   }
   
   /* Variables */
-  $loader-size: 100px;
+//   $loader-size: 100px;
   
   /* Loading Icon */
   .loading {
-	width: $loader-size;
-	height: $loader-size;
+	// width: $loader-size;
+	// height: $loader-size;
   
 	&__ring {
-	  position: absolute;
-	  width: $loader-size;
-	  height: $loader-size;
+	//   position: absolute;
+	//   width: $loader-size;
+	//   height: $loader-size;
 	  
-	  &:first-child {
-		transform: skew(30deg,20deg);
-	  }
+	//   &:first-child {
+	// 	transform: skew(30deg,20deg);
+	//   }
   
-	  &:last-child {
-		transform: skew(-30deg,-20deg) scale(-1, 1);
+	//   &:last-child {
+	// 	transform: skew(-30deg,-20deg) scale(-1, 1);
   
-		svg {
-		  animation-delay: -0.5s;
-		}
-	  }
+	// 	svg {
+	// 	  animation-delay: -0.5s;
+	// 	}
+	//   }
   
 	  svg {
 		// border: 10px solid rgba(185, 185, 185, 0.24);
 		// border-radius: 40%;
-		animation: rotate 1s linear infinite;
-		opacity: 0.8;
+		// animation: rotate 1s linear infinite;
+		// opacity: 0.8;
 
 		// fill: rgba(196, 20, 20, 0.61);
 	  }

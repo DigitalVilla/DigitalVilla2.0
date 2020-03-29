@@ -13,7 +13,7 @@ export default function Private(props) {
 			dek: [
 				<p>My most recent personal projects</p>,
 				<p>built to test advanced concepts.</p>,
-				<p>Try to view this site without WIFI!</p>,
+				// <p>Try to view this site without WIFI!</p>,
 				<span className="break"></span>,
 				<p>Applied technologies:</p>,
 				<p>JavaScript, React, Redux, SASS,</p>,

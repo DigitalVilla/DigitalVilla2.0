@@ -3,51 +3,54 @@ import TextScramble from '../utils/TextScramble'
 import logger from '../utils/logger';
 let log = logger(`<NeoText/>: `);
 
-// global variables
+// Global variables
 let timeId = 0;
 let _lapses = 0;
 let _autoPlay = false;
 let counter = 0;
 let Neo = null;
-let neoId = `neo-${Math.random()}`;
+let neoId = `neo-text`;
 
 export default function NeoText(props) {
-
-	const [_animate, setAnimate] = useState(props.animate);
-
+	const [_animate, setAnimate] = useState(false);
+	
 	useEffect(() => {
-		const { delay, charClass, autoPlay, reset, loop, lapses, loopDelay, speed, chars, rolls, phrases } = props.options;
-		log(['initTxt()', props]);
+		if (props.animate) {
+			setAnimate(true);
+		} else {
+			setAnimate(false);
+		}
+		runTextScramble();
+	})
 
-		setAnimate(props.animate);
+	const runTextScramble = () => {
+		const { delay, charClass, autoPlay, reset, loop, lapses, loopDelay, speed, chars, rolls, phrases } = props.options;
+		log(['initTxt()']);
+		clearTimeout(timeId)
+		counter = reset ? 0 : counter;
 
 		const next = () => {
 			log('next()', 4);
-
 			clearTimeout(timeId)
+			if (!_animate) return;
 			let nextPhrase = phrases[counter];
-			let words = nextPhrase.split(' ').length;
+			let words = nextPhrase.split(' ').length * 0;
 
 			Neo.setText(nextPhrase, props.animate).then(() => {
 				log('next().then()', 2, true);
 				if (!_animate) return
+
 				let nextDelay = counter !== 0 ? words * delay || 600 : loopDelay || 2000;
 
 				if (!loop && counter !== 0) {
-					timeId = setTimeout(() => {
-						next()
-					}, nextDelay)
+					timeId = setTimeout(next, nextDelay)
 
 				} else if (loop && _lapses > 0) {
 					timeId = setTimeout(next, nextDelay);
 				} else {
 					clearTimeout(timeId);
-					// props.setPlay(false);
 				}
 			}).catch((err) => {
-				// props.setPlay(false);
-				// props.setAnimate(true);
-				counter = reset ? 0 : counter;
 				log('next().catch()', 3, true)
 			});
 
@@ -71,13 +74,13 @@ export default function NeoText(props) {
 			log('invoke next()', 1, true);
 			next();
 		}
-	}, [props, _animate]);
+	}
 
 	return (
 		<div className={props.options.className || 'neo-text'} id={neoId}>
 			{props.options.initialText || 'Neo-Text'}
 		</div>
-	)
+	);
 }
 
 /* <NeoText options={{

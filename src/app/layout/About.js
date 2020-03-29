@@ -1,20 +1,23 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import ego from "../assets/ego.png"
 import main from "../assets/lens.jpg"
 import NeoText from "../components/NeoText"
 import SplitImage from "../components/SplitImage"
 
 const About = props => {
-	const isVisible = () => {
-		return props.api ? props.api.getActiveSection().anchor === "About" : false
-	}
+	const [visible, setVisible] = useState(false);
+
+	useEffect(()=> {
+		setVisible(props.api && props.api.getActiveSection().anchor === "About");
+	})
+
 	const neoOptions = {
 		className: "neo-text",
 		//Controls
 		loop: true,
-		delay: 3000,
-		loopDelay: 5000,
-		lapses: 8,
+		delay: 2000,
+		loopDelay: 3000,
+		lapses: 6,
 		reset: true,
 		autoPlay: true,
 		speed: "medium",

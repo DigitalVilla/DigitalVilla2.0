@@ -56,6 +56,10 @@ export default (() => {
 					// console.log("SW requested status update");
 					sendStatusUpdate(e.ports && e.ports[0]);
 				}
+				if (data.header === "newServiceWorker") {
+					console.log("new Service Worker!"); 
+					
+				}
 			}, false);
 		}
 	}

@@ -11,7 +11,6 @@ const Menu = (props) => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [page, setPage] = useState('');
 
-	
 	useEffect(() => {
 		if ( props.api ) {
 			setView = setViewSize();
@@ -27,7 +26,6 @@ const Menu = (props) => {
 			setView();
 		}
 	}, [props.api])
-
 
 	useEffect(()=> {
 		if (props.api) {

@@ -3,7 +3,7 @@ import logo from "../assets/logo_DV.png";
 import "../scss/main.scss"
 
 const IE = (props) => {
-  return props.display ? (
+  return (
     <section className="section">
       <div className="Error container-fluid">
         <div className="header noSelect"><img className="main-logo" src={logo} alt="D V Logo" />
@@ -16,7 +16,7 @@ const IE = (props) => {
         </div>
       </div>
     </section>
-  ) : <></>;
+  );
 };
 
 export default IE;

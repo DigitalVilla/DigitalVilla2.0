@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Fullpage from "./Fulllpage";
 import IE from './IE_error';
 
 export default function Index() {
-  const [toLoad, setToLoad] = useState(false);
   let ua = window.navigator.userAgent;
   let msie = ua.indexOf("MSIE ");
   let isIE = msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) // eslint-disable-line no-useless-escape
+  
   useEffect(() => {
     setTimeout(() => {
-      if (!toLoad) {
         document.body.removeChild(document.getElementById("loader"));
         let fp = document.getElementsByClassName("fp-completely")[0]
         fp && fp.classList.add("active");
-      }
-      setToLoad(true);
-    }, 100);
-  });
+    }, 800);
+  },[]);
 
-  return isIE ? <IE display={toLoad} /> : <Fullpage display={toLoad} />;
+  if (isIE) {
+    return <IE/>
+  }
+
+  return <Fullpage/>
 }
