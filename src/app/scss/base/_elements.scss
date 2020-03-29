@@ -178,9 +178,9 @@
 		}
 	}
 
-	@media (max-height:400px){
+	@media (max-height:405px) {
 		.dek {
-			.first {
+			.neo-text {
 				display: none;
 			}
 		}
@@ -193,7 +193,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 100Vh;
+		height: calc(var(--vh) * 100);
 		position: relative;
 
 		.break {
@@ -365,7 +365,6 @@
 
 // Contact
 .contact {
-
 	.business-card {
 		--width: 80vw;
 		--height: calc(var(--width) * 1.75);
