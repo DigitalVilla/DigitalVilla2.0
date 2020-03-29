@@ -5,7 +5,7 @@
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	height: 100vh;
+	height: calc(calc(var(--vh) * 100));
 	width: 100vw;
 	opacity: 0;
 	transition: opacity var(--delayOut);

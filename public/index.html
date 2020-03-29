@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="#000000" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name=" theme-color" content="#000000" />
 
 
 	<!-- Open Graph -->
@@ -31,7 +31,14 @@
 
 	<title>Digital Villa | Full-Stack Web & Mobile Solutions</title>
 	<style>
+		:root {
+			--vh: 1vh;
+		}
+		html,
 		body {
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			/* overflow: hidden; */
 			margin: 0;
 			background: #999 -moz-radial-gradient(circle farthest-side, #261436, #05051e);
 			background: #999 -webkit-radial-gradient(circle farthest-side, #261436, #05051e);

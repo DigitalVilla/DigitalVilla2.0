@@ -12,7 +12,7 @@
 }
 
 $min_width: $min-width;
-$max_width: 1600px;
+$max_width: 1900px;
 $min_font: 16px;
 $max_font: 24px;
 
@@ -91,3 +91,37 @@ button {
 	width: 1px; 
 	white-space: nowrap;           
   }
+
+
+  #dump {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(238, 238, 238, 0.95);
+	color: #444;
+	font-size: var(--font-xs);
+	font-weight: 300;
+	display: none;
+	width: 90vw;
+	border-radius: 4px;
+	padding: 1rem;
+	// text-align: right;
+	z-index: 10001;
+
+	.dump-ul {
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-around;
+		li {
+			padding-left: 8px;
+		}
+	}
+}
+
+section {
+	// border: 1px solid #00f;
+}
+body {
+	// margin-top:1rem !important;
+	// border: 1px solid #f0f;
+}

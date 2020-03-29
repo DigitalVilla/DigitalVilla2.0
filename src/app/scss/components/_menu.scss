@@ -115,7 +115,7 @@
 		top: unset;
 		right: unset;
 		left: 1rem;
-		bottom: calc(var(--position) - 1.5rem);
+		bottom: calc(var(--position) - 1rem);
 		button {
 			height: calc(var(--btn-height) + 10px);
 			width: calc(var(--btn-height) + 10px);
@@ -131,12 +131,10 @@
 	}
 
 	&.contactBox-toggle {
-		top: unset;
-		bottom: calc(var(--position) - 6px);
+		top: calc(calc(var(--vh) * 101) - calc(var(--btn-height) + var(--position)));
 		margin-right: 5px;
 		animation: fadeIn 1s ease-in-out;
 		@include flex(flex-end);
-		opacity: 0.85;
 		transition: opacity 1s;
 
 		button {

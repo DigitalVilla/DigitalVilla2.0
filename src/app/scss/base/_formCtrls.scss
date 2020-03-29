@@ -23,14 +23,20 @@
     textarea,
     select {
         color: inherit;
+        border: none;
         border: $default-outline;
         border-radius: 4px;
         display: block;
-        font-size: var(--font-xs);
+        font-size: var(--font);
         margin-bottom: 0.5rem;
         padding-left: 0.6rem;
         width: 100%;
         height: 45px;
+        border-style:solid;
+        appearance: none;
+        box-shadow: inset 0px 0px 0px 0px red;
+        font-family: inherit;
+        font-weight: 300;
         
         &:focus {
             border-color: $focus-color;
@@ -45,7 +51,7 @@
         padding: 0.5rem;
         height: 100%;
         resize: none;
-        max-width: 100%;
+        width: 100%;
     }
 
     button[type=submit],
@@ -59,6 +65,7 @@
 
     .customSelect {
         select {
+            background: #fff;
             --arrow-color: #8c45b8ad;
             color: #767676;
             appearance: none;
