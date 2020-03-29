@@ -1,7 +1,7 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '1.5.4';
+const VERSION = '1.6.2';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
 const debug = false;
 let isOnline = true;
@@ -21,6 +21,7 @@ self.addEventListener("activate", function onActivate(e) {
 		await cacheFiles(true); /* forceReload */
 		await clients.claim(); // Take contrall of all open clients/tabs
 		print(`${APP_NAME} (${VERSION}): Activated.`);
+		sendMessage({ header: 'newServiceWorker' });
 	})())
 });
 
@@ -250,8 +251,9 @@ async function getAassetManifest () {
 	for (const key in res.files) {
 		if (res.files.hasOwnProperty(key)) {
 			const url = res.files[key];
+			console.log(url);
 			
-			if (!url.includes('LICENSE')) { 
+			if (!url.includes('.mp4') || !url.includes('LICENCE')) { 
 				assets.push(url);
 			}
 		}
