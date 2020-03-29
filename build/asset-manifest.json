@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.1dd56970.chunk.css",
-    "main.js": "/static/js/main.f70247e7.chunk.js",
+    "main.css": "/static/css/main.5bf9f81c.chunk.css",
+    "main.js": "/static/js/main.d5ccf944.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.9a849ed7.js",
-    "static/js/2.971b459d.chunk.js": "/static/js/2.971b459d.chunk.js",
+    "static/js/2.cef0e553.chunk.js": "/static/js/2.cef0e553.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.971b459d.chunk.js.LICENSE.txt": "/static/js/2.971b459d.chunk.js.LICENSE.txt",
+    "static/js/2.cef0e553.chunk.js.LICENSE.txt": "/static/js/2.cef0e553.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/static/media/Oswald-Regular.6ca57499.woff",
     "static/media/Resume2.0.pdf": "/static/media/Resume2.0.0df44a65.pdf",
     "static/media/design.jpg": "/static/media/design.d279d215.jpg",
@@ -30,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9a849ed7.js",
-    "static/js/2.971b459d.chunk.js",
-    "static/css/main.1dd56970.chunk.css",
-    "static/js/main.f70247e7.chunk.js"
+    "static/js/2.cef0e553.chunk.js",
+    "static/css/main.5bf9f81c.chunk.css",
+    "static/js/main.d5ccf944.chunk.js"
   ]
 }
