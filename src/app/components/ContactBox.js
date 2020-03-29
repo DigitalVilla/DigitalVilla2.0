@@ -5,7 +5,7 @@ import { Input, TextArea, Check, Select, HoneyPot } from './FormCtrls';
 
 export default function ContactBox(props) {
     const initState = {
-        subscribe: false,
+        captcha: false,
         subject: '',
         confirmEmail: "i@robot.me",
         confirmEmailCheck: false,
@@ -40,12 +40,23 @@ export default function ContactBox(props) {
         success && setSuccess(false);
     }
 
-    const handleOnChange = (e) => {
+    const onChange = (e) => {
         setFormValues({
             ...formValues,
             [e.target.name]: e.target.id === "check-ctrl" ? e.target.checked : e.target.value
         });
     };
+
+    const onBlur = (e) => {
+        console.log("onBlur");   
+            // props.api.reloadView();
+    }
+
+    const onFocus = (e) => {
+        // props.api
+        console.log("onFocus");   
+    }
+        
 
     return (
         <div id="contactBox" className={"menu contactBox " + props.className} onClick={handlePrstine}>
@@ -57,34 +68,32 @@ export default function ContactBox(props) {
                         <img src={img} alt="contact-header" />
                     </figure>
                     <h2>Send me a Text!</h2>
-                    <h3 className={`${success ? "active": ''}`} >
-                        Thanks for reaching out! </h3>
+                    <h3 className={`${success ? "active" : ''}`} >
+                        Thanks, You'll hear from me soon!
+                    </h3>
                 </div>
                 <div className={`form-body${loading ? " active": ''}`}>
                     {props.isOpen &&
                         <form className='form-controller' onSubmit={onSubmit}>
-                            <div className="">
+                            <div className="input-container">
                                 <Input className="customField" name="name" type="text" label="Name:" required
-                                    onChange={handleOnChange} state={formValues} placeholder="Name"
+                                    handlers={{onChange, onFocus, onBlur}} state={formValues} placeholder="Name"
                                 />
                                 <Input className="customField" name="email" type="email" label="Email:" required
-                                    onChange={handleOnChange} state={formValues} placeholder="Email"
+                                    handlers={{onChange, onFocus, onBlur}}  state={formValues} placeholder="Email"
                                 />
-                                <HoneyPot name="confirmEmail" state={formValues}
-                                    onChange={handleOnChange}
-                                />
-                                <Select className="customSelect" name="subject" onChange={handleOnChange} state={formValues} required
+                                <Select className="customSelect" name="subject" onChange={onChange} state={formValues} required
                                     label="Message:" placeholder="Subject" options={subject}
                                 />
                             </div>
                             <TextArea className="customTextarea" name="message" type="textarea" label="Message:" required
-                                onChange={handleOnChange} state={formValues} placeholder="Write your message"
+                                 handlers={{onChange, onFocus, onBlur}} state={formValues} placeholder="Write your message"
                             />
-
                             <div className="footer">
-                                <Check className="customCheck" name="subscribe" value="subscribe" state={formValues} required
-                                    label="You're Human Right?" onChange={handleOnChange} checkmark
+                                <Check className="customCheck" name="captcha" state={formValues} required
+                                    label="You're Human Right?" onChange={onChange} checkmark
                                 />
+                                <HoneyPot name="confirmEmail" state={formValues} onChange={onChange} />
                                 <Icon className="contactBox-submit" label="Send" type="submit" icon="planeSolid" gradient />
                             </div>
                         </form>

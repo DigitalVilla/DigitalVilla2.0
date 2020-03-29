@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1/>
+	<meta name="viewport" content="width=device-width, initial-scale=1/>
 	<meta name=" theme-color" content="#000000" />
 
 
@@ -29,15 +29,10 @@
 		:root {
 			--vh: 1vh;
 		}
-
-		html {
-			width: 100vw;
-			height: 100vh;
-			/* height: calc(var(--vh, 1vh) * 100) !important; */
-		}
+		html,
 		body {
-		
-
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
 			/* overflow: hidden; */
 			margin: 0;
 			background: #999 -moz-radial-gradient(circle farthest-side, #261436, #05051e);
@@ -118,16 +113,6 @@
 		</div>
 	</div>
 	<div id="root"></div>
-
-	<script>
-		setViewSize();
-		// Multiply it by 1% to get a value for a vh unit
-		function setViewSize() {
-			let vh = window.innerHeight * 0.01;
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		}
-		window.addEventListener('resize', setViewSize, false);
-	</script>
 </body>
 
 </html>

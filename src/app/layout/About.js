@@ -19,7 +19,7 @@ const About = props => {
 		autoPlay: true,
 		speed: "medium",
 		initialText: "Digital Villa",
-		phrases: ["Developer", "Designer", "Entrepreneur"],
+		phrases: ["Development", "UX Design", "Optimization", "SEO"],
 	}
 
 	return (
@@ -28,12 +28,11 @@ const About = props => {
 				<SplitImage image={ego} className='split-about noSelect' />
 				<div className="dek">
 					<NeoText options={neoOptions} animate={isVisible()} />
-					<p className="first">If you need a trending app or a new website I can do the job, however, I am not interested in doing just that.</p>
-
-					<p className="last">I am in the business of solving problems by offering innovating solutions. The work that I do for my clients truly impacts their businesses.
-					Therefore, I take my craft seriously and make sure that if we create a partnership I will do everything within my reach to grow your online presence so you can relax and keep doing what you do best!</p>
-					<p className="last">Whether as a subcontractor or an in-house developer, I can help you or your team develop full-stack websites; make mobile applications; optimize existing sites as PWAs; create and consume GraphQL APIs,
-						and even transition a slow monolithic site to a blazing fast Server-less architecture.</p>
+					<p className="first">I solve business problems with innovating solutions.
+					I take my craft seriously and do my best to enhance your brand online, so you can focus on keep doing what you do best.</p>
+					<p className="last">Whether as a subcontractor or an in-house developer, I can help you develop full-stack websites; implement advanced JS animations;
+					make mobile applications; optimize existing sites; create and consume APIs,
+						and even transition a slow WordPress site to a blazing fast architecture.</p>
 				</div>
 			</div>
 			<figure className="background noSelect">

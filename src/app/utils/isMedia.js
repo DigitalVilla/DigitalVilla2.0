@@ -18,16 +18,16 @@ const media = {
 }
 
 export default function isMedia(screen) {
-	const width =  window.innerWidth;
+	const width = window.innerWidth;
 	const height = window.innerHeight;
 	const userAgent = navigator.userAgent;
 	const orientation = window.orientation;
 
 	let landscape = Math.abs(orientation) === 90;
 	let mobile = (/Mobi/i.test(userAgent) ||
-			/Android/i.test(userAgent) ||
-			(userAgent).indexOf("Mobile") > 0 ||
-			typeof orientation !== "undefined") ||
+		/Android/i.test(userAgent) ||
+		(userAgent).indexOf("Mobile") > 0 ||
+		typeof orientation !== "undefined") ||
 		(userAgent.indexOf('IEMobile') !== -1);
 
 	switch (screen) {
@@ -73,8 +73,36 @@ export default function isMedia(screen) {
 			return width < media._2k;
 		case '4kDn':
 			return width < media._4k;
-			default:
+		default:
 			//nothing
 			break;
 	}
+}
+
+// setViewSize();
+// Multiply it by 1% to get a value for a vh unitz
+export function setViewSize() {
+	const fp = document.getElementById('fullpage');
+	const sections = Array.from(document.getElementsByClassName('fp-section'));
+	console.log("setViewSize init");
+
+
+	
+	const seView = () => {
+		setTimeout(() => {
+			console.log("setViewSize closure");
+			let vh = window.innerHeight * 0.01;
+			fp.style.height = sections.length * 100 * vh + 'px';
+			fp.style.bottom = 0;
+			document.body.style.bottom = 0;
+			document.documentElement.style.bottom = 0;
+
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+			sections.forEach((sec) => {
+				sec.style.height = 100 * vh + 'px'
+			});
+		
+		}, 200)
+	};
+	return seView; 
 }

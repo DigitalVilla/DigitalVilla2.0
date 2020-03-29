@@ -7,5 +7,5 @@ import SW from './services/serviceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 console.clear();
-// SW.unregister();
+SW.unregister();
 // SW.register();

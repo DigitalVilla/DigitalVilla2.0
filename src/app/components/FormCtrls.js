@@ -62,7 +62,7 @@ export const Input = (props) => {
                 value={props.state[props.name] || ''}
                 placeholder={props.placeholder || ''}
                 required={props.required || false}
-                onChange={props.onChange}
+                {...props.handlers}
             />
         </div>
     )
@@ -81,11 +81,11 @@ export const TextArea = (props) => {
                 id={props.name}
                 name={props.name}
                 value={props.state[props.name] || ''}
-                onChange={props.onChange}
                 type={props.type || "text"}
                 required={props.required || false}
                 className={props.className ? props.className + '-textarea' : false}
                 placeholder={props.placeholder || ''}
+                {...props.handlers}
             />
         </div>
     )

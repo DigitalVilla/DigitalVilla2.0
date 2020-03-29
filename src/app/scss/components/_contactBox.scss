@@ -189,7 +189,7 @@
 
     .form-container {
       max-width: 75vw;
-      height: calc(calc(var(--vh) * 95));
+      height: calc(calc(var(--vh) * 90));
       bottom: unset;
       top: 0;
 
@@ -200,7 +200,7 @@
       }
 
       .form-body {
-        padding: 0.7rem;
+        padding: 0.3rem 0.5rem;
         form {
           flex-direction: row;
 
