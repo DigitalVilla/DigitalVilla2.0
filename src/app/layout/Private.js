@@ -20,19 +20,19 @@ export default function Private(props) {
 				<p>AJAX, PWA, MongoDB, Express, Node.js</p>
 			]
 		},
-		// {
-		// 	title: 'Digital Villa',
-		// 	image: digitalvilla,
-		// 	dek: [
-		// 		<p>More than a website, this is my personal</p>,
-		// 		<p>sandbox to apply hot and new technologies.</p>,
-		// 		<span className="break"></span>,
-		// 		<p>Currently working on server-less LAMDA functions</p>,
-		// 		<p>to manage forms and email services.</p>,
-		// 		<span className="break button"></span>,
-		// 		<p><a className="btn" href="https://staging.digitalvilla.ca">Check it out</a></p>,
-		// 	]
-		// },
+		{
+			title: 'Digital Villa',
+			image: digitalvilla,
+			dek: [
+				<p>More than a website, this is my personal</p>,
+				<p>sandbox to play with modern technologies.</p>,
+				<span className="break"></span>,
+				<p>Currently working on server-less LAMDA functions</p>,
+				<p>to manage forms and email services.</p>,
+				<span className="break button"></span>,
+				<p><a className="btn" href="https://staging.digitalvilla.ca">Check it out</a></p>,
+			]
+		},
 		{
 			title: 'Match.io',
 			image: imatch,
