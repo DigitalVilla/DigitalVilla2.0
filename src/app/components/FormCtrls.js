@@ -44,7 +44,7 @@ export const HoneyPot = (props) => {
     )
 }
 
-export const Input = (props) => {
+export const Input = React.forwardRef((props, ref) => {
     return (
         <div className={"form-ctrlr " + (props.className || '')}>
             <label
@@ -54,6 +54,7 @@ export const Input = (props) => {
                 {props.label || ''}
             </label>
             <input
+                ref={ref}
                 id={props.name}
                 name={props.name}
                 type={props.type || "text"}
@@ -66,7 +67,7 @@ export const Input = (props) => {
             />
         </div>
     )
-}
+})
 
 export const TextArea = (props) => {
     return (

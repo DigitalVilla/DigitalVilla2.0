@@ -25,7 +25,7 @@ export default function Private(props) {
 			image: digitalvilla,
 			dek: [
 				<p>More than a website, this is my personal</p>,
-				<p>sandbox to apply hot and new technologies.</p>,
+				<p>sandbox to play with modern technologies.</p>,
 				<span className="break"></span>,
 				<p>Currently working on server-less LAMDA functions</p>,
 				<p>to manage forms and email services.</p>,
