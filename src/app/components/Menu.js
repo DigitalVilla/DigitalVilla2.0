@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import logo from './../assets/logo_DV.png'
-import resume from '../assets/Resume2.0.pdf'
+import resume from '../assets/Resume2020.pdf'
 import Icon from './Icons'
 import ContactBox from './ContactBox';
 import {setViewSize} from '../utils/isMedia'

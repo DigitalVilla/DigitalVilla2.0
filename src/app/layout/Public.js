@@ -24,9 +24,9 @@ export default function Public(props) {
 			title: 'KIT is moving online!',
 			image: kit,
 			dek: [
-				<p>I am currently developing their hot e-comm</p>,
-				<p>and fixing all the layout and navigation bugs</p>,
+				<p>I am currently developing their hot e-comm...</p>,
 				<span className="break"></span>,
+				<p>...and fixing all the layout and navigation bugs</p>,
 				<p>the original developer left in the live site.</p>,
 				<p>It is a shame that there are developers</p>,
 				<p>damaging businesses with their mediocrity.</p>,
@@ -42,8 +42,8 @@ export default function Public(props) {
 				<p>to showcase their high-end services.</p>,
 				<span className="break"></span>,
 				<p>I was assigned to build them a web app.</p>,
-				<p>TLC loved it so much that Arcane has</p>,
-				<p>earned their trust to build them a real website.</p>,
+				<p>TLC loved it so much that Arcane has earned</p>,
+				<p>their trust to build them a real website.</p>,
 				<span className="break button"></span>,
 				<p><a className="btn noSelect" href="https://tlc.previewurl.ca/quoting-tool/pricing.php">View Demo</a></p>,
 			]
