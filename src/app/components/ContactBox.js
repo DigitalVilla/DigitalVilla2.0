@@ -9,7 +9,9 @@ const initState = {
     confirmEmail: "i@robot.ai",
 }
 
-export default function ContactBox(props) {
+export default React.memo(function ContactBox(props) {
+   console.log("** ContactBox **");
+    
     const [formValues, setFormValues] = useState(initState);
     const [initFocus, setInitFocus] = useState(true);
     const [success, setSuccess] = useState(false);
@@ -69,50 +71,55 @@ export default function ContactBox(props) {
     }
 
     return (
-        <div id="contactBox" className={"menu contactBox " + props.className}>
-            <div className="form-background" onClick={handleClose}></div>
-            <div className="form-container">
-                <div className="form-header">
-                    <Icon className="contactBox-close" icon={'logOut'} action={handleClose} />
-                    <figure>
-                        <img src={img} alt="contact-header" />
-                    </figure>
-                    <h2>Send me a Text!</h2>
-                    <h3 className={`${success ? "active" : ''}`} >
-                        Thanks, You'll hear from me soon!
+        <>
+            <div className={`controller contactBox-toggle noSelect${props.isOpen ? " active" : 'active'}`}>
+                <Icon icon={'planeSolid'} action={props.toggleContact} />
+            </div>
+            <div id="contactBox" className={`controller contactBox${props.isOpen ? " active" : ''}`}>
+                <div className="form-background" onClick={handleClose}></div>
+                <div className="form-container">
+                    <div className="form-header">
+                        <Icon className="contactBox-close" icon={'logOut'} action={handleClose} />
+                        <figure>
+                            <img src={img} alt="contact-header" />
+                        </figure>
+                        <h2>Send me a Text!</h2>
+                        <h3 className={`${success ? "active" : ''}`} >
+                            Thanks, You'll hear from me soon!
                     </h3>
-                </div>
-                <div className={`form-body${loading ? " active" : ''}`}>
-                    {props.isOpen &&
-                        <form className='form-controller' onSubmit={onSubmit}>
-                            <div className="input-container">
-                                <Input className="customField" name="name" type="text" label="Name:" required ref={refInputName}
-                                    handlers={{ onChange, onFocus, onBlur }} state={formValues} placeholder="Name"
+                    </div>
+                    <div className={`form-body${loading ? " active" : ''}`}>
+                        {props.isOpen &&
+                            <form className='form-controller' onSubmit={onSubmit}>
+                                <div className="input-container">
+                                    <Input className="customField" name="name" type="text" label="Name:" required ref={refInputName}
+                                        handlers={{ onChange, onFocus, onBlur }} state={formValues} placeholder="Name"
+                                    />
+                                    <Input className="customField" name="email" type="email" label="Email:" required
+                                        handlers={{ onChange, onFocus, onBlur }} state={formValues} placeholder="Email"
+                                    />
+                                    <Select className="customSelect" name="subject" onChange={onChange} state={formValues} required
+                                        label="Message:" placeholder="Subject" options={subjects}
+                                    />
+                                </div>
+                                <TextArea className="customTextarea" name="message" type="textarea" label="Message:" required
+                                    handlers={{ onChange, onFocus, onBlur }} state={formValues} placeholder="Write your message"
                                 />
-                                <Input className="customField" name="email" type="email" label="Email:" required
-                                    handlers={{ onChange, onFocus, onBlur }} state={formValues} placeholder="Email"
-                                />
-                                <Select className="customSelect" name="subject" onChange={onChange} state={formValues} required
-                                    label="Message:" placeholder="Subject" options={subjects}
-                                />
-                            </div>
-                            <TextArea className="customTextarea" name="message" type="textarea" label="Message:" required
-                                handlers={{ onChange, onFocus, onBlur }} state={formValues} placeholder="Write your message"
-                            />
-                            <div className="footer">
-                                <Check className="customCheck" name="captcha" state={formValues} required
-                                    label="You're Human Right?" onChange={onChange} checkmark
-                                />
-                                <HoneyPot name="confirmEmail" state={formValues} onChange={onChange} />
-                                <Icon className="contactBox-submit" label="Send" type="submit" icon="planeSolid" gradient />
-                            </div>
-                        </form>
-                    }
-                    {loading &&
-                        <Loader className="sendMessage" gradient />
-                    }
+                                <div className="footer">
+                                    <Check className="customCheck" name="captcha" state={formValues} required
+                                        label="You're Human Right?" onChange={onChange} checkmark
+                                    />
+                                    <HoneyPot name="confirmEmail" state={formValues} onChange={onChange} />
+                                    <Icon className="contactBox-submit" label="Send" type="submit" icon="planeSolid" gradient />
+                                </div>
+                            </form>
+                        }
+                        {loading &&
+                            <Loader className="sendMessage" gradient />
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
-}
+})

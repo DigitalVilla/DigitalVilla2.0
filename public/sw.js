@@ -1,7 +1,7 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '1.6.2';
+const VERSION = '2.2.0';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
 const debug = false;
 let isOnline = true;

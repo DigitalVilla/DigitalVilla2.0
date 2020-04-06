@@ -1,22 +1,22 @@
-.menu {
+.controller {
 	// constants
 	$vertical: true;
 	$menu-items: 4;
 	// variables
-	--btn-width: 50px;
-	--btn-height: 36px;
+	--btn-width: 64px;
+	--btn-height: 40px;
 	--position: 16px;
 	--gutter: var(--space);
 	--nav-size: calc((var(--btn-height) + var(--gutter)) * #{$menu-items});
 
 	position: absolute;
-		top: var(--position);
-		right: var(--position);
+	top: var(--position);
+	right: var(--position);
 	height: var(--btn-height);
 	width: var(--btn-width);
 	z-index: 1000;
 
-	&-button {
+	.menu-button {
 		height: 100%;
 
 		img {
@@ -25,13 +25,13 @@
 		}
 	}
 
-	&-nav {
+	.menu-nav {
 		height: 0;
 		width: 0;
 		overflow: hidden;
 		position: absolute;
-		transition: all .1s;
-		transition-delay: .6s;
+		transition: all 0.1s;
+		transition-delay: 0.6s;
 
 		@if $vertical {
 			top: var(--btn-height);
@@ -41,7 +41,7 @@
 		}
 
 		&.active {
-			transition: all .1s;
+			transition: all 0.1s;
 			transition-delay: 0;
 
 			@if $vertical {
@@ -58,11 +58,11 @@
 			@include flex(space-between);
 
 			@if $vertical {
-				padding-top: calc(var(--gutter)/2);
+				padding-top: calc(var(--gutter) / 2);
 				flex-direction: column;
 				height: 100%;
 			} @else {
-				padding-right: calc(var(--gutter)/4);
+				padding-right: calc(var(--gutter) / 4);
 			}
 
 			li {
@@ -82,10 +82,10 @@
 
 						@if $vertical {
 							transform: translate(0, calc(var(--nav-size) * -1));
-							transition: all ($i) * .2s;
+							transition: all ($i) * 0.2s;
 						} @else {
 							transform: translate(var(--nav-size), 0);
-							transition: transform ($i) * .15s, opacity ($i) * .1s;
+							transition: transform ($i) * 0.15s, opacity ($i) * 0.1s;
 						}
 					}
 
@@ -95,9 +95,9 @@
 							transform: translate3d(0, 0, 0);
 
 							@if $vertical {
-								transition-property: transform  ($i) * .15s, opacity ($i) * .2s;
+								transition-property: transform ($i) * 0.15s, opacity ($i) * 0.2s;
 							} @else {
-								transition: all ($i) * .2s;
+								transition: all ($i) * 0.2s;
 							}
 						}
 					}
@@ -115,18 +115,18 @@
 		top: unset;
 		right: unset;
 		left: 1rem;
-		bottom: calc(var(--position) - 1rem);
+		bottom: calc(var(--position) - 1.2rem);
 		button {
-			height: calc(var(--btn-height) + 10px);
-			width: calc(var(--btn-height) + 10px);
+			height: calc(var(--btn-height) + 15px);
+			width: calc(var(--btn-height) + 15px);
 		}
 		opacity: .0;
-		transition: opacity .3s;
-		
+		transition: opacity 0.3s;
+
 		&.active {
 			animation: fadeIn 1s ease-in-out;
-			transition: opacity .3s;
-			opacity: .8;
+			transition: opacity 0.3s;
+			opacity: 0.8;
 		}
 	}
 
@@ -148,15 +148,15 @@
 		}
 	}
 
-	svg, 
-	&-button {
+	svg,
+	.menu-button {
 		&:after {
 			@extend .overlay;
 			opacity: 0;
 		}
-	
+
 		&:active {
-			transform: scale3d(.95, .95, 1);
+			transform: scale3d(0.95, 0.95, 1);
 		}
 	}
 
@@ -166,6 +166,4 @@
 		--btn-height: 50px;
 		--position: var(--space-md);
 	}
-
-
 }
