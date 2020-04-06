@@ -1,6 +1,6 @@
 import React from "react"
 
-const SplitImage = ({className, image, imageLeft}) => {
+export default function SplitImage({ className, image, imageLeft }) {
   return (
     <div className={"split-image " + className}>
       <div className="left">
@@ -12,5 +12,3 @@ const SplitImage = ({className, image, imageLeft}) => {
     </div>
   )
 }
-
-export default SplitImage

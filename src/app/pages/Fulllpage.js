@@ -1,18 +1,19 @@
 import React from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import Layout from "../layout/Layout"
-import Menu from "../components/Menu"
+import Controllers from "../components/Controllers"
 import pages from "../constants/pages"
 import "../scss/main.scss"
 
 export default function FullPage(props) {
 	const anchors = pages.map((page) => page.name);
+	console.log('FULLPAGE');
 
 	return (
 		<ReactFullpage
 			licenseKey={process.env.REACT_APP_FP}
 			//Navigation
-			menu={".menu"}
+			menu={".controller"}
 			navigation={true}
 			navigationPosition={"left"}
 			// navigationTooltips={anchors}
@@ -33,12 +34,13 @@ export default function FullPage(props) {
 			render={({ state, fullpageApi }) => {
 				return (
 					<>
-						<Menu
+						<Controllers
+							fpState={state}
 							anchors={anchors}
 							api={fullpageApi}
 						/>
 						<ReactFullpage.Wrapper>
-							{ pages.map((P, i) =>
+							{pages.map((P, i) =>
 								<Layout key={'FP-' + i} api={fullpageApi} pageName={P.name} >
 									<P.page api={fullpageApi} isVisible={false} />
 								</Layout>

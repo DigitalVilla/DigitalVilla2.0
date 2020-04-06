@@ -84,13 +84,13 @@ export default function isMedia(screen) {
 export function setViewSize() {
 	const fp = document.getElementById('fullpage');
 	const sections = Array.from(document.getElementsByClassName('fp-section'));
-	console.log("setViewSize init");
+	// console.log("setViewSize init");
 
 
 	
 	const seView = () => {
 		setTimeout(() => {
-			console.log("setViewSize closure");
+			// console.log("setViewSize closure");
 			let vh = window.innerHeight * 0.01;
 			fp.style.height = sections.length * 100 * vh + 'px';
 			fp.style.bottom = 0;

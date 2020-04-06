@@ -6,7 +6,7 @@ import Video from "../components/Video"
 import isMedia from "../utils/isMedia"
 import logo_DV from "../assets/logo_DV.png"
 
-const Home = props => {
+export default React.memo(function Home (props) {
 	let icon = isMedia("mobile") ? "chevronCircleDn" : "mouse"
 
 	const handlePageDown = () => {
@@ -43,6 +43,4 @@ const Home = props => {
 			</div>
 		</>
 	)
-}
-
-export default Home
+})

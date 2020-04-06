@@ -1,7 +1,7 @@
 import React from 'react'
 import design from "../assets/design.jpg"
 
-export default function Contact(props) {
+export default React.memo(function Contact(props) {
 	return (
 		<>
 			< div className="content" >
@@ -46,4 +46,4 @@ export default function Contact(props) {
 			</div >
 		</>
 	)
-}
+})
