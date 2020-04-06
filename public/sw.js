@@ -1,7 +1,7 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '2.2.12';
+const VERSION = '2.2.10';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
 const debug = false;
 let isOnline = true;
@@ -137,8 +137,7 @@ async function router(req) {
 		let res = await cache.match(reqURL);
 		if (res) {
 			return res;
-		}
-		else {
+		} else {
 			if (isOnline) {
 				try {
 					let fetchOptions = {
@@ -154,10 +153,9 @@ async function router(req) {
 				}
 				catch (err) { console.log(err);
 				}
-			} else {
-				return notFoundResponse();
 			}
 		}
+		return notFoundResponse();
 	}
 
 	return req
