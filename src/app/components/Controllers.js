@@ -78,7 +78,7 @@ export default class Controllers extends Component {
 		// console.log('Controller: ', lastEvent);
 		return (
 			<>
-				{/* <OfflineIcon /> */}
+				<OfflineIcon />
 				<Menu toggleMenu={this.toggleMenu} isOpen={isMenuOpen} />
 				{/* <ContactBox toggleContact={this.toggleContact} isOpen={isContactOpen} /> */}
 			</>
