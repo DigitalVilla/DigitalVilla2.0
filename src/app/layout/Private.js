@@ -15,12 +15,12 @@ export default React.memo(function Private(props) {
 			dek: {
 				top: [
 					"My most recent personal projects",
-					"built to test advanced concepts."
+					"built to test advanced concepts",
 				],
 				bottom: [
-					"Applied technologies:",
 					"JavaScript, React, Redux, SASS,",
-					"AJAX, PWA, MongoDB, Express, Node.js"
+					"AJAX, PWA, MongoDB, Express, Node.js",
+					"PS. This site works without WiFi"
 				]
 			}
 		},

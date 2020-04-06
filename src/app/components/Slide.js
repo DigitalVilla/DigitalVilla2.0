@@ -28,7 +28,7 @@ export default function Slide({ slide, index, imageFirst }) {
                         }
                         <span className="break"></span>
                         {slide.dek.bottom &&
-                            renderDeck(slide.dek.top)
+                            renderDeck(slide.dek.bottom)
                         }
                         <span className="break button"></span>
                         {slide.link &&

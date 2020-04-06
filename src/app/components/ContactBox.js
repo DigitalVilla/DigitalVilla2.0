@@ -10,7 +10,7 @@ const initState = {
 }
 
 export default React.memo(function ContactBox(props) {
-   console.log("** ContactBox **");
+//    console.log("** ContactBox **");
     
     const [formValues, setFormValues] = useState(initState);
     const [initFocus, setInitFocus] = useState(true);

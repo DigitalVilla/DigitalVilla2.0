@@ -1,7 +1,7 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '2.2.0';
+const VERSION = '2.2.10';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
 const debug = false;
 let isOnline = true;
@@ -29,7 +29,6 @@ self.addEventListener("fetch", async function onFetch(e) {
 	e.respondWith(router(e.request));
 	// print(e.request);
 	// return e;
-
 });
 
 self.addEventListener("message", onMessage);
@@ -68,7 +67,7 @@ async function clearCaches(clearAll) {
 function onMessage({ data }) {
 	if ("statusUpdate" in data) {
 		({ isOnline, isLoggedIn } = data.statusUpdate);
-		print(`${APP_NAME} (${VERSION}) is ${isOnline? 'Online': 'Offline'}.`,true);
+		print(`${APP_NAME} (${VERSION}) is ${isOnline ? 'Online' : 'Offline'}.`, true);
 	}
 }
 
@@ -89,10 +88,10 @@ async function sendMessage(msg) {
  * @param {Boolean} forceReload If false only new files will be cached else all files will be cached regardless
  */
 async function cacheFiles(forceReload = false) {
-	
+
 	if (!forceReload) { // Fetch only on init
 		filesToCache = await getAassetManifest();
-		print(filesToCache);
+		// print(filesToCache);
 	}
 
 	const cache = await caches.open(CACHE_NAME);
@@ -134,103 +133,33 @@ async function router(req) {
 
 	// request for site's own URL?
 	if (url.origin == location.origin) {
-		// are we making an API request?
-		if (/^\/api\/.+$/.test(reqURL)) {
-			let res;
-
-			if (isOnline) { // Fetch online first API and update cached file
+		// all other files use "cache-first"
+		let res = await cache.match(reqURL);
+		if (res) {
+			return res;
+		} else {
+			if (isOnline) {
 				try {
 					let fetchOptions = {
 						method: req.method,
 						headers: req.headers,
-						credentials: "same-origin",
 						cache: "no-store",
 					};
 					res = await fetch(req.url, fetchOptions);
-
 					if (res && res.ok) {
-						if (req.method == "GET") {
-							await cache.put(reqURL, res.clone());
-						}
-						return res;
+						await cache.put(reqURL, res);
+						return res.clone();
 					}
 				}
-				catch (err) { }
-			}
-
-			// Use the chached file 
-			res = await cache.match(reqURL);
-			if (res) {
-				return res;
-			}
-
-			return notFoundResponse();
-		}
-		// are we requesting an HTML page?
-		else if (req.headers.get("Accept").includes("text/html")) {
-			// login-aware requests?
-			if (/^\/(?:login|logout|add-post)$/.test(reqURL)) {
-				// TODO
-			}
-			// otherwise, just use "network-and-cache"
-			else {
-				let res;
-
-				if (isOnline) {
-					try {
-						let fetchOptions = {
-							method: req.method,
-							headers: req.headers,
-							cache: "no-store",
-						};
-						res = await fetch(req.url, fetchOptions);
-						if (res && res.ok) {
-							await cache.put(reqURL, res.clone());
-							return res;
-						}
-					}
-					catch (err) { }
+				catch (err) {
+					console.log(err);
 				}
-
-				// fetch failed, so try the cache
-				res = await cache.match(reqURL);
-
-				if (res) {
-					return res;
-				}
-
-				// otherwise, return an offline-friendly page
-				return cache.match("/offline");
 			}
 		}
-		// all other files use "cache-first"
-		else {
-			let res = await cache.match(reqURL);
-			if (res) {
-				return res;
-			}
-			else {
-				if (isOnline) {
-					try {
-						let fetchOptions = {
-							method: req.method,
-							headers: req.headers,
-							cache: "no-store",
-						};
-						res = await fetch(req.url, fetchOptions);
-						if (res && res.ok) {
-							await cache.put(reqURL, res);
-							return res.clone();
-						}
-					}
-					catch (err) { }
-				}
-
-				// otherwise, force a network-level 404 response
-				return notFoundResponse();
-			}
-		}
+		return notFoundResponse();
 	}
+
+	return req
 }
 
 function notFoundResponse() {
@@ -240,26 +169,39 @@ function notFoundResponse() {
 	});
 }
 
-async function getAassetManifest () {
-	let assets = ['/favicon.ico'];
-	const res = await fetch('/asset-manifest.json', {
-		mode: 'no-cors'
-	})
-	.then(res => res.json())
-	.catch(error => print(error));
+function getAassetManifest() {
 
-	for (const key in res.files) {
-		if (res.files.hasOwnProperty(key)) {
-			const url = res.files[key];
-			console.log(url);
-			
-			if (!url.includes('.mp4') || !url.includes('LICENCE')) { 
-				assets.push(url);
-			}
-		}
-	}
- 
-	return assets;
+	return [
+		"/",
+		"/favicon.ico",
+		// "/index.html",
+		"/static/css/main.1e9bd4de.chunk.css",
+		"/static/js/main.aec7274e.chunk.js",
+		"/static/js/runtime-main.9a849ed7.js",
+		"/static/js/2.2fdd8f06.chunk.js",
+		"/static/media/Oswald-Regular.6ca57499.woff",
+		"/static/media/Oswald-Light.d1473454.woff",
+		// "/static/media/Resume2020.e8f7dd2e.pdf",
+		"/static/media/design.d279d215.jpg",
+		"/static/media/digitalvilla.8166ac43.jpg",
+		"/static/media/ego.5817646d.png",
+		"/static/media/eyedentify.635d1f57.png",
+		"/static/media/imatch.238265bf.png",
+		"/static/media/justbeer.903a5dd9.png",
+		"/static/media/kit.e25ddfc5.png",
+		"/static/media/lens.0232d8c5.jpg",
+		"/static/media/mac-rainbow.5abf287b.jpg",
+		"/static/media/nebula-lg.5cd98627.jpg",
+		"/static/media/nebula-md.be5f5855.jpg",
+		"/static/media/nebula-sm.6b93cfaa.jpg",
+		// "/static/media/nebula.1081eb94.jpg",
+		// "/static/media/nebula.3a134d72.mp4",
+		"/static/media/old-games.ca742234.jpg",
+		"/static/media/portal.081c5a10.png",
+		"/static/media/tlc.8e92e647.jpg",
+		"/static/media/winsight.d9b15e6c.jpg",
+		"/static/media/wow.37b50493.png"
+	]
 }
 
 function print(log, forced) {

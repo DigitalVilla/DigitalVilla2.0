@@ -10,5 +10,5 @@ console.log(`%c${start+start} Digital Villa ${start+start} %c${'2.3'} `, `color:
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // console.clear();
-SW.unregister();
-// SW.register();
+// SW.unregister();
+SW.register();
