@@ -4,7 +4,7 @@ import resume from '../assets/Resume2020.pdf'
 import Icon from './Icons'
 
 const Menu = (props) => {
-	console.log("** Menu **");
+	// console.log("** Menu **");
 		
 
 	const handleLink = (a) => {

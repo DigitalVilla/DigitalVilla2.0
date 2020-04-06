@@ -22,7 +22,7 @@ export default class Controllers extends Component {
 
 		setView();
 		window.addEventListener('resize', () => {
-			console.log("REZISE");
+			// console.log("REZISE");
 			setView();
 			//Toodo update state
 		});
@@ -37,7 +37,7 @@ export default class Controllers extends Component {
 
 		if (isMenuOpen && fpState.lastEvent === "onLeave") {
 			const currentPage = api.getActiveSection().anchor
-			console.log(fpState.lastEvent === "afterLoad" && this.count++);
+			// console.log(fpState.lastEvent === "afterLoad" && this.count++);
 
 			// Close the menu when scroll happens 
 			if (this.page != currentPage) {
@@ -52,7 +52,7 @@ export default class Controllers extends Component {
 	}
 
 	toggleMenu = () => {
-		console.log('toggleMenu');
+		// console.log('toggleMenu');
 
 		this.setState((prevState) => ({
 			isMenuOpen: !prevState.isMenuOpen,
@@ -75,12 +75,12 @@ export default class Controllers extends Component {
 		const { isContactOpen, isMenuOpen } = this.state
 		const { lastEvent } = this.props.fpState;
 
-		console.log('Controller: ', lastEvent);
+		// console.log('Controller: ', lastEvent);
 		return (
 			<>
-				<OfflineIcon />
+				{/* <OfflineIcon /> */}
 				<Menu toggleMenu={this.toggleMenu} isOpen={isMenuOpen} />
-				<ContactBox toggleContact={this.toggleContact} isOpen={isContactOpen} />
+				{/* <ContactBox toggleContact={this.toggleContact} isOpen={isContactOpen} /> */}
 			</>
 		)
 	}

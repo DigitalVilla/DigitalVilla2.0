@@ -115,12 +115,12 @@
 		top: unset;
 		right: unset;
 		left: 1rem;
-		bottom: calc(var(--position) - 10px);
+		bottom: calc(var(--position) - 1.2rem);
 		button {
 			height: calc(var(--btn-height) + 15px);
 			width: calc(var(--btn-height) + 15px);
 		}
-		// opacity: .0;
+		opacity: .0;
 		transition: opacity 0.3s;
 
 		&.active {

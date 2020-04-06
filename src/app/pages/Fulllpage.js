@@ -7,7 +7,6 @@ import "../scss/main.scss"
 
 export default function FullPage(props) {
 	const anchors = pages.map((page) => page.name);
-	console.log('FULLPAGE');
 
 	return (
 		<ReactFullpage
