@@ -1,15 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.1e9bd4de.chunk.css",
-    "main.js": "/static/js/main.aec7274e.chunk.js",
+    "main.js": "/static/js/main.0849dafc.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.9a849ed7.js",
-    "static/js/2.2fdd8f06.chunk.js": "/static/js/2.2fdd8f06.chunk.js",
+    "static/js/2.acb4ea82.chunk.js": "/static/js/2.acb4ea82.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.2fdd8f06.chunk.js.LICENSE.txt": "/static/js/2.2fdd8f06.chunk.js.LICENSE.txt",
+    "static/js/2.acb4ea82.chunk.js.LICENSE.txt": "/static/js/2.acb4ea82.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/static/media/Oswald-Regular.6ca57499.woff",
     "static/media/Resume2020.pdf": "/static/media/Resume2020.e8f7dd2e.pdf",
     "static/media/design.jpg": "/static/media/design.d279d215.jpg",
-    "static/media/digitalvilla.jpg": "/static/media/digitalvilla.8166ac43.jpg",
     "static/media/ego.png": "/static/media/ego.5817646d.png",
     "static/media/eyedentify.png": "/static/media/eyedentify.635d1f57.png",
     "static/media/imatch.png": "/static/media/imatch.238265bf.png",
@@ -30,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9a849ed7.js",
-    "static/js/2.2fdd8f06.chunk.js",
+    "static/js/2.acb4ea82.chunk.js",
     "static/css/main.1e9bd4de.chunk.css",
-    "static/js/main.aec7274e.chunk.js"
+    "static/js/main.0849dafc.chunk.js"
   ]
 }

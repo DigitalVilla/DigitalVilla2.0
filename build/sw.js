@@ -151,8 +151,7 @@ async function router(req) {
 						return res.clone();
 					}
 				}
-				catch (err) {
-					console.log(err);
+				catch (err) { console.log(err);
 				}
 			}
 		}
@@ -170,17 +169,14 @@ function notFoundResponse() {
 }
 
 function getAassetManifest() {
-
 	return [
 		"/",
 		"/favicon.ico",
-		// "/index.html",
 		"/static/css/main.1e9bd4de.chunk.css",
-		"/static/js/main.aec7274e.chunk.js",
+		"/static/js/main.e421cd98.chunk.js",
 		"/static/js/runtime-main.9a849ed7.js",
 		"/static/js/2.2fdd8f06.chunk.js",
 		"/static/media/Oswald-Regular.6ca57499.woff",
-		"/static/media/Oswald-Light.d1473454.woff",
 		// "/static/media/Resume2020.e8f7dd2e.pdf",
 		"/static/media/design.d279d215.jpg",
 		"/static/media/digitalvilla.8166ac43.jpg",
@@ -195,7 +191,7 @@ function getAassetManifest() {
 		"/static/media/nebula-md.be5f5855.jpg",
 		"/static/media/nebula-sm.6b93cfaa.jpg",
 		// "/static/media/nebula.1081eb94.jpg",
-		// "/static/media/nebula.3a134d72.mp4",
+		//  "/static/media/nebula.3a134d72.mp4",
 		"/static/media/old-games.ca742234.jpg",
 		"/static/media/portal.081c5a10.png",
 		"/static/media/tlc.8e92e647.jpg",

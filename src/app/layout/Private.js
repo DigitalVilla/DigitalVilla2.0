@@ -1,7 +1,7 @@
 import React from "react"
 import main from "../assets/old-games.jpg"
 import imatch from "../assets/projects/imatch.png"
-import digitalvilla from "../assets/projects/digitalvilla.jpg"
+// import digitalvilla from "../assets/projects/digitalvilla.jpg"
 import wow from "../assets/projects/wow.png"
 import eyedentify from "../assets/projects/eyedentify.png"
 import Slide from "../components/Slide.js"
@@ -20,25 +20,25 @@ export default React.memo(function Private(props) {
 				bottom: [
 					"JavaScript, React, Redux, SASS,",
 					"AJAX, PWA, MongoDB, Express, Node.js",
-					"PS. This site works without WiFi"
+					// "PS. This site works without WiFi"
 				]
 			}
 		},
-		{
-			image: digitalvilla,
-			title: 'Digital Villa',
-			link: "https://staging.digitalvilla.ca",
-			dek: {
-				top: [
-					"More than a website, this is my personal",
-					"sandbox to play with modern technologies."
-				],
-				bottom: [
-					"Currently working on server-less LAMDA functions",
-					"to manage forms and email services."
-				]
-			}
-		},
+		// {
+		// 	image: digitalvilla,
+		// 	title: 'Digital Villa',
+		// 	link: "https://staging.digitalvilla.ca",
+		// 	dek: {
+		// 		top: [
+		// 			"More than a website, this is my personal",
+		// 			"sandbox to play with modern technologies."
+		// 		],
+		// 		bottom: [
+		// 			"Currently working on server-less LAMDA functions",
+		// 			"to manage forms and email services."
+		// 		]
+		// 	}
+		// },
 		{
 			image: imatch,
 			title: 'Match.io',

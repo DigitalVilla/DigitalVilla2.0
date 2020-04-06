@@ -6,7 +6,7 @@ import Video from "../components/Video"
 import isMedia from "../utils/isMedia"
 import logo_DV from "../assets/logo_DV.png"
 
-export default React.memo(function Home (props) {
+export default React.memo(function Home(props) {
 	let icon = isMedia("mobile") ? "chevronCircleDn" : "mouse"
 
 	const handlePageDown = () => {
@@ -27,7 +27,7 @@ export default React.memo(function Home (props) {
 					<span>Villa</span>
 				</div>
 				<h2>
-					Full-Stack Web & <span className="break"></span>Mobile Development
+					* This is only a staging Site *
 				</h2>
 				{props.children}
 			</div>

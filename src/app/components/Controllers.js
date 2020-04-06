@@ -80,7 +80,7 @@ export default class Controllers extends Component {
 			<>
 				<OfflineIcon />
 				<Menu toggleMenu={this.toggleMenu} isOpen={isMenuOpen} />
-				{/* <ContactBox toggleContact={this.toggleContact} isOpen={isContactOpen} /> */}
+				<ContactBox toggleContact={this.toggleContact} isOpen={isContactOpen} />
 			</>
 		)
 	}
