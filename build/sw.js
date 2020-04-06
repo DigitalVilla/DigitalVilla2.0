@@ -1,7 +1,7 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '2.2.10';
+const VERSION = '2.3.0';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
 const debug = false;
 let isOnline = true;
@@ -147,7 +147,7 @@ async function router(req) {
 					};
 					res = await fetch(req.url, fetchOptions);
 					if (res && res.ok) {
-						await cache.put(reqURL, res);
+						// await cache.put(reqURL, res);
 						return res.clone();
 					}
 				}
@@ -155,11 +155,9 @@ async function router(req) {
 					console.log(err);
 				}
 			}
+			return notFoundResponse();
 		}
-		return notFoundResponse();
 	}
-
-	return req
 }
 
 function notFoundResponse() {
