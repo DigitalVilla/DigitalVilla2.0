@@ -1,7 +1,7 @@
 "use strict";
 
 const APP_NAME = 'DigitalVilla';
-const VERSION = '2.2.10';
+const VERSION = '2.2.12';
 const CACHE_NAME = `${APP_NAME}-${VERSION}`;
 const debug = false;
 let isOnline = true;
@@ -190,6 +190,7 @@ function getAassetManifest() {
 		"/static/media/nebula-lg.5cd98627.jpg",
 		"/static/media/nebula-md.be5f5855.jpg",
 		"/static/media/nebula-sm.6b93cfaa.jpg",
+		"/static/media/greyeagle.3176cd3c.png",
 		// "/static/media/nebula.1081eb94.jpg",
 		//  "/static/media/nebula.3a134d72.mp4",
 		"/static/media/old-games.ca742234.jpg",
