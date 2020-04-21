@@ -5,6 +5,7 @@ import kit from "../assets/projects/kit.png"
 import winsight from "../assets/projects/winsight.jpg"
 import justbeer from "../assets/projects/justbeer.png"
 import portal from "../assets/projects/portal.png"
+import greyeagle from '../assets/projects/greyeagle.png'
 import Slide from "../components/Slide.js"
 
 export default React.memo(function Public(props) {
@@ -26,9 +27,26 @@ export default React.memo(function Public(props) {
 			}
 		},
 		{
+			image: greyeagle,
+			title: 'Grey Eagle',
+			link: "https://www.greyeagleresortandcasino.ca/",
+			dek: {
+				top: [
+					"Calgary's most famous Casino has",
+					"a new modern and attractive website"
+				],
+				bottom: [
+					"Web performance and accesibility",
+					"Carousels and map integration",
+					"COVID popup implementation"
+				],
+
+			}
+		},
+		{
 			image: kit,
 			title: 'KIT is moving online!',
-			link: "https://tlc.previewurl.ca/quoting-tool/pricing.php",
+			link: "http://kitinteriorobjects.previewurl.ca/",
 			dek: {
 				top: [
 					"I am currently developing their hot e-comm...",
