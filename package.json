@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.17",
+    "@fullpage/react-fullpage": "^0.1.18",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -12,26 +12,14 @@
   "scripts": {
     "install-fp": "yarn add @fullpage/react-fullpage",
     "start": "react-scripts start",
-    "update-fp": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
-    "update-cra": "cp -f ./src/app/scripts/webpack.config.js ./node_modules/react-scripts/config/webpack.config.js",
-    "update": "yarn update-fp | yarn update-cra",
+    "replace-fp": "cp -f ./src/app/scripts/react-fullpage.js ./node_modules/@fullpage/react-fullpage/dist/react-fullpage.js",
+    "replace-cra": "cp -f ./src/app/scripts/webpack.config.js ./node_modules/react-scripts/config/webpack.config.js",
+    "replace": "yarn update-fp | yarn update-cra",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">1%",
-      "not dead",
-      "not OperaMini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
