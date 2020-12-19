@@ -1,38 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e9bd4de.chunk.css",
-    "main.js": "/static/js/main.ecf0212c.chunk.js",
+    "main.css": "/static/css/main.3bd42882.chunk.css",
+    "main.js": "/static/js/main.d790d8ee.chunk.js",
+    "main.js.map": "/static/js/main.d790d8ee.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9a849ed7.js",
-    "static/js/2.eb624742.chunk.js": "/static/js/2.eb624742.chunk.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9a849ed7.js.map",
+    "static/js/2.c44c1a7d.chunk.js": "/static/js/2.c44c1a7d.chunk.js",
+    "static/js/2.c44c1a7d.chunk.js.map": "/static/js/2.c44c1a7d.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.eb624742.chunk.js.LICENSE.txt": "/static/js/2.eb624742.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/static/media/Oswald-Regular.6ca57499.woff",
-    "static/media/Resume2020.pdf": "/static/media/Resume2020.e8f7dd2e.pdf",
-    "static/media/design.jpg": "/static/media/design.d279d215.jpg",
-    "static/media/digitalvilla.jpg": "/static/media/digitalvilla.8166ac43.jpg",
-    "static/media/ego.png": "/static/media/ego.5817646d.png",
-    "static/media/eyedentify.png": "/static/media/eyedentify.635d1f57.png",
-    "static/media/greyeagle.png": "/static/media/greyeagle.3176cd3c.png",
-    "static/media/imatch.png": "/static/media/imatch.238265bf.png",
-    "static/media/justbeer.png": "/static/media/justbeer.903a5dd9.png",
-    "static/media/kit.png": "/static/media/kit.e25ddfc5.png",
-    "static/media/lens.jpg": "/static/media/lens.0232d8c5.jpg",
-    "static/media/mac-rainbow.jpg": "/static/media/mac-rainbow.5abf287b.jpg",
-    "static/media/nebula-lg.jpg": "/static/media/nebula-lg.5cd98627.jpg",
-    "static/media/nebula-md.jpg": "/static/media/nebula-md.be5f5855.jpg",
-    "static/media/nebula-sm.jpg": "/static/media/nebula-sm.6b93cfaa.jpg",
-    "static/media/nebula.jpg": "/static/media/nebula.1081eb94.jpg",
-    "static/media/nebula.mp4": "/static/media/nebula.3a134d72.mp4",
-    "static/media/old-games.jpg": "/static/media/old-games.ca742234.jpg",
-    "static/media/portal.png": "/static/media/portal.081c5a10.png",
-    "static/media/tlc.jpg": "/static/media/tlc.8e92e647.jpg",
-    "static/media/winsight.jpg": "/static/media/winsight.d9b15e6c.jpg",
-    "static/media/wow.png": "/static/media/wow.37b50493.png"
+    "static/css/main.3bd42882.chunk.css.map": "/static/css/main.3bd42882.chunk.css.map",
+    "static/js/2.c44c1a7d.chunk.js.LICENSE.txt": "/static/js/2.c44c1a7d.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/static/media/Oswald-Regular.6ca57499.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.9a849ed7.js",
-    "static/js/2.eb624742.chunk.js",
-    "static/css/main.1e9bd4de.chunk.css",
-    "static/js/main.ecf0212c.chunk.js"
+    "static/js/2.c44c1a7d.chunk.js",
+    "static/css/main.3bd42882.chunk.css",
+    "static/js/main.d790d8ee.chunk.js"
   ]
 }
