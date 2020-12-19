@@ -1,13 +1,11 @@
 import React from "react"
-import ego from "../assets/ego.png"
-import main from "../assets/lens.jpg"
 import SplitImage from "../components/SplitImage"
 
 export default React.memo(function About(props) {
 	return (
 		<>
 			<div className="content">
-				<SplitImage image={ego} className='split-about noSelect' />
+				<SplitImage image="https://assets.digitalvilla.ca/images/ego_insta.jpg" className='split-about noSelect' />
 				<div className="dek">
 					<h2 className="neo-text">Business Solutions</h2>
 					<p className="first">I solve business problems with innovating solutions.
@@ -18,7 +16,7 @@ export default React.memo(function About(props) {
 				</div>
 			</div>
 			<figure className="background noSelect">
-				<img data-src={main} alt='Logo' />
+				<img data-src="https://assets.digitalvilla.ca/pages/lens.jpg" alt='Logo' />
 			</figure>
 		</>
 	)

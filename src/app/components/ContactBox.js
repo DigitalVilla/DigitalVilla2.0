@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Icon, { Loader } from './Icons'
-import img from "../assets/old-games.jpg"
 import { Input, TextArea, Check, Select, HoneyPot } from './FormCtrls';
 const initState = {
     subject: '',
@@ -33,6 +32,7 @@ export default React.memo(function ContactBox(props) {
             setInitFocus(false)
             refInputName.current.focus();
         }
+        // eslint-disable-next-line
     })
 
     const onSubmit = (e) => {
@@ -81,7 +81,7 @@ export default React.memo(function ContactBox(props) {
                     <div className="form-header">
                         <Icon className="contactBox-close" icon={'logOut'} action={handleClose} />
                         <figure>
-                            <img src={img} alt="contact-header" />
+                            <img src="https://assets.digitalvilla.ca/pages/old-games.jpg" alt="contact-header" />
                         </figure>
                         <h2>Send me a Text!</h2>
                         <h3 className={`${success ? "active" : ''}`} >

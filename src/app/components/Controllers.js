@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { setViewSize } from '../utils/isMedia'
-import ContactBox from './ContactBox';
 import OfflineIcon from './OfflineIcon'
 import Menu from './Menu'
 
@@ -17,7 +16,6 @@ export default class Controllers extends Component {
 
 	componentDidMount() {
 		const setView = setViewSize()
-		const setState = this.setState
 		// this.props.api.reloadView = setView;
 
 		setView();
@@ -40,7 +38,7 @@ export default class Controllers extends Component {
 			// console.log(fpState.lastEvent === "afterLoad" && this.count++);
 
 			// Close the menu when scroll happens 
-			if (this.page != currentPage) {
+			if (this.page !== currentPage) {
 				this.page = currentPage;
 				this.toggleMenu();
 				this.autoCalled = true
@@ -72,8 +70,7 @@ export default class Controllers extends Component {
 	}
 
 	render() {
-		const { isContactOpen, isMenuOpen } = this.state
-		const { lastEvent } = this.props.fpState;
+		const {  isMenuOpen } = this.state
 
 		// console.log('Controller: ', lastEvent);
 		return (

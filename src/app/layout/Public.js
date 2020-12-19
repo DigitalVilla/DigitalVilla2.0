@@ -1,23 +1,16 @@
 import React from "react"
-import main from "../assets/mac-rainbow.jpg"
-import tlc from "../assets/projects/tlc.jpg"
-import kit from "../assets/projects/kit.png"
-import winsight from "../assets/projects/winsight.jpg"
-import justbeer from "../assets/projects/justbeer.png"
-import portal from "../assets/projects/portal.png"
-import greyeagle from '../assets/projects/greyeagle.png'
 import Slide from "../components/Slide.js"
 
 export default React.memo(function Public(props) {
 	// console.log("** Page: Public **");
 	const slides = [
 		{
-			image: main,
+			image: "https://assets.digitalvilla.ca/pages/mac-rainbow.jpg",
 			title: 'Professional Work',
 			dek: {
 				top: [
 					"Best projects developed",
-					<>under <a href='https://www.thearcane.com'>Arcane</a> and <a href='https://www.mobilityquotient.com'>Mobility Quotient</a></>,
+					<>under <a href='https://thearcane.com'>Arcane</a> and <a href='https://mobilityquotient.com'>Mobility Quotient</a></>,
 				],
 				bottom: [
 					"Applied Technologies:",
@@ -27,9 +20,26 @@ export default React.memo(function Public(props) {
 			}
 		},
 		{
-			image: greyeagle,
+			image: 'https://assets.digitalvilla.ca/projects/quantifi.jpg',
+			title: 'Quantifi',
+			link: "https://quantifi.ca",
+			dek: {
+				top: [
+					"Calgary based tech-company",
+					"Helping customers to better assess",
+					"and manage consumer credit risk",
+				],
+				bottom: [
+					"AWS ecosystem development",
+					"Serverless Lambda development",
+				],
+
+			}
+		},
+		{
+			image: 'https://assets.digitalvilla.ca/projects/greyeagle.png',
 			title: 'Grey Eagle',
-			link: "https://www.greyeagleresortandcasino.ca/",
+			link: "https://greyeagleresortandcasino.ca/",
 			dek: {
 				top: [
 					"Calgary's most famous Casino has",
@@ -44,7 +54,7 @@ export default React.memo(function Public(props) {
 			}
 		},
 		{
-			image: kit,
+			image: "https://assets.digitalvilla.ca/projects/kit.jpg",
 			title: 'KIT is moving online!',
 			link: "http://kitinteriorobjects.previewurl.ca/",
 			dek: {
@@ -61,7 +71,7 @@ export default React.memo(function Public(props) {
 			}
 		},
 		{
-			image: tlc,
+			image: "https://assets.digitalvilla.ca/projects/tlc.jpg",
 			title: 'TLC Pricing Tool',
 			link: "https://tlc.previewurl.ca/quoting-tool/pricing.php",
 			dek: {
@@ -78,9 +88,9 @@ export default React.memo(function Public(props) {
 			}
 		},
 		{
-			image: winsight,
+			image: "https://assets.digitalvilla.ca/projects/winsight.jpg",
 			title: 'Winsight',
-			link: "https://www.winsightmedia.com/",
+			link: "https://winsightmedia.com/",
 			dek: {
 				top: [
 					"After redesigning each of Winsight's",
@@ -95,7 +105,7 @@ export default React.memo(function Public(props) {
 			}
 		},
 		{
-			image: justbeer,
+			image: "https://assets.digitalvilla.ca/projects/justbeer.jpg",
 			title: 'JustBeer',
 			link: "https://justbeerapp.com/guides",
 			dek: {
@@ -111,22 +121,6 @@ export default React.memo(function Public(props) {
 
 			}
 		},
-		{
-			image: portal,
-			title: 'My Winsight',
-			dek: {
-				top: [
-					"In 2019 MQ created one of the",
-					"most ambitious projects in",
-					"the food industry.",
-				],
-				bottom: [
-					"An online application to unify",
-					"all of Winsight's family tasks.",
-					"** PRIVATE **",
-				],
-			}
-		}
 	];
 
 	return (

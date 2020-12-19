@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "../assets/logo_DV.png";
 import "../scss/main.scss"
 
 const IE = (props) => {
   return (
     <section className="section">
       <div className="Error container-fluid">
-        <div className="header noSelect"><img className="main-logo" src={logo} alt="D V Logo" />
+        <div className="header noSelect"><img className="main-logo" src='https://assets.digitalvilla.ca/images/logo_DV.png' alt="D V Logo" />
             <h1>Digital Villa | Media Agency, Web Design, Software Development, Graphic design, Website</h1>
             <div className="title"><span>Digital Villa</span></div>
             <h2>You have landed In a black hole!<div className="breaks">&nbsp;</div> Get back in Orbit with a real Browser:</h2>

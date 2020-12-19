@@ -1,16 +1,11 @@
 import React from "react"
-import main from "../assets/old-games.jpg"
-import imatch from "../assets/projects/imatch.png"
-import digitalvilla from "../assets/projects/digitalvilla.jpg"
-import wow from "../assets/projects/wow.png"
-import eyedentify from "../assets/projects/eyedentify.png"
 import Slide from "../components/Slide.js"
 
 export default React.memo(function Private(props) {
 	// console.log("** Page: Private **");
 	const slides = [
 		{
-			image: main,
+			image: "https://assets.digitalvilla.ca/pages/old-games.jpg",
 			title: 'Personal Work',
 			dek: {
 				top: [
@@ -25,7 +20,7 @@ export default React.memo(function Private(props) {
 			}
 		},
 		{
-			image: digitalvilla,
+			image: "https://assets.digitalvilla.ca/projects/digitalvilla.jpg",
 			title: 'Digital Villa',
 			link: "https://staging.digitalvilla.ca",
 			dek: {
@@ -40,7 +35,7 @@ export default React.memo(function Private(props) {
 			}
 		},
 		{
-			image: imatch,
+			image: "https://assets.digitalvilla.ca/projects/imatch.png",
 			title: 'Match.io',
 			link: "https://match-io.netlify.com",
 
@@ -53,7 +48,7 @@ export default React.memo(function Private(props) {
 			}
 		},
 		{
-			image: wow,
+			image: "https://assets.digitalvilla.ca/projects/wow.png",
 			title: 'WOW',
 			LINK: "https://wordsofwow.netlify.com",
 			dek: {
@@ -66,7 +61,7 @@ export default React.memo(function Private(props) {
 			},
 		},
 		{
-			image: eyedentify,
+			image: "https://assets.digitalvilla.ca/projects/eyedentify.png",
 			title: 'Eyedentify',
 			link:"https://eyedntify.herokuapp.com",
 			dek: {
@@ -77,6 +72,21 @@ export default React.memo(function Private(props) {
 				],
 				bottom : [
 					"Create a Fake account and explore!",
+				]
+			}
+		},
+		{
+			image: "https://assets.digitalvilla.ca/projects/libro.jpg",
+			title: 'Libro',
+			link:"https://mylibro.netlify.app/",
+			dek: {
+				top: [
+					"Quick React prototype to test",
+					"new techniques in an inventory"
+				],
+				bottom : [
+					"Fast search algorithm",
+					"Responsive deck design",
 				]
 			}
 		},

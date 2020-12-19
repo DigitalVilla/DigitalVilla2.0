@@ -1,6 +1,4 @@
 import React from 'react'
-import logo from './../assets/logo_DV.png'
-import resume from '../assets/Resume2020.pdf'
 import Icon from './Icons'
 
 const Menu = (props) => {
@@ -25,7 +23,7 @@ const Menu = (props) => {
 			'icon': 'codepen'
 		},
 		{
-			'link': resume,
+			'link': 'https://assets.digitalvilla.ca/files/Resume2020.pdf',
 			'icon': 'resume'
 		}
 	];
@@ -34,7 +32,7 @@ const Menu = (props) => {
 		<>
 			<div id="menu" className="controller">
 				<button className="menu-button noSelect" onClick={props.toggleMenu}>
-					<img src={logo} alt="logo" />
+					<img src="https://assets.digitalvilla.ca/images/logo_DV.png" alt="logo" />
 				</button>
 
 				<nav className={`menu-nav${props.isOpen ? " active" : ''}`}>

@@ -1,10 +1,8 @@
 import React from "react"
 import Icon from "../components/Icons"
-import video from "../assets/nebula.mp4"
 import poster from "../constants/poster"
 import Video from "../components/Video"
 import isMedia from "../utils/isMedia"
-import logo_DV from "../assets/logo_DV.png"
 
 export default React.memo(function Home (props) {
 	let icon = isMedia("mobile") ? "chevronCircleDn" : "mouse"
@@ -16,7 +14,7 @@ export default React.memo(function Home (props) {
 	return (
 		<>
 			<div className="header noSelect">
-				<img className="main-logo" src={logo_DV} alt="DV" />
+				<img className="main-logo" src="https://assets.digitalvilla.ca/images/logo_DV.png" alt="DV" />
 				<h1>
 					{/* {`${meta.title} is a ${meta.description} by ${siteMetadata.author}. location ${siteMetadata.location}`} */}
 					Advanced and Inovative Web development and  Mobile development in ReactJS and React Native
@@ -32,7 +30,7 @@ export default React.memo(function Home (props) {
 				{props.children}
 			</div>
 
-			<Video poster={poster} media={video} />
+			<Video poster={poster} media="https://assets.digitalvilla.ca/media/nebula.mp4" />
 
 			<div className="scroll">
 				<Icon

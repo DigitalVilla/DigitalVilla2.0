@@ -1,12 +1,12 @@
 import React from 'react'
-import design from "../assets/design.jpg"
+const stampUrl = "https://assets.digitalvilla.ca/images/stamp_DV.jpg"
 
 export default React.memo(function Contact(props) {
 	return (
 		<>
 			< div className="content" >
 				<div className="business-card" >
-					<div className="logo" style={{ backgroundImage: "url(" + design + ")" }}></div>
+					<div className="logo" style={{ backgroundImage: "url(" + stampUrl + ")" }}></div>
 
 					<div className="content">
 						<div className="top">
@@ -24,10 +24,10 @@ export default React.memo(function Contact(props) {
 				</div>
 
 				<div className="business-card background-card">
-					<div className="logo" style={{ backgroundImage: "url(" + design + ")" }}></div>
+					<div className="logo" style={{ backgroundImage: "url(" + stampUrl + ")" }}></div>
 				</div>
 				<div className="business-card background-card second">
-					<div className="logo" style={{ backgroundImage: "url(" + design + ")" }}></div>
+					<div className="logo" style={{ backgroundImage: "url(" + stampUrl + ")" }}></div>
 
 					<div className="content">
 						<div className="top">
