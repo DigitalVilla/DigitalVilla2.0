@@ -1,0 +1,40 @@
+@import './../../../../../libs/themes/src/styles/mixins';
+
+.main-layout {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  padding-top: var(--navbar-height);
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 2.2rem 0 1.6rem;
+    font-size: var(--font-xxl);
+  }
+
+  .banner {
+    --banner-heigh: 180px;
+    display: flex;
+    flex-direction: column;
+    height: var(--banner-heigh);
+    justify-content: center;
+    background-color: var(--off-white);
+
+    .content {
+      position: relative;
+      z-index: 2;
+
+      h2 {
+        font-size: var(--font-xxl);
+        font-weight: 100;
+        margin-bottom: var(--space-xs);
+      }
+      @include mediaUp(sm) {
+        padding: 0 1rem;
+      }
+      @include mediaUp(lg) {
+        padding: 0 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@digitalvilla/lambdas": ["libs/lambdas/src/index.js"],
+      "@digitalvilla/hooks": ["libs/hooks/src/index.js"],
+      "@digitalvilla/themes": ["libs/themes/src/index.js"],
+      "@digitalvilla/components": ["libs/components/src/index.js"],
+      "@digitalvilla/utils": ["libs/utils/src/index.js"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

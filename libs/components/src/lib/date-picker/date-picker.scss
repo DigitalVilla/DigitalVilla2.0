@@ -1,0 +1,134 @@
+@import './../../../../themes/src/styles/mixins';
+
+.date-picker {
+  --active-color: var(--primary200);
+  position: relative;
+
+  .form-input-container {
+    position: relative;
+
+    .form-input {
+      letter-spacing: 1px;
+    }
+
+    .date-picker-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 3rem;
+      background: transparent;
+
+      &:active,
+      &:focus {
+        box-shadow: none !important;
+      }
+
+      &.active {
+        .svg-icon {
+          fill: var(--active-color);
+        }
+      }
+      .svg-icon {
+        width: 0.9rem;
+        fill: var(--grey-light);
+      }
+    }
+  }
+
+  &-modal {
+    display: none;
+    right: 0;
+    top: 4rem;
+    position: absolute;
+    z-index: 10;
+    background: white;
+
+    &.active {
+      display: block;
+    }
+
+    max-width: 340px;
+    height: auto;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    margin: 1rem;
+
+    @include mediaDown(sm) {
+      width: 100%;
+      margin: 0;
+      top: 1rem;
+    }
+
+    .header {
+      padding: 1.2rem 1rem 0.5rem;
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .date-picker-chevron {
+          margin-bottom: 0.2rem;
+
+          .svg-icon {
+            fill: var(--grey-light);
+            height: 1.3rem;
+            width: 1.3rem;
+          }
+        }
+
+        .form-ctrl-select {
+          --field-height: 35px;
+          max-width: 100px;
+        }
+      }
+    }
+
+    .body {
+      padding: 0 1rem 1rem;
+
+      .cell {
+        display: flex;
+        justify-content: center;
+      }
+
+      .weekdays {
+        font-size: var(--font-xs);
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: var(--space-sm) 0;
+        color: var(--grey-dark);
+      }
+
+      .days {
+        li {
+          border-radius: 5%;
+          cursor: pointer;
+          font-size: var(--font-sm);
+          opacity: 0.7;
+
+          &.current {
+            opacity: 1;
+            font-weight: 500;
+
+            &.active {
+              transition: background-color none;
+              background-color: var(--active-color);
+              color: white;
+            }
+          }
+
+          &.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            background-color: var(--off-white);
+          }
+
+          &:hover:not(.active):not(.disabled) {
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+}

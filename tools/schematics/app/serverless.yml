@@ -1,0 +1,99 @@
+# https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+
+service: app-APP_NAME
+frameworkVersion: '2'
+
+plugins:
+  - serverless-app-sync
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-west-2'}
+  logRetentionInDays: 180
+
+resources:
+  Resources:
+    AppS3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.s3bucketDomain}
+        AccessControl: Private
+
+    AppS3BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: AppS3Bucket
+        PolicyDocument:
+          Statement:
+            - Sid: PublicReadGetObject
+              Effect: Allow
+              Principal:
+                AWS: "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ${self:custom.OAI}"
+              Action:
+              - s3:GetObject
+              Resource: arn:aws:s3:::${self:custom.s3bucketDomain}/*
+
+    AppCloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          Origins:
+            - DomainName: ${self:custom.s3bucketDomain}.s3.${self:provider.region}.amazonaws.com
+              Id: ${self:custom.s3bucketDomain}
+              S3OriginConfig:
+                OriginAccessIdentity: origin-access-identity/cloudfront/${self:custom.OAI}
+          DefaultCacheBehavior:
+            TargetOriginId: ${self:custom.s3bucketDomain}
+            ViewerProtocolPolicy: redirect-to-https
+            AllowedMethods:
+              - GET
+              - HEAD
+            Compress: 'true'
+            ForwardedValues:
+              QueryString: 'false'
+              Cookies:
+                Forward: none
+          PriceClass: PriceClass_100
+          Aliases:
+          - ${self:custom.s3bucketDomain}
+          DefaultRootObject: index.html
+          Enabled: 'true'
+          HttpVersion: http2
+          CustomErrorResponses:
+            - ErrorCode: 404
+              ResponseCode: 200
+              ResponsePagePath: /index.html
+            - ErrorCode: 403
+              ResponseCode: 200
+              ResponsePagePath: /index.html
+          ViewerCertificate:
+            AcmCertificateArn: ${self:custom.AcmARN}
+            SslSupportMethod: sni-only
+            MinimumProtocolVersion: TLSv1.2_2019
+
+    AppRoute53:
+      Type: "AWS::Route53::RecordSet"
+      Properties:
+        HostedZoneId: Z06065542K9O049NU7EH9
+        Name: ${self:custom.s3bucketDomain}
+        Type: A
+        AliasTarget:
+          DNSName:
+            'Fn::GetAtt': [ AppCloudFrontDistribution, DomainName ]
+          HostedZoneId: Z2FDTNDATAQYW2
+
+  Outputs:
+    AppCloudFrontDistributionOutput:
+      Value:
+        'Fn::GetAtt': [ AppCloudFrontDistribution, DomainName ]
+
+custom:
+  subdomain:
+    dev: stage
+    prod: app
+  OAI: E3H2V4IOMV8CMJ
+  AcmARN: arn:aws:acm:us-east-1:813912021779:certificate/87b1005d-4a79-4e08-a3f0-7de4a2741dd3
+  s3bucketDomain: APP_NAME.${self:custom.subdomain.${self:provider.stage}}.qntifi.com

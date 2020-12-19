@@ -1,0 +1,52 @@
+// App related styles
+.app {
+  --nav-height: 46px;
+  h1,
+  h2 {
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--grey-darkest);
+  }
+
+  .main-link {
+    color: var(--primary200);
+    font-size: var(--font);
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .blank-layout {
+    background: var(--off-white);
+    min-height: 100vh;
+    padding-bottom: 2rem;
+    padding-top: var(--navbar-height);
+    position: relative;
+
+    .blank-card {
+      background: #fcfcfc;
+      margin: 5vh auto 0;
+      max-width: 500px;
+      width: 90%;
+      padding: 2rem 4rem;
+      position: relative;
+    }
+
+    .blank-logo {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 1rem 2rem;
+      max-width: 50vw;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "@nrwl/web/babel",
+    "@babel/preset-env"
+  ],
+  "babelrcRoots": [
+    "*"
+  ]
+}

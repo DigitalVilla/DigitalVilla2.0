@@ -1,0 +1,55 @@
+/** Common Extensions **/
+
+.container {
+  max-width: 1400px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 0.8rem;
+
+  @include mediaUp(xs) {
+    padding: 0 1rem;
+  }
+
+  @include mediaUp(md) {
+    padding: 0 2rem;
+  }
+
+  @include mediaUp(xl) {
+    padding: 0;
+  }
+}
+
+/* Center absolute */
+.abs-center {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ */
+.reader-only,
+.hidden {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.noSelect {
+  user-select: none;
+}
+
+.card {
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}

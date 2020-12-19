@@ -1,0 +1,49 @@
+.message-box {
+  --box-background-color: white;
+  --icon-fill: var(--primary200);
+
+  padding: 1rem 2rem;
+  border: 1px solid var(--off-white);
+  margin: 0.2rem;
+  background: var(--box-background-color);
+  border-radius: 3%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+
+  .message-box-icon {
+    height: 1rem;
+    width: 1rem;
+    fill: var(--icon-fill);
+  }
+
+  .message-box-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.7rem;
+    height: 1rem;
+    width: 1rem;
+
+    .svg-icon {
+      opacity: 0.7;
+      fill: var(--grey);
+    }
+
+    &:hover {
+      .svg-icon {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.message-box-wrapper {
+  display: none;
+  opacity: 0;
+  transition: all 3s;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}

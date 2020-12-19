@@ -1,0 +1,52 @@
+.form-ctrl-radio-group {
+  --active-color: var(--primary200);
+  width: 100%;
+
+  .radio-container {
+    display: flex;
+
+    .radio-label {
+      margin-right: 2rem;
+      padding: 0.5rem 0.4rem 0.4rem 1.6rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .radio-check {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid var(--grey-lightest);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:after {
+        position: relative;
+        opacity: 0;
+        content: '';
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        background-color: var(--active-color);
+        transition: opacity 0.2s;
+      }
+    }
+
+    .form-radio {
+      &:active ~ .radio-check,
+      &:focus ~ .radio-check {
+        box-shadow: var(--focus-outline);
+      }
+      &:checked ~ .radio-check {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

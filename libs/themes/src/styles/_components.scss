@@ -1,0 +1,58 @@
+/** BUTTONS **/
+.btn {
+  padding: 0.4rem 1.8rem;
+  border: 2px solid var(--primary200);
+  font-size: var(--font);
+  font-weight: 500;
+  outline: 0;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+
+  &.primary {
+    background-color: var(--primary200);
+    color: white;
+  }
+  &.secondary {
+    color: var(--primary200);
+  }
+
+  &.tertiary {
+    background-color: var(--secondary200);
+    color: white;
+    border-color: var(--secondary200);
+  }
+
+  &.radius {
+    border-radius: 2rem;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: var(--focus-outline);
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: var(--off-white) !important;
+    color: var(--white) !important;
+    border-color: var(--off-white);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.svg-btn {
+  .svg-icon {
+    height: 1rem;
+  }
+}
+
+.svg-icon {
+  fill: var(--primary200);
+  height: 100%;
+  width: 100%;
+}

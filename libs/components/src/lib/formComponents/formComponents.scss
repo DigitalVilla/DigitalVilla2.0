@@ -1,0 +1,82 @@
+// All general styles and variables are written contained here
+.form-ctrl-select,
+.form-ctrl-input {
+  --placeholder-color: var(--grey);
+  --field-height: 40px;
+  --background-color: white;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.disabled {
+    --background-color: var(--off-white);
+  }
+}
+
+.form-label {
+  font-size: var(--font-md);
+  font-weight: 600;
+}
+
+.form-textarea,
+.form-select,
+.form-input {
+  width: 100%;
+  height: var(--field-height);
+  border: 1px solid var(--grey-lightest);
+  border-radius: 3px;
+  padding: 0 var(--space);
+  font-size: var(--font-sm);
+  color: var(--grey-darkest);
+  background: var(--background-color);
+
+  &::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: var(--placeholder-color);
+  }
+
+  &::-ms-input-placeholder {
+    color: var(--placeholder-color);
+  }
+
+  &.hasError {
+    box-shadow: var(--error-outline) !important;
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed !important;
+    --background-color: var(--off-white);
+    border-color: var(--background-color);
+    color: var(--grey-dark);
+  }
+}
+
+.form-select-container,
+.form-input-container {
+  position: relative;
+
+  .form-ctrl-error-msg {
+    --icon-fill: var(--danger);
+
+    position: absolute;
+    max-width: 80%;
+    top: -1.5rem;
+    right: 0.5rem;
+    font-size: var(--font-xs);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    z-index: 5;
+
+    .message-box-icon {
+      margin-right: 0.6rem;
+      opacity: 0.8;
+    }
+  }
+}

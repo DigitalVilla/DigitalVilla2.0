@@ -1,0 +1,106 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// see: https://codyhouse.co/blog/post/css-custom-properties-vs-sass-variables
+// -----------------------------------------------------------------------------
+
+//App :default
+$primary200: #00a9e0;
+$primary100: lighten($primary200, 5%);
+$primary300: darken($primary200, 5%);
+$primary400: darken($primary200, 15%);
+$secondary200: #e47a00;
+$secondary100: lighten($secondary200, 5%);
+$secondary300: darken($secondary200, 5%);
+$secondary400: darken($secondary200, 15%);
+
+$success: #67c84e;
+$warning: #ffa13c;
+$danger: #ee192b;
+$info: #4a99c0;
+
+$NA-color: #8d8d8d;
+$INC-color: #2e2e2e;
+$SUB-color: #f5f100;
+$CA-color: #7fc872;
+$AP-color: #1f9900;
+$PS-color: #bd00ed;
+$PF-color: #009ced;
+$FC-color: #2910b3;
+$DC-color: #a80000;
+
+:root {
+  // Navbar
+  --navbar-height: 50px;
+  --transition: all 0.2s linear;
+
+  --primary100: #{$primary100}; // Highlight
+  --primary200: #{$primary200}; // Main
+  --primary300: #{$primary300}; // Accent
+  --primary400: #{$primary400}; // Shadow
+
+  --secondary100: #{$secondary100}; // Highlight
+  --secondary200: #{$secondary200}; // Main
+  --secondary300: #{$secondary300}; // Accent
+  --secondary400: #{$secondary400}; // Shadow
+
+  --success: #{$success};
+  --warning: #{$warning};
+  --danger: #{$danger};
+  --info: #{$info};
+
+  // Grey scale
+  --white: #ffffff;
+  --off-white: #f2f2f2;
+  --grey-lightest: #d1d1da;
+  --grey-light: #c9c9c9;
+  --grey: #9e9e9e;
+  --grey-dark: #6c7377;
+  --grey-darkest: #484848;
+  --black: #111122;
+
+  --NA-color: #{$NA-color};
+  --INC-color: #{$INC-color};
+  --SUB-color: #{$SUB-color};
+  --CA-color: #{$CA-color};
+  --AP-color: #{$AP-color};
+  --PS-color: #{$PS-color};
+  --PF-color: #{$PF-color};
+  --FC-color: #{$FC-color};
+  --DC-color: #{$DC-color};
+
+  //Custom settings
+  --font-color: var(--grey-darkest);
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --focus-outline: 0 0 0 1px rgba(116, 190, 255, 0.5);
+  --error-outline: 0 0 0 1px rgba(255, 0, 0, 0.5);
+
+  // Regular font family
+  --font-family: 'Poppins', 'Open Sans', 'Helvetica Neue Light',
+    'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+  // Code (monospace) font family
+  --code-font: 'Courier New', 'DejaVu Sans Mono', 'Monaco', monospace;
+
+  // Spacing
+  --space: 1rem;
+  --space-xxs: calc(var(--space) / 5);
+  --space-xs: calc(var(--space) / 4);
+  --space-sm: calc(var(--space) / 1.5);
+  --space-md: calc(var(--space) * 1.5);
+  --space-lg: calc(var(--space) * 2.2);
+  --space-xl: calc(var(--space) * 3.5);
+  --space-xxl: calc(var(--space) * 5.5);
+  --space-xxxl: calc(var(--space) * 7.5);
+
+  // body font size
+  --font: 1rem;
+  --font-xxs: calc(var(--font) * 0.7);
+  --font-xs: calc(var(--font) * 0.75);
+  --font-sm: calc(var(--font) * 0.9);
+  --font-md: calc(var(--font) * 1.2);
+  --font-lg: calc(var(--font) * 1.5);
+  --font-xl: calc(var(--font) * 1.75);
+  --font-xxl: calc(var(--font) * 2);
+  --font-xxxl: calc(var(--font) * 2.5);
+}

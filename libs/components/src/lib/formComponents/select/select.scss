@@ -1,0 +1,46 @@
+.form-ctrl-select {
+  &.disabled .form-select-container .select-chevron-down {
+    fill: var(--grey);
+  }
+
+  .form-select-container {
+    position: relative;
+    background: var(--background-color);
+
+    .form-select {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      background: transparent !important;
+      position: relative;
+      padding-right: 1.5rem;
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &.placeholder {
+        color: var(--grey);
+
+        option {
+          color: var(--grey-darkest);
+        }
+      }
+    }
+
+    .select-placeholder {
+      color: var(--grey) !important;
+    }
+
+    .select-chevron-down {
+      position: absolute;
+      right: 10px;
+      height: 0.6rem;
+      width: 0.6rem;
+      fill: var(--grey-darkest);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.main-navbar {
+  height: var(--nav-height);
+  background: rgb(0, 0, 0);
+  position: relative;
+  z-index: 11;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-logo {
+    height: var(--nav-height);
+    padding: 0.5rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .links {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 1rem;
+    }
+  }
+}

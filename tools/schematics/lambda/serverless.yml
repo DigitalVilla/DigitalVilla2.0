@@ -1,0 +1,76 @@
+# https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+
+service: api-API_NAME
+frameworkVersion: '2'
+
+plugins:
+  - serverless-offline
+  - serverless-domain-manager
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-west-2'}
+  logRetentionInDays: 180
+  memorySize: 128
+  timeout: 5
+  apiGateway:
+    shouldStartNameWithService: true
+
+functions:
+  hello:
+    handler: functions/hello.handler
+    events:
+      - http:
+          path: hello
+          method: get
+          cors:
+            origin: '*'
+            headers: ${self:custom.allowedHeaders}
+
+resources:
+  Resources:
+    GatewayResponseDefault4XX:
+      Type: AWS::ApiGateway::GatewayResponse
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: DEFAULT_4XX
+        RestApiId:
+          Ref: 'ApiGatewayRestApi'
+    GatewayResponseDefault5XX:
+      Type: 'AWS::ApiGateway::GatewayResponse'
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: DEFAULT_5XX
+        RestApiId:
+          Ref: 'ApiGatewayRestApi'
+
+custom:
+  allowedHeaders:
+    - Accept
+    - Content-Type
+    - Content-Length
+    - Authorization
+    - X-Api-Key
+    - X-Amz-Date
+    - X-Amz-Security-Token
+    - X-Amz-User-Agent
+    - app_user_id
+    - app_user_name
+  customDomain:
+    rest:
+      domainName: API_NAME.api.digitalvilla.ca
+
+      stage: ${self:provider.stage}
+      basePath: ${self:provider.stage}
+      certificateName: 'api.digitalvilla.ca
+'
+      createRoute53Record: true
+      endpointType: 'edge'
+      securityPolicy: tls_1_2
+      autoDomain: true
